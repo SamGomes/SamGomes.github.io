@@ -1,0 +1,75 @@
+//play song on load
+window.onload = function() {
+	//document.getElementById("my_audio").play();
+}
+
+function showPortfolioPopup(title,videoPath,desc,sourceLink)
+{
+	
+   $("#portfolioPopup .modal-title").text($("#"+title).text());
+   $("#portfolioPopup_description").text($("#"+desc).text());
+   $("#portfolioPopup_sourceLink").text($("#"+sourceLink).text());
+   $("#portfolioPopup_sourceLink").attr("href",$("#"+sourceLink).text());
+   
+   var popupVideo = $("#portfolioPopup_video");
+   var popupVideoTitle = $("#portfolioPopup_videoTitle");
+   if(videoPath==""){
+	    popupVideoTitle.text("No Demo Video Available for this work. Sorry :(");
+	   popupVideo.addClass("hidden");
+   }else{
+	   popupVideo.removeClass("hidden");
+	   popupVideoTitle.text("Demo Video:");
+   }
+   popupVideo.attr('src', videoPath);
+   
+   $("#portfolioPopup").modal();
+}
+
+
+
+$(document).ready(function(){ //after page load
+
+	var EXPANDED_FOOTER=false;
+
+	$('#portfolioPopup').on('hidden.bs.modal', function () {
+			$('video').each(function() {
+				$(this).get(0).pause();
+			});
+	});
+	
+	$('img').hover(function(tip) {
+		if($(this).hasClass("portfolioTooltiped")){
+			$(this).attr("title","Click for more info");      			
+		}
+	});
+
+	$('a').click(function(){ //animate anchor change
+		activeAnchor = $(this).attr('href');
+		if(activeAnchor == null){
+			return;
+		}
+		$('html, body').animate({
+			scrollTop: $(activeAnchor).offset().top
+		}, 500);
+	});
+
+
+	$("#expandFooterTrigger").click(function(){
+		
+		if(EXPANDED_FOOTER){
+			$("#footer").css("height", "6rem");
+		}else{
+			$("#footer").css("height", "15rem");
+		}
+		EXPANDED_FOOTER=!EXPANDED_FOOTER;
+	});
+
+	$("#coverDownArrow").mouseover(function(){
+		$("#scrollDownText").css("color", "rgba(186,100,255,1)");
+	});
+	$("#coverDownArrow").mouseout(function(){
+		$("#scrollDownText").css("color", "rgba(255,100,0,1)");
+	});
+	
+	
+});

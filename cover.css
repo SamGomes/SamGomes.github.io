@@ -1,0 +1,290 @@
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-image: url("resources/images/codeBackgroundDark.png");
+  background-size:cover;
+  background-color: #1D193C;
+
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+}
+
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 2rem;
+}
+
+/*glyphicon fix*/
+.glyphicon {
+    position: static;
+}
+
+
+/*
+ * Header
+ */
+
+.masthead {
+	background-color:  rgba(0,0,0,.8);
+	padding: .75rem 1.25rem;
+ }
+
+.masthead-brand {
+  width:  10%;
+  height: 10%;
+}
+
+.cover-icon-link{
+  font-size: 8.875rem;   
+  border-bottom-color:transparent;
+  color: rgba(255,100,0,1);
+}
+
+.cover-icon-link:hover,
+.cover-icon-link:focus {
+	color: rgba(186,100,255,1);
+	text-decoration:none; 
+	cursor: pointer; 
+}
+
+
+.cover-image {
+  width: 18%;
+}
+
+.nav-link {
+  display: inline-block;
+  font-weight: normal;
+  color: rgba(150,150,150,1);
+  background-color: transparent;
+  border-bottom-color:transparent;
+  padding-right: 2.25rem;
+  font-style: normal;
+  font-size: 1.2em; 
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+	color: rgba(255,255,255,1);
+	text-decoration:none; 
+	cursor: pointer; 
+}
+
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-link .fancy {
+  border-style:solid;
+  border-radius: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-color:#fff;
+}
+
+
+.nav-link .fancy:hover, 
+.nav-link .fancy:focus{
+  background-color: #fff;
+}
+
+
+.nav-masthead .active {
+  color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+h2{
+	padding-left: 5em;
+	padding-right: 5em;
+}
+
+/*
+ * Middle
+ */
+
+ .jumbotron{
+	background-color: rgba(150,150,150,0.9);
+	border:  5rem solid transparent;
+	border-style:solid;
+	border-image: url("resources/sectionBorder.png") 30 stretch;
+  }
+
+ .jumbotron  h1{ 
+	color: rgba(20,20,20,1);
+ }
+ .jumbotron  h2{
+	color: rgba(20,20,20,1);
+ }
+ .jumbotron  h3{
+	color: rgba(20,20,20,1);
+ }
+  
+ .jumbotron-heading{
+	padding-bottom: 3.5rem;
+ }
+ 
+ 
+ .jumbotron p{
+	font-size: 1.2rem; 
+	color: #777;
+	text-align: left;
+}
+
+ 
+.cover {
+  padding: 0 1.5rem;
+  font-weight: normal;
+  font-size: 1.875em; 
+  vertical-align: middle;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+}
+
+
+
+.card {
+  float: left;
+  width: 30.333%;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
+  box-shadow: 1rem 1rem 1rem rgba(50,50,50,1);
+  
+  border-style: none;
+  border-radius: 1rem;
+  border-color: rgba(50,50,50,1);
+  
+  background-color: rgba(215,215,215,1);
+  
+}
+
+.card:hover {
+	  background-color: rgba(235,235,235,1);
+}
+
+.hidden{
+	display: none;
+}
+
+/*
+* Poppups
+*/
+
+.modal-content  {
+   margin-top: 20%;
+   background-color: rgba(150,150,150,1);
+   box-shadow: none;
+   border-style: none;
+}
+
+.modal-footer{
+	text-align: justify;
+}
+
+/*
+ * Footer
+ */
+
+ .footer{ 
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:6rem;
+	width:100%;
+	background:rgba(0,0,0,.8);
+	height:6rem;  
+	transition:all 0.5s;
+	color: rgba(150,150,150,1);
+	padding-top: 1.25em;
+ }
+ 
+
+.icon {
+    height: 100px;
+    width: 100px;
+	display: block;
+	vertical-align: middle;
+    /* Other styles here */
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 40em) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot{
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  
+  .cover-container{
+	width: 100%;
+	horizontal-align: center;
+  }
+  
+}
+
+@media (min-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%;
+  }
+}

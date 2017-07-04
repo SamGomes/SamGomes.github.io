@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- This page was created by me, Samuel Gomes. The additional used libraries include bootstrap and jQuery.-->
+<html lang="en">
+	<!-- Header -->
+	<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- <link rel="icon" src=""> -->
+	
+	
+
+	
+	<title>S. Gomes Web Page</title>
+
+	<!-- CSS Imports-->
+	<link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/fontAwesome/css/font-awesome.css" rel="stylesheet">
+	<link href="cover.css" rel="stylesheet">
+	
+	<script src="resources/w3.js"></script>
+	
+	<audio id="my_audio" src="./resources/audio.wav" loop="loop"></audio>
+  </head>
+
+  <body>	
+  
+	<!-- FrontPage-->
+	<div class="site-wrapper" id="anchor_frontPage">
+		 <div class="site-wrapper-inner">
+				<div class="masthead clearfix">
+					<div class="inner">
+						<nav class="nav nav-masthead">
+							<a class="nav-link" href="#anchor_frontPage">Home</a><!-- 
+							<a class="nav-link" href="#anchor_biography">Biography</a> -->
+							<a class="nav-link" href="#anchor_portfolio">Portfolio</a>
+							<!-- <a class="nav-link" href="#anchor_publications">Publications</a> -->
+							<a class="nav-link fancy" href="./files/cv.pdf" download">Get_my_CV</a>
+						</nav>
+					</div>
+				</div>
+		
+			<div class="cover-container">
+				<img  class="cover-image" src="resources/images/Sam.png"></img>
+				<h2>"I always wanted to be a professional computer engineer. <br> Now that my dream came true, here is my website!"</h2>
+				<h3 style="color:rgba(255,100,0,1)" id="scrollDownText">Scroll down to see the rest</h3>
+				<a class="cover-icon-link glyphicon glyphicon-menu-down " id="coverDownArrow" href="#anchor_portfolio"></a></h1>
+			</div>
+		</div>
+		
+	</div>
+			
+			
+			
+	<!-- Portfolio-->	
+	<div id="anchor_portfolio">	
+	
+		<!-- Popup -->
+		<div class="modal fade" id="portfolioPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Video demo</h4>
+				</div>
+				<div class="modal-body">
+					<h3 style="text-align:left" id="portfolioPopup_videoTitle"></h3>
+					<video id="portfolioPopup_video" style="height: 100%; width: 100%;" controls="controls"/>
+				</div>
+				<div class="modal-footer">
+					<h3>Description:</h3>
+					<p id="portfolioPopup_description"></p>
+					<h3>Source Link:</h3>
+					<a id="portfolioPopup_sourceLink"></a>
+				</div>
+			</div>
+		  </div>
+		</div>
+		
+		
+		<section class="jumbotron text-center ">
+			<div class=" jumbotron-heading">
+				<h1>My Portfolio</h1>
+				<h3 class="lead text-muted">Here I include some of the work I have worked on over the years as a programmer.</h3>
+			</div>
+
+			<div class="album">
+				<div class="container">
+				
+					<div class="card">
+						<img   class="cover-icon-link portfolioTooltiped" data-toggle="modal"  onclick=showPortfolioPopup("title1","resources/videos/CGJ.mp4","desc1","source1") alt="escapeThePiramid" style="height: 280px; width: 100%;  display: block;" src="resources/images/escapeThePiramid.png" >
+						<p class="card-title" id="title1">Escape-the-Pyramid</p>
+						<p class="hidden" id="desc1">A game developed as a computer graphics project with implementation of multiple techniques such as cell shading,  normal mapping,  multiple light sources,  model importing / picking  and snapshots saving.</p>
+						<p class="hidden" id="source1">https://github.com/SamGomes/Escape-the-Pyramid---CGJ</p>
+					</div>
+					
+					<div class="card">
+						<img  class="cover-icon-link portfolioTooltiped" data-toggle="modal"  onclick=showPortfolioPopup("title2","","desc2","source2") alt="cloudPrime" style="height: 280px; width: 100%;  display: block;" src="resources/images/CloudPrime.png">
+						<p class="card-title" id="title2">CloudPrime</p>
+						<p class="hidden" id="desc2">A project for the "Cloud Computing and Virtualization" course. It consisted in a service to execute prime number factorizations. It automatically scaled AWS servers so that a response could always be provided. The objective was to manage the servers load.</p>
+						<p class="hidden" id="source2">https://github.com/SamGomes/CloudPrime</p>
+					</div>
+					
+					<div class="card">
+						<img  class="cover-icon-link portfolioTooltiped" data-toggle="modal"  onclick=showPortfolioPopup("title3","","desc3","source3") alt="matSatSolver" style="height: 280px; width: 100%;  display: block;" src="resources/images/MAXSAT.png">
+						<p class="card-title" id="title3">Max-sat Solver</p>
+						<p class="hidden" id="desc3">A solver for the maximum satisfaction problem in the context of the "Parallel and Distributed Computation" course. It implements dynamic parallel load balancing (using openMP) and static distributed load balancing (using MPI).</p>
+						<p class="hidden" id="source3">https://github.com/SamGomes/MaxSat-Solver</p>
+					</div>		
+					
+					<div class="card">
+						<img   class="cover-icon-link portfolioTooltiped" data-toggle="modal"  onclick=showPortfolioPopup("title4","","desc4","source4")  alt="goal Bounding on nav mesh" style="height: 280px; width: 100%;  display: block;" src="resources/images/goalBoundNavMesh.png">
+						<p class="card-title" id="title4">Goal-Bounding-on-NavMesh</p>
+						<p class="hidden" id="desc4">Use of the Goal Bounding algorithm created by Steve Rabin in a Navigation Mesh. Work done for the course "Artificial Inteligence for Games"</p>
+						<p class="hidden" id="source4">https://github.com/SamGomes/Goal-Bounding-on-NavMesh</p>
+					</div>
+					
+					
+					<div class="card">
+						<img  class="cover-icon-link portfolioTooltiped" data-toggle="modal" onclick=showPortfolioPopup("title5","resources/videos/P3DRayTracer.mp4","desc5","source5")  alt="rayTracer" style="height: 280px; width: 100%;  display: block;" src="resources/images/rayTracer.png">
+						<p class="card-title" id="title5">P3D Ray Tracer</p>
+						<p class="hidden" id="desc5">A ray tracer developed for the "3D Programming" course. It implements techniques such as nff models import, anti-aliasing, soft shadows, depth of field and acceleration by using an uniform grid;</p>
+						<p class="hidden" id="source5">https://github.com/SamGomes/P3DStuff</p>
+					</div>
+					
+					<div class="card">
+						<img   class="cover-icon-link portfolioTooltiped" data-toggle="modal" onclick=showPortfolioPopup("title6","resources/videos/doom^2.mp4","desc6","source6")   alt="doom^2" style="height: 280px; width: 100%;  display: block;" src="resources/images/Doom^2.png">
+						<p class="card-title" id="title6">Doom^2</p>
+						<p class="hidden" id="desc6">A game developed in Unity 3D for the "3D Programming" course. It implements techniques such as ambient occlusion and Motion Blur.</p>
+						<p class="hidden" id="source6">https://github.com/SamGomes/P3DStuff</p>
+					</div>
+
+					<div class="card">
+						<img  class="cover-icon-link portfolioTooltiped" data-toggle="modal" onclick=showPortfolioPopup("title7","resources/videos/VI.mp4","desc7","source7")  alt="metacriticDash" style="height: 280px; width: 100%;  display: block;" src="resources/images/MetacriticDash.png">
+						<p class="card-title" id="title7">Metacritic-Dashboard</p>
+						<p class="hidden" id="desc7">This work consists in a dashboard regarding information of the Metacritic website.</p>
+						<p class="hidden" id="source7">https://github.com/SamGomes/Metacritic-DashBoard</p>
+					</div>
+				
+					<div class="card">
+						<img  class="cover-icon-link portfolioTooltiped" data-toggle="modal" onclick=showPortfolioPopup("title8","","desc8","source8") alt="REFIND" style="height: 280px; width: 100%;  display: block;" src="resources/images/refind.png">
+						<p class="card-title" id="title8">REFIND</p>
+						<p class="hidden" id="desc8"> Project developed during the 2nd Edition of Hack for Good hackathon. Refind is a job platform, where companies can post jobs specifically for refugees, with the objective to bypass prejudice from certain employers.</p>
+						<p class="hidden" id="source8">https://github.com/SamGomes/hack-for-good-2017</p>
+					</div>
+						
+				</div>
+			</div>
+		</section>
+	</div>
+		
+
+	
+	<!-- Publications-->
+<!-- 	<div id="anchor_publications">
+		<section class="jumbotron text-center ">
+			<div class=" jumbotron-heading">
+				<h1>My Publications</h1>
+				<h3 class="lead text-muted">Here I include some of the publications where I participated.</h3>
+			</div>
+		</section>
+	</div> -->
+	
+	
+	
+	<footer class="footer container" id="footer">
+	<!-- Contact-->
+		<div id="anchor:contact">
+			<div class="row text-center">
+				
+				<div class="col-sm-12">
+					<a class="nav-link" id="expandFooterTrigger">Contact</a>
+				</div>
+				
+				<div class="col-sm-4">
+					<h3><span class="nav-link glyphicon glyphicon-earphone"></span></h3>
+					<p>+351 912190467</p><br>
+				</div>
+				
+				<div class="col-sm-4">
+					<h3><a href="https://github.com/SamGomes" class="nav-link fa fa-github" ></a></h3>
+					<p>https://github.com/SamGomes</p><br>
+				</div>
+				
+				<div class="col-sm-4">
+					<h3><span class="nav-link glyphicon glyphicon-envelope"></span></h3>
+					<p>sam.s.gomes25@gmail.com</p><br>
+				</div>
+			
+			</div>	
+		</div>
+	</footer>	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="resources/jquery-3.1.0.js"></script>  
+	<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+	
+	
+</body></html>

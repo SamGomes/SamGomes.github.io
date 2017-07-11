@@ -184,11 +184,13 @@ h2{
 
 
 .card {
+
+  align: center;
   float: left;
-  width: 30.333%;
+  width: 25rem;
   padding: 0.75rem;
   margin-bottom: 2rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   margin-right: 1rem;
   
   box-shadow: 1rem 1rem 1rem rgba(50,50,50,1);

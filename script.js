@@ -44,7 +44,7 @@ $(document).ready(function(){ //after page load
 	});
 
 	$('a').click(function(){ //animate anchor change
-		activeAnchor = $(this).attr('href');
+		activeAnchor = $(this).attr('data-anchorPoint');
 		if(activeAnchor == null){
 			return;
 		}

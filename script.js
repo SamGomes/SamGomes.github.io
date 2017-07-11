@@ -29,12 +29,20 @@ function showPortfolioPopup(title,videoPath,desc,sourceLink)
 
 $(document).ready(function(){ //after page load
 
+	// alert($('.card').height());
+	// //dynamic card height
+	// $('.card').css("height", $(window).innerHeight()/2);
+	// $(window).resize(function(){
+	// 	$('.card').css("height", $(window).innerHeight()/2);
+	// });
+
+
 	var EXPANDED_FOOTER=false;
 
 	$('#portfolioPopup').on('hidden.bs.modal', function () {
-			$('video').each(function() {
-				$(this).get(0).pause();
-			});
+		$('video').each(function() {
+			$(this).get(0).pause();
+		});
 	});
 	
 	$('img').hover(function(tip) {

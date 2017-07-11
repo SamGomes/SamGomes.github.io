@@ -100,8 +100,31 @@ body {
 }
 
 
-.nav-masthead .nav-link + .nav-link {
+.nav-masthead {
+  float: right;
   margin-left: 1rem;
+}
+
+.masthead {
+  position: fixed;
+  top: 0;
+}
+.mastfoot {
+  position: fixed;
+  bottom: 0;
+}
+.site-wrapper-inner {
+  vertical-align: middle;
+}
+/* Handle the widths */
+.masthead,
+.mastfoot{
+  width: 100%; /* Must be percentage or pixels for horizontal alignment */
+}
+
+.cover-container{
+  width: 100%;
+  horizontal-align: center;
 }
 
 .nav-link .fancy {
@@ -123,14 +146,6 @@ body {
   color: #fff;
 }
 
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-  .nav-masthead {
-    float: right;
-  }
-}
 
 
 h2{
@@ -185,10 +200,9 @@ h2{
 
 .card {
 
-  align: center;
   float: left;
   width: 25rem;
-  padding: 0.75rem;
+  padding: 0.75em;
   margin-bottom: 2rem;
   margin-left: 2rem;
   margin-right: 1rem;
@@ -205,6 +219,12 @@ h2{
 
 .card:hover {
 	  background-color: rgba(235,235,235,1);
+}
+
+.portfolioTooltiped{
+  width: 100%; 
+  height: 280px; 
+  display: block;
 }
 
 .hidden{
@@ -252,41 +272,3 @@ h2{
     /* Other styles here */
 }
 
-/*
- * Affix and center
- */
-
-@media (min-width: 40em) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot{
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
-  
-  .cover-container{
-	width: 100%;
-	horizontal-align: center;
-  }
-  
-}
-
-@media (min-width: 62em) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%;
-  }
-}

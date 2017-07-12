@@ -163,6 +163,7 @@ h2{
 	border:  5rem solid transparent;
 	border-style:solid;
 	border-image: url("resources/sectionBorder.png") 30 stretch;
+	width: 100%;
   }
 
  .jumbotron  h1{ 

@@ -9,6 +9,7 @@ body {
   background-image: url("resources/images/codeBackgroundDark.png");
   background-size:cover;
   background-color: #1D193C;
+  background-attachment: fixed;
 
   color: #fff;
   text-align: center;

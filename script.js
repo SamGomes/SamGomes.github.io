@@ -1,6 +1,16 @@
 //play song on load
 window.onload = function() {
 	//document.getElementById("my_audio").play();
+	var rights =  new Date();
+	y = rights.getFullYear();
+	m = rights.getMonth();
+	d = rights.getDate();
+
+	var monthNames = ["January", "February", "March", "April", "May", "June",
+					  "July", "August", "September", "October", "November", "December"];
+
+	var rightsElement = $("#rightsText");
+	rightsElement.text("Samuel Gomes Web Page @ " + monthNames[m] + " of " + y +".");
 }
 
 function showPortfolioPopup(title,videoPath,desc,sourceLink)
@@ -14,7 +24,7 @@ function showPortfolioPopup(title,videoPath,desc,sourceLink)
    var popupVideo = $("#portfolioPopup_video");
    var popupVideoTitle = $("#portfolioPopup_videoTitle");
    if(videoPath==""){
-	    popupVideoTitle.text("No Demo Video Available for this work. Sorry :(");
+	   popupVideoTitle.text("No Demo Video Available for this work. Sorry :(");
 	   popupVideo.addClass("hidden");
    }else{
 	   popupVideo.removeClass("hidden");
@@ -36,7 +46,6 @@ $(document).ready(function(){ //after page load
 	// 	$('.card').css("height", $(window).innerHeight()/2);
 	// });
 
-
 	var EXPANDED_FOOTER=false;
 
 	$('#portfolioPopup').on('hidden.bs.modal', function () {
@@ -45,7 +54,7 @@ $(document).ready(function(){ //after page load
 		});
 	});
 	
-	$('img').hover(function(tip) {
+	$('img').hover(function() {
 		if($(this).hasClass("portfolioTooltiped")){
 			$(this).attr("title","Click for more info");      			
 		}

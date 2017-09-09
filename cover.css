@@ -100,7 +100,7 @@ body {
 .nav-link:focus {
 	color: rgba(255,255,255,1);
 	text-decoration:none; 
-	cursor: pointer; 
+	cursor: pointer;
 }
 
 
@@ -178,18 +178,26 @@ h2{
  .jumbotron  h3{
 	color: rgba(20,20,20,1);
  }
-  
+ 
  .jumbotron-heading{
 	padding-bottom: 3.5rem;
  }
  
  
- .jumbotron p{
+.jumbotron p{
 	font-size: 1.2rem; 
 	color: #777;
 	text-align: left;
 }
+.pBlack{
+  font-size: 1.2rem; 
+  color: rgba(20,20,20,1);
+ }
 
+.pCitation{
+  font-size: 1.4rem; 
+  color: rgba(20,20,100,1);
+ }
  
 .cover {
   padding: 0 1.5rem;

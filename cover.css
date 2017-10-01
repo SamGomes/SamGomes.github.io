@@ -150,7 +150,9 @@ body {
   color: #fff;
 }
 
-
+.textRow{
+  padding-bottom: 1rem;
+}
 
 h2{
 	padding-left: 5em;

@@ -11,13 +11,16 @@ window.onload = function() {
 
 	var rightsElement = $("#rightsText");
 	rightsElement.text("Samuel Gomes Web Page @ " + monthNames[m] + " of " + y +".");
+
+	$("#footer_contacts").hide();
 }
 
 function showPortfolioPopup(title,videoPath,desc,sourceLink)
 {
 	
    $("#portfolioPopup .modal-title").text($("#"+title).text());
-   $("#portfolioPopup_description").text($("#"+desc).text());
+   $("#portfolioPopup_description").empty();
+   $("#portfolioPopup_description").append($("#"+desc).children().clone());
    $("#portfolioPopup_sourceLink").text($("#"+sourceLink).text());
    $("#portfolioPopup_sourceLink").attr("href",$("#"+sourceLink).text());
    
@@ -72,11 +75,12 @@ $(document).ready(function(){ //after page load
 
 
 	$("#expandFooterTrigger").click(function(){
-		
-		if(EXPANDED_FOOTER){
-			$("#footer").css("height", "6rem");
+		var expandDuration = 500;
+
+		if(!EXPANDED_FOOTER){
+			$("#footer_contacts").show(expandDuration);
 		}else{
-			$("#footer").css("height", "15rem");
+			$("#footer_contacts").hide(expandDuration);
 		}
 		EXPANDED_FOOTER=!EXPANDED_FOOTER;
 	});

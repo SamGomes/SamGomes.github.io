@@ -15,9 +15,6 @@ body {
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
   font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
-
-
-   min-width: 1004px;
 }
 
 
@@ -27,17 +24,13 @@ body {
   display: table;
   width: 100%;
   height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
 }
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
 }
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
+.cover-container-text{
+  font-size: 3vw;
 }
 
 /* Padding for spacing */
@@ -57,7 +50,6 @@ body {
 
 .masthead {
 	background-color:  rgba(0,0,0,.8);
-	padding: .75rem 1.25rem;
  }
 
 .masthead-brand {
@@ -66,7 +58,7 @@ body {
 }
 
 .cover-icon-link{
-  font-size: 8.875rem;   
+  font-size: 7vw;   
   border-bottom-color:transparent;
   color: rgba(255,100,0,1);
 }
@@ -89,9 +81,22 @@ body {
   color: rgba(150,150,150,1);
   background-color: transparent;
   border-bottom-color:transparent;
-  padding-right: 2.25rem;
+  padding-right: 1em;
   font-style: normal;
-  font-size: 1.2em; 
+  font-size: 1em; 
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-text{
+  display: inline-block;
+  font-weight: normal;
+  color: rgba(150,150,150,1);
+  background-color: transparent;
+  border-bottom-color:transparent;
+  padding-right: 1em;
+  font-style: normal;
+  font-size: 1em; 
   text-align: center;
   text-decoration: none;
 }
@@ -103,39 +108,21 @@ body {
 	cursor: pointer;
 }
 
-
-.nav-masthead {
-  float: right;
-  margin-left: 1rem;
-}
-
-.masthead {
-  position: fixed;
-  top: 0;
-}
-.mastfoot {
-  position: fixed;
-  bottom: 0;
-}
 .site-wrapper-inner {
   vertical-align: middle;
 }
-/* Handle the widths */
-.masthead,
-.mastfoot{
-  width: 100%; /* Must be percentage or pixels for horizontal alignment */
-}
+
 
 .cover-container{
   width: 100%;
-  horizontal-align: center;
+}
+
+.navbar{
+  opacity: 0.8;
 }
 
 .nav-link .fancy {
   border-style:solid;
-  border-radius: 1rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
   border-color:#fff;
 }
 
@@ -145,6 +132,10 @@ body {
   background-color: #fff;
 }
 
+
+.nav-masthead{
+  float: right;
+}
 
 .nav-masthead .active {
   color: #fff;
@@ -164,11 +155,14 @@ h2{
  */
 
  .jumbotron{
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 5%;
+  padding-right: 5%;
+
 	background-color: rgba(150,150,150,0.9);
-	border:  5rem solid transparent;
-	border-style:solid;
-	border-image: url("resources/sectionBorder.png") 30 stretch;
-	width: 100%;
+	width: 90%;
   }
 
  .jumbotron  h1{ 
@@ -202,28 +196,20 @@ h2{
  }
  
 .cover {
-  padding: 0 1.5rem;
   font-weight: normal;
   font-size: 1.875em; 
   vertical-align: middle;
 }
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-}
-
 
 
 .card {
-
-  float: left;
-  width: 28rem;
-  margin-left: 8rem;
-  margin-bottom: 3rem;
-  padding: 0 1.5rem;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  padding: 5%;
   box-shadow: 1rem 1rem 1rem rgba(50,50,50,1);
   
   border-style: none;
-  border-radius: 1rem;
+  /*border-radius: 1rem;*/
   border-color: rgba(50,50,50,1);
   
   background-color: rgba(215,215,215,1);
@@ -234,21 +220,24 @@ h2{
 	  background-color: rgba(235,235,235,1);
 }
 
-.portfolioTooltiped{
+.portfolioTooltipImage{
   width: 100%; 
-  height: 280px; 
+  height: auto; 
+  display: block;
+}
+.portfolioTooltipDescriptionImage{
+  width: 80%; 
+  margin:auto;
   display: block;
 }
 
-.hidden{
-	display: none;
-}
 
 /*
 * Poppups
 */
 
 .modal-content  {
+  border-radius: 0;
    margin-top: 20%;
    background-color: rgba(150,150,150,1);
    box-shadow: none;
@@ -259,29 +248,11 @@ h2{
 	text-align: justify;
 }
 
-/*
- * Footer
- */
-
- .footer{ 
-	position:fixed;
-	left:0px;
-	bottom:0px;
-	height:6rem;
-	width:100%;
-	background:rgba(0,0,0,.8);
-	height:6rem;  
-	transition:all 0.5s;
-	color: rgba(150,150,150,1);
-	padding-top: 1.25em;
- }
- 
 
 .icon {
-    height: 100px;
-    width: 100px;
-	display: block;
-	vertical-align: middle;
-    /* Other styles here */
+  height: 100px;
+  width: 100px;
+  display: block;
+  vertical-align: middle;
 }
 

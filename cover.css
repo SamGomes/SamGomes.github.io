@@ -5,18 +5,45 @@
 
 html,
 body {
-  height: 100%;
-  background-image: url("resources/images/codeBackgroundDark.png");
-  background-size:cover;
-  background-color: #1D193C;
-  background-attachment: fixed;
+
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
 
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
   font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+
+  scroll-behavior: smooth;
 }
 
+.background{
+  background-image: url("resources/images/codeBackgroundDark.png");
+  background-color: #1D193C;
+  position: fixed;
+
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+
+  z-index: -1;
+}
+
+.background-effect{
+  background-image: url("resources/images/codeBackgroundDarkEffects.png");
+  background-color: transparent;
+  position: absolute;
+
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+
+  z-index: -1;
+}
 
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -30,8 +57,9 @@ body {
   vertical-align: top;
 }
 .cover-container-text{
-  font-size: 3vw;
+  font-size: 2vw;
 }
+
 
 /* Padding for spacing */
 .inner {
@@ -63,16 +91,21 @@ body {
   color: rgba(255,100,0,1);
 }
 
-.cover-icon-link:hover,
+.cover-icon-link:hover{
+  color: rgba(186,100,255,1); 
+  cursor: pointer; 
+  text-decoration: none;
+  text-shadow: 0.1rem;
+}
 .cover-icon-link:focus {
 	color: rgba(186,100,255,1);
 	text-decoration:none; 
 	cursor: pointer; 
 }
 
-
 .cover-image {
-  width: 18.8%;
+  padding: 2%;
+  width: 22.8%;
 }
 
 .nav-link {
@@ -119,6 +152,13 @@ body {
 
 .navbar{
   opacity: 0.8;
+  border-radius: 2rem;
+
+  margin:1rem;
+
+  border-style:solid;
+  border-width: 0.1rem;
+  border-color:#aaa;
 }
 
 .nav-link .fancy {
@@ -161,7 +201,9 @@ h2{
   padding-left: 5%;
   padding-right: 5%;
 
-	background-color: rgba(150,150,150,0.9);
+	background-color: rgba(150,150,150,1);
+
+  border-radius: 2rem;
 	width: 90%;
   }
 
@@ -209,7 +251,8 @@ h2{
   box-shadow: 1rem 1rem 1rem rgba(50,50,50,1);
   
   border-style: none;
-  /*border-radius: 1rem;*/
+  border-radius: 2rem;
+
   border-color: rgba(50,50,50,1);
   
   background-color: rgba(215,215,215,1);
@@ -220,12 +263,12 @@ h2{
 	  background-color: rgba(235,235,235,1);
 }
 
-.portfolioTooltipImage{
+.cardImage{
   width: 100%; 
   height: auto; 
   display: block;
 }
-.portfolioTooltipDescriptionImage{
+.cardDescriptionImage{
   width: 80%; 
   margin:auto;
   display: block;
@@ -238,16 +281,21 @@ h2{
 
 .modal-content  {
   border-radius: 0;
-   margin-top: 20%;
-   background-color: rgba(150,150,150,1);
-   box-shadow: none;
-   border-style: none;
+  margin-top: 20%;
+  background-color: rgba(150,150,150,1);
+  box-shadow: none;
+  border-style: none;
+  border-radius: 2rem;
 }
 
 .modal-footer{
 	text-align: justify;
 }
 
+.modal-open {
+  /*avoid modal stucking background*/
+  overflow: visible; 
+}
 
 .icon {
   height: 100px;

@@ -16,7 +16,7 @@ var view = (function($, undefined){
 						  "July", "August", "September", "October", "November", "December"];
 
 		var rightsElement = $("#rightsText");
-		rightsElement.text("Samuel Gomes Web Page @ " + monthNames[m] + " of " + y +".");
+		rightsElement.append("Samuel Gomes Web Page @ " + monthNames[m] + " of " + y +". <br> Unless stated otherwise in the works themselves, the rights are reserved to me as well as the other authors of the work presented here.");
 
 		$("#footer_contacts").hide();
 	};
@@ -58,10 +58,26 @@ var view = (function($, undefined){
 
 	documentObj.ready(function(){ //after page load
 
-		$(window).on("scroll", function() {
-			var currentScroll = documentObj.scrollTop();  
-			$("#codeBackgroundDarkEffects").css("transform","translateY("+ -currentScroll +"px)");
-		});
+		var codeBackgroundDarkEffects = $("#codeBackgroundDarkEffects");
+		codeBackgroundDarkEffects.css("transform","translateY(0px)");
+
+
+		//make background effect move a little in sin way
+		var backgroundEffectFunc = function(){
+			var frameRatioIncrement = 0.016;
+			var currI = 0;
+			window.setInterval(function(){ 
+				var currEffectsOffset = parseFloat(codeBackgroundDarkEffects.css('transform').split(/[(,)]/)[6]);
+				var currentScroll = parseFloat(documentObj.scrollTop());  
+
+				//do linear interpolation for animations using translations
+				currI = (currI>2*Math.PI)? currI=frameRatioIncrement : currI+=frameRatioIncrement;
+				var ratio = Math.sin(currI)*0.2;
+				var newOffset = ratio*window.screen.height;
+
+				codeBackgroundDarkEffects.css("transform","translateY("+ parseFloat(-currentScroll+newOffset) +"px)");
+			}, 41);
+		}();
 
 		var EXPANDED_FOOTER=false;
 
@@ -77,13 +93,16 @@ var view = (function($, undefined){
 			}
 		});
 
-		$('a').click(function(){ //animate anchor change
-			activeAnchor = $(this).attr('data-anchorPoint');
-			if(activeAnchor == null){
-				return;
-			}
-		});
-
+		var cards = $(".card");
+		for(var i=0; i < cards.length; i++){
+			var currCard = $(cards[i]);
+			var currImage = currCard.find(".card-image")[0];
+			
+			//get predominant image color
+			var imageColor = (new Vibrant(currImage)).VibrantSwatch;
+			//lighten image color by giving transparency
+			currCard.css("background-color", imageColor.getHex()+"33");
+		}
 
 		$("#expandFooterTrigger").click(function(){
 			var expandDuration = 500;

@@ -3,8 +3,8 @@
  * Base structure
  */
 
-html,
-body {
+ html,
+ body {
 
   top: 0; 
   left: 0; 
@@ -35,9 +35,11 @@ body {
 .background-effect{
   background-image: url("resources/images/codeBackgroundDarkEffects.png");
   background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
 
-  top: 0;
+  top: 12%;
   left: 0; 
   width: 100%; 
   height: 100%; 
@@ -63,12 +65,12 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /*glyphicon fix*/
 .glyphicon {
-    position: static;
+  position: static;
 }
 
 
@@ -76,11 +78,11 @@ body {
  * Header
  */
 
-.masthead {
-	background-color:  rgba(0,0,0,.8);
+ .masthead {
+   background-color:  rgba(0,0,0,.8);
  }
 
-.masthead-brand {
+ .masthead-brand {
   width:  10%;
   height: 10%;
 }
@@ -106,6 +108,13 @@ body {
 .cover-image {
   padding: 2%;
   width: 22.8%;
+}
+
+.nav-img {
+  width: 12rem;
+  height: 3rem;
+  float: left;
+  margin: 0;
 }
 
 .nav-link {
@@ -151,15 +160,19 @@ body {
 }
 
 .navbar{
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 2rem;
 
   margin:1rem;
+  padding:1rem;
 
-  border-style:solid;
-  border-width: 0.1rem;
+  background-size: cover;
+  background-color: transparent;
+
+  border-style:none;
+/*  border-width: 0.1rem;
   border-color:#aaa;
-}
+*/}
 
 .nav-link .fancy {
   border-style:solid;
@@ -195,48 +208,45 @@ h2{
  */
 
  .jumbotron{
-  margin-left: auto;
-  margin-right: auto;
+   margin-left: auto;
+   margin-right: auto;
 
-  padding-left: 5%;
-  padding-right: 5%;
+   padding-left: 5%;
+   padding-right: 5%;
 
-	background-color: rgba(150,150,150,1);
+   background-color: rgba(150,150,150,1);
 
-  border-radius: 2rem;
-	width: 90%;
-  }
+   background-image: url("resources/images/jumbotronSkin.png");
+   background-size: 100%;
+
+   border-radius: 2rem;
+   width: 90%;
+ }
 
  .jumbotron  h1{ 
-	color: rgba(20,20,20,1);
+   color: rgba(20,20,20,1);
  }
  .jumbotron  h2{
-	color: rgba(20,20,20,1);
+   color: rgba(20,20,20,1);
  }
  .jumbotron  h3{
-	color: rgba(20,20,20,1);
+   color: rgba(20,20,20,1);
  }
- 
  .jumbotron-heading{
-	padding-bottom: 3.5rem;
+   padding-bottom: 3.5rem;
  }
  
  
-.jumbotron p{
-	font-size: 1.2rem; 
-	color: #777;
-	text-align: left;
-}
-.pBlack{
+ .p-black{
   font-size: 1.2rem; 
   color: rgba(20,20,20,1);
- }
+}
 
-.pCitation{
+.p-citation{
   font-size: 1.4rem; 
   color: rgba(20,20,100,1);
- }
- 
+}
+
 .cover {
   font-weight: normal;
   font-size: 1.875em; 
@@ -245,6 +255,8 @@ h2{
 
 
 .card {
+  display:block;
+
   margin-left: 5%;
   margin-bottom: 5%;
   padding: 5%;
@@ -255,20 +267,34 @@ h2{
 
   border-color: rgba(50,50,50,1);
   
-  background-color: rgba(215,215,215,1);
+  background-image: url("resources/images/cardSkin.png");
+  background-size: 100% 100%;
+
+  float: right;
+
+  width:100%;
+  height:100%;
   
 }
+ .jumbotron  p.card-title{
+   font-size: 1.4rem; 
+   color: rgba(50,50,50,1);
+   text-align: left;
+ }
 
-.card:hover {
-	  background-color: rgba(235,235,235,1);
+
+.card:hover{
+ transform: scale(1.05);
+ background-color: rgba(235,235,235,1);
+ background-image: url("resources/images/cardSkinHover.png");
 }
 
-.cardImage{
+.card-image{
   width: 100%; 
   height: auto; 
   display: block;
 }
-.cardDescriptionImage{
+.card-description-image{
   width: 80%; 
   margin:auto;
   display: block;

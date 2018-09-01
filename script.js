@@ -100,8 +100,11 @@ var view = (function($, undefined){
 			
 			//get predominant image color
 			var imageColor = (new Vibrant(currImage)).VibrantSwatch;
-			//lighten image color by giving transparency
-			currCard.css("background-color", imageColor.getHex()+"33");
+			//checking if color could be found in the palette
+			if(imageColor!=undefined){
+				//lighten image color by giving transparency
+				currCard.css("background-color", imageColor.getHex()+"33");
+			}
 		}
 
 		$("#expandFooterTrigger").click(function(){

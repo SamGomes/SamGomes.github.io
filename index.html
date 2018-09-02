@@ -1,113 +1,102 @@
 <!DOCTYPE html>
 <!-- This page was created by me, Samuel Gomes. The additional used libraries include bootstrap and jQuery.-->
 <html lang="en">
-	
-
-	<!-- Header -->
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8;">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<link rel="icon" href="resources/images/pageIcon.png">
-		<!-- <link rel="icon" src=""> -->
 
 
-		<title>S. Gomes Web Page</title>
+<!-- Header -->
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8;">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="resources/images/pageIcon.png">
+	<!-- <link rel="icon" src=""> -->
 
-		<!-- CSS Imports-->
-		<link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet">
-		<link href="resources/fontAwesome/css/font-awesome.css" rel="stylesheet">
-		<link href="cover.css" rel="stylesheet">
 
-		<!-- <script src="resources/w3.js"></script> -->
+	<title>S. Gomes Web Page</title>
 
-		<audio id="my_audio" src="./resources/audio.wav" loop="loop"></audio>
-	</head>
+	<!-- CSS Imports-->
+	<link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/fontAwesome/css/font-awesome.css" rel="stylesheet">
+	<link href="cover.css" rel="stylesheet">
 
-	<body>	
+	<!-- <script src="resources/w3.js"></script> -->
 
-		<!-- background -->
-		<div class="background" id="codeBackground"></div>
-		<div class="parallaxContainer" id="mainParallaxContainer">
-			<!-- background effects -->
-			<div class="background-effect" id="codeBackgroundDarkEffects"></div>
-		</div>
-		
-		<!-- FrontPage-->
-		<div class="site-wrapper" id="anchor_frontPage">
-			<div class="site-wrapper-inner">
-				<div class="navbar navbar-inverse navbar-fixed-top" style="background-image: url('resources/images/topNavbarSkin.png');">
-					<img class="nav-img" src="resources/images/artisticSignature.png"></img>
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavbar">
-						<span class=" fa fa-bars"></span>
-					</button>
-					<div class="navbar-collapse collapse" id="topNavbar">
-						<div class="inner">
-							<nav class="nav navbar-nav nav-masthead">
-								<a class="nav-link" href="#anchor_frontPage">Home</a><!-- 
-								<a class="nav-link" href="#anchor_biography">Biography</a> -->
-								<a class="nav-link" href="#anchor_portfolio">Portfolio</a>
-								<a class="nav-link" href="#anchor_researchProjects">Research_Projects</a>
-								<a class="nav-link" href="#anchor_publications">Publications</a>
+	<audio id="my_audio" src="./resources/audio.wav" loop="loop"></audio>
+</head>
 
-								<a class="nav-link fancy" href="./files/cv.pdf" target="_blank" download">Get_my_CV</a>
-								<!-- <a class="nav-link fancy" href="./outsideAcademiaPage/outsideAcademia.html">Outside_Academia</a> -->
-							</nav>
-						</div>
-					</div>
-				</div>
+<body>	
 
-				<div class="cover-container container">
-					<img  class="cover-image" src="resources/images/Sam.png"></img>
-					<h2 class="cover-container-text">"I always wanted to be a professional computer engineer. <br> As a reseacher, I have the oportunity to use my knowledge to create new things!"</h2>
-					<h3 class="cover-container-text" style="color:rgba(255,100,0,1)" id="scrollDownText">Scroll down to see the rest</h3>
-					<a class="cover-container-text cover-icon-link fa fa-angle-double-down" id="coverDownArrow" href="#anchor_portfolio"></a></h1>
-				</div>
-			</div>
+	<!-- background -->
+	<div class="background" id="codeBackground"></div>
+	<div class="parallaxContainer" id="mainParallaxContainer">
+		<!-- background effects -->
+		<div class="background-effect" id="codeBackgroundDarkEffects"></div>
+	</div>
+
+	<!-- FrontPage-->
+	<div class="cover" id="anchor_frontPage">
+		<div class="navbar fixed-top navbar-expand-md" style="background-image: url(&apos;resources/images/topNavbarSkin.png&apos;);">
+			<img class="nav-img" src="resources/images/artisticSignature.png">
+			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#topNavbar">	<span class=" fa fa-bars"></span>
+			</button>
+			<div class="navbar-collapse collapse float-right" id="topNavbar">
+				<nav class="nav navbar-nav nav-masthead">	
+					<a class="nav-link" href="#anchor_frontPage">Home</a>
+                	<!-- <a class="nav-link" href="#anchor_biography">Biography</a> -->	
+                	<a class="nav-link" href="#anchor_portfolio">Portfolio</a>
+                	<a class="nav-link" href="#anchor_researchProjects">Research_Projects</a>
+                	<a class="nav-link" href="#anchor_publications">Publications</a>
+                	<a class="nav-link nav-link-fancy" href="./files/cv.pdf" target="_blank">Get_my_CV</a>
+        		</nav>
+    		</div>
 		</div>
 
+	    <div class="cover-container">
+	    	<img  class="cover-image" src="resources/images/Sam.png"></img>
+	    	<h2 class="cover-container-text">"I always wanted to be a professional computer engineer. <br> As a reseacher, I have the oportunity to use my knowledge to create new things!"</h2>
+	    	<h3 class="cover-container-text" style="color:rgba(255,100,0,1)" id="scrollDownText">Scroll down to see the rest</h3>
+	    	<a class="cover-container-text cover-icon-link fa fa-angle-double-down" id="coverDownArrow" href="#anchor_portfolio"></a></h1>
+	    </div>
+	</div>
 
-		<!-- Contact-->
-		<footer class="navbar navbar-inverse navbar-fixed-bottom clearfix" id="footer" style="background-image: url('resources/images/bottomNavbarSkin.png');">
-			<div id="anchor:contact">
-				<div class="row text-center">
-					<div class="col-sm-12">
-						<a class="nav-link" id="expandFooterTrigger">Contacts</a>
-					</div>
-					<div class="col-sm-12" id="footer_contacts">
-						<div class="col-sm-3">
-							<h3><span class="nav-link glyphicon glyphicon-earphone"></span></h3>
-							<p class="nav-text">+351 912190467</p>
-						</div>
-						
-						<div class="col-sm-3">
-							<h3><a href="https://github.com/SamGomes" class="nav-link fa fa-github" target="_blank"></a></h3>
-							<p class="nav-text">github.com/SamGomes</p>
-						</div>
-						
-						<div class="col-sm-3">
-							<h3><span class="nav-link glyphicon glyphicon-envelope"></span></h3>
-							<p class="nav-text">sam.s.gomes25@gmail.com</p>
-						</div>
 
-						<div class="col-sm-3">
-							<h3><a href="https://www.linkedin.com/in/sam-s-gomes/" class="nav-link fa fa-linkedin" target="_blank"></a></h3>
-							<p class="nav-text">linkedin.com/in/sam-s-gomes/</p>
-						</div>
-					</div>
-				</div>	
+	<!-- Contact-->
+	<footer class="navbar fixed-bottom navbar-expand-md" id="footer" style="background-image: url('resources/images/bottomNavbarSkin.png');">
+		<div class="row">
+			<a class="nav-link" id="expandFooterTrigger" href="#">Contacts</a>
+		</div>
+		<div class="row" id="footerContacts">
+			<div class="col">
+				<h3><span class="nav-link fa fa-phone"></span></h3>
+				<p class="nav-text">+351 912190467</p>
 			</div>
-		</footer>
 
-				
-		<!-- Portfolio-->	
-		<div id="anchor_portfolio">	
+			<div class="col">
+				<h3><a href="https://github.com/SamGomes" class="nav-link fa fa-github" target="_blank"></a></h3>
+				<p class="nav-text">github.com/SamGomes</p>
+			</div>
 
-			<!-- Popup -->
-			<div class="modal fade" id="portfolioPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
+			<div class="col">
+				<h3><span class="nav-link fa fa-envelope"></span></h3>
+				<p class="nav-text">sam.s.gomes25@gmail.com</p>
+			</div>
+
+			<div class="col">
+				<h3><a href="https://www.linkedin.com/in/sam-s-gomes/" class="nav-link fa fa-linkedin" target="_blank"></a></h3>
+				<p class="nav-text">linkedin.com/in/sam-s-gomes/</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Portfolio-->	
+	<div id="anchor_portfolio">	
+
+		<!-- Popup -->
+		<div class="modal fade" id="portfolioPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -124,171 +113,171 @@
 						<a id="portfolioPopup_sourceLink" target="_blank"></a>
 					</div>
 				</div>
-			  </div>
 			</div>
-			
-			
-			<section class="jumbotron text-center ">
-				<div class=" jumbotron-heading">
-					<h1>My Portfolio</h1>
-					<h3 class="lead text-muted">Here I include some of the work I have participated over the years as a programmer.</h3>
-				</div>
-
-				<div class="container">
-					
-					<div class="row">
-						<div class="col-md-4">
-							<div class="card">
-								<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title1","resources/videos/CGJ.mp4","portfolio_desc1","portfolio_source1") alt="escapeThePyramid" src="resources/images/portfolio/escapeThePyramid.png" >
-								<p class="card-title" id="portfolio_title1">Escape-the-Pyramid</p>
-								<div class="hidden" id="portfolio_desc1">
-									<p>A game developed as a computer graphics project with implementation of multiple techniques such as cell shading,  normal mapping,  multiple light sources,  model importing / picking  and snapshots saving.</p>
-								</div>
-								<p class="hidden" id="portfolio_source1">https://github.com/SamGomes/Escape-the-Pyramid---CGJ</p>
-							</div>
-						</div>	
-						
-						<div class="col-md-4">
-							<div class="card">
-								<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title2","","portfolio_desc2","portfolio_source2") alt="cloudPrime" src="resources/images/portfolio/cloudPrime.png">
-								<p class="card-title" id="portfolio_title2">CloudPrime</p>
-								<div class="hidden" id="portfolio_desc2">
-									<p>A project for the "Cloud Computing and Virtualization" course. It consisted in a service to execute prime number factorizations. It automatically scaled AWS servers so that a response could always be provided. The objective was to manage the servers load.</p>
-								</div>
-								<p class="hidden" id="portfolio_source2">https://github.com/SamGomes/CloudPrime</p>
-							</div>
-						</div>	
-						
-						<div class="col-md-4">
-							<div class="card">
-								<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title3","","portfolio_desc3","portfolio_source3") alt="matSatSolver" src="resources/images/portfolio/MAXSAT.png">
-								<p class="card-title" id="portfolio_title3">Max-sat Solver</p>
-								<div class="hidden" id="portfolio_desc3">
-									<p>A solver for the maximum satisfaction problem in the context of the "Parallel and Distributed Computation" course. It implements dynamic parallel load balancing (using openMP) and static distributed load balancing (using MPI).</p>
-								</div>
-								<p class="hidden" id="portfolio_source3">https://github.com/SamGomes/MaxSat-Solver</p>
-							</div>		
-						</div>
-
-					</div>	
-					<div class="row">
-					
-						<div class="col-md-4">
-							<div class="card">
-								<img   class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title4","","portfolio_desc4","portfolio_source4")  alt="goal Bounding on nav mesh" src="resources/images/portfolio/goalBoundNavMesh.png">
-								<p class="card-title" id="portfolio_title4">Goal-Bounding-on-NavMesh</p>
-								<div class="hidden" id="portfolio_desc4">
-									<p>Use of the Goal Bounding algorithm created by Steve Rabin in a Navigation Mesh. Work done for the course "Artificial Inteligence for Games".</p>
-								</div>
-								<p class="hidden" id="portfolio_source4">https://github.com/SamGomes/Goal-Bounding-on-NavMesh</p>
-							</div>
-						</div>	
-						
-						<div class="col-md-4">
-							<div class="card">
-								<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title5","resources/videos/P3DRayTracer.mp4","portfolio_desc5","portfolio_source5")  alt="rayTracer" src="resources/images/portfolio/rayTracer.png">
-								<p class="card-title" id="portfolio_title5">P3D Ray Tracer</p>
-								<div class="hidden" id="portfolio_desc5">
-									<p>A ray tracer developed for the "3D Programming" course. It implements techniques such as nff models import, anti-aliasing, soft shadows, depth of field and acceleration by using an uniform grid.</p>
-								</div>
-								<p class="hidden" id="portfolio_source5">https://github.com/SamGomes/P3DStuff</p>
-							</div>
-						</div>	
-						
-						<div class="col-md-4">
-							<div class="card">
-								<img   class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title6","resources/videos/doom^2.mp4","portfolio_desc6","portfolio_source6")   alt="doom^2" src="resources/images/portfolio/Doom^2.png">
-								<p class="card-title" id="portfolio_title6">Doom^2</p>
-								<div class="hidden" id="portfolio_desc6">
-									<p>A game developed in Unity 3D for the "3D Programming" course. It implements techniques such as ambient occlusion and Motion Blur.</p>
-								</div>
-								<p class="hidden" id="portfolio_source6">https://github.com/SamGomes/P3DStuff</p>
-							</div>
-						</div>	
-
-					</div>	
-					<div class="row">
-
-						<div class="col-md-4">
-							<div class="card">
-								<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title7","resources/videos/VI.mp4","portfolio_desc7","portfolio_source7")  alt="metacriticDash" src="resources/images/portfolio/metacriticDash.png">
-								<p class="card-title" id="portfolio_title7">Metacritic-Dashboard</p>
-								<div class="hidden" id="portfolio_desc7">
-									<p>This work consists in a dashboard regarding information of the Metacritic website. Work done for the "Information Vizualization" course.</p>
-								</div>
-								<p class="hidden" id="portfolio_source7">https://github.com/SamGomes/Metacritic-DashBoard</p>
-							</div>
-						</div>	
-					
-						<div class="col-md-4">
-							<div class="card">
-								<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title8","","portfolio_desc8","portfolio_source8") alt="REFIND" src="resources/images/portfolio/HackForGood/2017/refind.png">
-								<p class="card-title" id="portfolio_title8">REFIND</p>
-								<div class="hidden" id="portfolio_desc8">
-									<div>
-										<img class="card-description-image" src="resources/images/portfolio/HackForGood/hackForGoodLogo.png">
-										<p class="card-description-image">Figure 1: Hack For Good logo.</p>
-									</div>
-									<hr>
-									<p>Project developed during the 2nd Edition of Hack for Good hackathon. Refind is a job platform, where companies can post jobs specifically for refugees, with the objective to bypass prejudice from certain employers.</p>
-								</div>
-								<p class="hidden" id="portfolio_source8">https://github.com/SamGomes/hack-for-good-2017</p>
-							</div>
-						</div>	
-							
-						<div class="col-md-4">
-							<div class="card">
-								<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title9","","portfolio_desc9","portfolio_source9") alt="CrossAnt" src="resources/images/portfolio/GGJ/2018/crossAntLogo.png">
-								<p class="card-title" id="portfolio_title9">Cross Ant</p>
-								<div class="hidden" id="portfolio_desc9">
-									<div>
-										<img class="card-description-image" src="resources/images/portfolio/GGJ/GGJLogo.png">
-										<p class="card-description-image">Figure 1: GGJ logo.</p>
-									</div>
-									<hr>
-									<p> Imagine you are an ant and you want to maintain the colony stable. To achieve your objective you have to serve the 👑 Queen Ant 👑 any type of food she likes. In order to get some food you got to use 4 colored buttons to press the letters of the requested food in an evergoing and challenge increasing rolling letter soup. </p>
-
-									<p> The game was developed at Global Game Jam '18. The main theme to follow was transmission. Our game associates to such theme, as it is based on the communication (transmission) of a message between a Helper Ant and the Queen Ant. A screenshot of the game is provided bellow.</p>
-									<hr>
-									<div>
-										<img  class="card-description-image" src="resources/images/portfolio/GGJ/2018/crossAntScreenshot.png">
-										<p  class="card-description-image">Figure 2: Screenshot of Cross Ant.</p>
-									</div>
-								</div>
-								<p class="hidden" id="portfolio_source9">https://github.com/SamGomes/crossAnt</p>
-							</div>
-						</div>	
-					
-					</div>	
-					<div class="row">
-
-						<div class="col-md-4">
-							<div class="card">
-								<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title10","","portfolio_desc10","portfolio_source10") alt="HashCode2018" src="resources/images/portfolio/HashCode/HashCodeLogo.png">
-								<p class="card-title" id="portfolio_title10">Hash Code 2018: Self-driving rides</p>
-								<div class="hidden" id="portfolio_desc10">
-									<div>
-										<img class="card-description-image" src="resources/images/portfolio/HashCode/HashCodeLogo.png">
-										<p class="card-description-image" >Figure 1: Hash Code logo. </p>
-									</div>
-									<hr>
-									<p> My team's solution for the Hash Code 2018 competition on 1st March is provided in the source link. </p>
-								</div>
-								<p class="hidden" id="portfolio_source10">https://github.com/SamGomes/HashCode2018</p>
-							</div>	
-						</div>	
-
-					</div>	
-				</div>
-			</section>
 		</div>
-			
-		<!-- Research Projects-->
-		<div id="anchor_researchProjects">
 
-			<!-- Popup -->
-			<div class="modal fade" id="researchProjectPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
+
+		<section class="jumbotron text-center ">
+			<div class=" jumbotron-heading">
+				<h1>My Portfolio</h1>
+				<h2>Here I include some of the work I have participated over the years as a programmer.</h2>
+			</div>
+
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card">
+							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title1","resources/videos/CGJ.mp4","portfolio_desc1","portfolio_source1") alt="escapeThePyramid" src="resources/images/portfolio/escapeThePyramid.png" >
+							<p class="card-title" id="portfolio_title1">Escape-the-Pyramid</p>
+							<div class="d-none" id="portfolio_desc1">
+								<p>A game developed as a computer graphics project with implementation of multiple techniques such as cell shading,  normal mapping,  multiple light sources,  model importing / picking  and snapshots saving.</p>
+							</div>
+							<p class="d-none" id="portfolio_source1">https://github.com/SamGomes/Escape-the-Pyramid---CGJ</p>
+						</div>
+					</div>	
+
+					<div class="col-md-4">
+						<div class="card">
+							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title2","","portfolio_desc2","portfolio_source2") alt="cloudPrime" src="resources/images/portfolio/cloudPrime.png">
+							<p class="card-title" id="portfolio_title2">CloudPrime</p>
+							<div class="d-none" id="portfolio_desc2">
+								<p>A project for the "Cloud Computing and Virtualization" course. It consisted in a service to execute prime number factorizations. It automatically scaled AWS servers so that a response could always be provided. The objective was to manage the servers load.</p>
+							</div>
+							<p class="d-none" id="portfolio_source2">https://github.com/SamGomes/CloudPrime</p>
+						</div>
+					</div>	
+
+					<div class="col-md-4">
+						<div class="card">
+							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title3","","portfolio_desc3","portfolio_source3") alt="matSatSolver" src="resources/images/portfolio/MAXSAT.png">
+							<p class="card-title" id="portfolio_title3">Max-sat Solver</p>
+							<div class="d-none" id="portfolio_desc3">
+								<p>A solver for the maximum satisfaction problem in the context of the "Parallel and Distributed Computation" course. It implements dynamic parallel load balancing (using openMP) and static distributed load balancing (using MPI).</p>
+							</div>
+							<p class="d-none" id="portfolio_source3">https://github.com/SamGomes/MaxSat-Solver</p>
+						</div>		
+					</div>
+
+				</div>	
+				<div class="row">
+
+					<div class="col-md-4">
+						<div class="card">
+							<img   class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title4","","portfolio_desc4","portfolio_source4")  alt="goal Bounding on nav mesh" src="resources/images/portfolio/goalBoundNavMesh.png">
+							<p class="card-title" id="portfolio_title4">Goal-Bounding-on-NavMesh</p>
+							<div class="d-none" id="portfolio_desc4">
+								<p>Use of the Goal Bounding algorithm created by Steve Rabin in a Navigation Mesh. Work done for the course "Artificial Inteligence for Games".</p>
+							</div>
+							<p class="d-none" id="portfolio_source4">https://github.com/SamGomes/Goal-Bounding-on-NavMesh</p>
+						</div>
+					</div>	
+
+					<div class="col-md-4">
+						<div class="card">
+							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title5","resources/videos/P3DRayTracer.mp4","portfolio_desc5","portfolio_source5")  alt="rayTracer" src="resources/images/portfolio/rayTracer.png">
+							<p class="card-title" id="portfolio_title5">P3D Ray Tracer</p>
+							<div class="d-none" id="portfolio_desc5">
+								<p>A ray tracer developed for the "3D Programming" course. It implements techniques such as nff models import, anti-aliasing, soft shadows, depth of field and acceleration by using an uniform grid.</p>
+							</div>
+							<p class="d-none" id="portfolio_source5">https://github.com/SamGomes/P3DStuff</p>
+						</div>
+					</div>	
+
+					<div class="col-md-4">
+						<div class="card">
+							<img   class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title6","resources/videos/doom^2.mp4","portfolio_desc6","portfolio_source6")   alt="doom^2" src="resources/images/portfolio/Doom^2.png">
+							<p class="card-title" id="portfolio_title6">Doom^2</p>
+							<div class="d-none" id="portfolio_desc6">
+								<p>A game developed in Unity 3D for the "3D Programming" course. It implements techniques such as ambient occlusion and Motion Blur.</p>
+							</div>
+							<p class="d-none" id="portfolio_source6">https://github.com/SamGomes/P3DStuff</p>
+						</div>
+					</div>	
+
+				</div>	
+				<div class="row">
+
+					<div class="col-md-4">
+						<div class="card">
+							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title7","resources/videos/VI.mp4","portfolio_desc7","portfolio_source7")  alt="metacriticDash" src="resources/images/portfolio/metacriticDash.png">
+							<p class="card-title" id="portfolio_title7">Metacritic-Dashboard</p>
+							<div class="d-none" id="portfolio_desc7">
+								<p>This work consists in a dashboard regarding information of the Metacritic website. Work done for the "Information Vizualization" course.</p>
+							</div>
+							<p class="d-none" id="portfolio_source7">https://github.com/SamGomes/Metacritic-DashBoard</p>
+						</div>
+					</div>	
+
+					<div class="col-md-4">
+						<div class="card">
+							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title8","","portfolio_desc8","portfolio_source8") alt="REFIND" src="resources/images/portfolio/HackForGood/2017/refind.png">
+							<p class="card-title" id="portfolio_title8">REFIND</p>
+							<div class="d-none" id="portfolio_desc8">
+								<div>
+									<img class="card-description-image" src="resources/images/portfolio/HackForGood/hackForGoodLogo.png">
+									<p class="card-description-image">Figure 1: Hack For Good logo.</p>
+								</div>
+								<hr>
+								<p>Project developed during the 2nd Edition of Hack for Good hackathon. Refind is a job platform, where companies can post jobs specifically for refugees, with the objective to bypass prejudice from certain employers.</p>
+							</div>
+							<p class="d-none" id="portfolio_source8">https://github.com/SamGomes/hack-for-good-2017</p>
+						</div>
+					</div>	
+
+					<div class="col-md-4">
+						<div class="card">
+							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title9","","portfolio_desc9","portfolio_source9") alt="CrossAnt" src="resources/images/portfolio/GGJ/2018/crossAntLogo.png">
+							<p class="card-title" id="portfolio_title9">Cross Ant</p>
+							<div class="d-none" id="portfolio_desc9">
+								<div>
+									<img class="card-description-image" src="resources/images/portfolio/GGJ/GGJLogo.png">
+									<p class="card-description-image">Figure 1: GGJ logo.</p>
+								</div>
+								<hr>
+								<p> Imagine you are an ant and you want to maintain the colony stable. To achieve your objective you have to serve the 👑 Queen Ant 👑 any type of food she likes. In order to get some food you got to use 4 colored buttons to press the letters of the requested food in an evergoing and challenge increasing rolling letter soup. </p>
+
+								<p> The game was developed at Global Game Jam '18. The main theme to follow was transmission. Our game associates to such theme, as it is based on the communication (transmission) of a message between a Helper Ant and the Queen Ant. A screenshot of the game is provided bellow.</p>
+								<hr>
+								<div>
+									<img  class="card-description-image" src="resources/images/portfolio/GGJ/2018/crossAntScreenshot.png">
+									<p  class="card-description-image">Figure 2: Screenshot of Cross Ant.</p>
+								</div>
+							</div>
+							<p class="d-none" id="portfolio_source9">https://github.com/SamGomes/crossAnt</p>
+						</div>
+					</div>	
+
+				</div>	
+				<div class="row">
+
+					<div class="col-md-4">
+						<div class="card">
+							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title10","","portfolio_desc10","portfolio_source10") alt="HashCode2018" src="resources/images/portfolio/HashCode/HashCodeLogo.png">
+							<p class="card-title" id="portfolio_title10">Hash Code 2018: Self-driving rides</p>
+							<div class="d-none" id="portfolio_desc10">
+								<div>
+									<img class="card-description-image" src="resources/images/portfolio/HashCode/HashCodeLogo.png">
+									<p class="card-description-image" >Figure 1: Hash Code logo. </p>
+								</div>
+								<hr>
+								<p> My team's solution for the Hash Code 2018 competition on 1st March is provided in the source link. </p>
+							</div>
+							<p class="d-none" id="portfolio_source10">https://github.com/SamGomes/HashCode2018</p>
+						</div>	
+					</div>	
+
+				</div>	
+			</div>
+		</section>
+	</div>
+
+	<!-- Research Projects-->
+	<div id="anchor_researchProjects">
+
+		<!-- Popup -->
+		<div class="modal fade" id="researchProjectPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -298,84 +287,83 @@
 						<div id="researchProjectPopup_description"></div>
 					</div>
 				</div>
-			  </div>
+			</div>
+		</div>
+
+		<section class="jumbotron text-center">
+			<div class=" jumbotron-heading">
+				<h1>Research Projects</h1>
+				<h2>Here I include the research projects in which I have participated </h2> <!--or am still part of.</h3> -->
 			</div>
 
-			<section class="jumbotron text-center">
-				<div class=" jumbotron-heading">
-					<h1>Research Projects</h1>
-					<h3 class="lead text-muted">Here I include the research projects in which I have participated </h3> <!--or am still part of.</h3> -->
-
-					<div class="container">
-
-						<div class="row">
-							<!-- <h3>Project Participations</h3> -->
-							<div class="col-md-4">
-								<div class="card">
-									<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showResearchProjectPopup("researchProjects_title1","researchProjects_desc1") alt="LAW-TRAIN logo" src="resources/images/researchProjects/lawTrainLogo.png">
-									<p class="card-title" id="researchProjects_title1">LAW-TRAIN</p>
-									<div class="hidden" id="researchProjects_desc1">
-										<p>Participation for 7 months as a developer and researcher.</p>
-									</div>
-								</div>
-							</div>	
-							<div class="col-md-4">
-								<div class="card">		
-									<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showResearchProjectPopup("researchProjects_title2","researchProjects_desc2") alt="AMIGOS logo" src="resources/images/researchProjects/amigosLogo.png">
-									<p class="card-title" id="researchProjects_title2">AMIGOS</p>
-									<div class="hidden" id="researchProjects_desc2">
-										<p>Currently Participating as a developer and researcher. Started working on this project in May of 2018.</p>
-									</div>
-
-								</div>
-							</div>	
+			<div class="container">
+				<div class="row">
+					<!-- <h3>Project Participations</h3> -->
+					<div class="col-md-4">
+						<div class="card">
+							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showResearchProjectPopup("researchProjects_title1","researchProjects_desc1") alt="LAW-TRAIN logo" src="resources/images/researchProjects/lawTrainLogo.png">
+							<p class="card-title" id="researchProjects_title1">LAW-TRAIN</p>
+							<div class="d-none" id="researchProjects_desc1">
+								<p>Participation for 7 months as a developer and researcher.</p>
+							</div>
 						</div>
+					</div>	
+					<div class="col-md-4">
+						<div class="card">		
+							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showResearchProjectPopup("researchProjects_title2","researchProjects_desc2") alt="AMIGOS logo" src="resources/images/researchProjects/amigosLogo.png">
+							<p class="card-title" id="researchProjects_title2">AMIGOS</p>
+							<div class="d-none" id="researchProjects_desc2">
+								<p>Currently Participating as a developer and researcher. Started working on this project in May of 2018.</p>
+							</div>
 
-					</div>
+						</div>
+					</div>	
 				</div>
-			</section>
-		</div>	
+			</div>	
+		</section>
+	</div>	
 
-		<!-- Publications-->
-		<div id="anchor_publications">
-			<section class="jumbotron text-center ">
-				<div class=" jumbotron-heading">
-					<h1>My Publications</h1>
-					<h3 class="lead text-muted">Here I include my publications related to academic studies and conferences.</h3>
+	<!-- Publications-->
+	<div id="anchor_publications">
+		<section class="jumbotron text-center ">
+			<div class=" jumbotron-heading">
+				<h1>My Publications</h1>
+				<h2>Here I include my publications related to academic studies and conferences.</h2>
 
-					<div class="row textRow">
-						<a class="p-citation" href="https://link.springer.com/chapter/10.1007/978-3-319-65340-2_10" target="_blank">  Gomes S., Dias J., Martinho C. (2017) Iterative Parallel Sampling RRT for Racing Car Simulation. In: Oliveira E., Gama J., Vale Z., Lopes Cardoso H. (eds) Progress in Artificial Intelligence. EPIA 2017. Lecture Notes in Computer Science, vol 10423. Springer, Cham.</a>
-					</div>
-					<div class="row textRow">
-						<a class="p-citation" href="https://fenix.tecnico.ulisboa.pt/cursos/meic-t/dissertacao/1972678479053541" target="_blank">  Gomes S., Dias J., Martinho C. Application and Design of GPU Parallel RRT for Racing Car Simulation. Case Study of Iterative Parallel Sampling RRT applied to The Open Racing Car Simulator. Masters thesis, Instituto Superior Técnico, 2017.</a>
-					</div>
+			</div>
 
-				</div>
-			</section>
-		</div>
+			<div class="row text-row">
+				<a class="p-citation" href="https://link.springer.com/chapter/10.1007/978-3-319-65340-2_10" target="_blank">  Gomes S., Dias J., Martinho C. (2017) Iterative Parallel Sampling RRT for Racing Car Simulation. In: Oliveira E., Gama J., Vale Z., Lopes Cardoso H. (eds) Progress in Artificial Intelligence. EPIA 2017. Lecture Notes in Computer Science, vol 10423. Springer, Cham.</a>
+			</div>
+			<div class="row text-row">
+				<a class="p-citation" href="https://fenix.tecnico.ulisboa.pt/cursos/meic-t/dissertacao/1972678479053541" target="_blank">  Gomes S., Dias J., Martinho C. Application and Design of GPU Parallel RRT for Racing Car Simulation. Case Study of Iterative Parallel Sampling RRT applied to The Open Racing Car Simulator. Masters thesis, Instituto Superior Técnico, 2017.</a>
+			</div>
 
-
-		<!-- Rights-->
-		<div id="rights">
-			<section class="jumbotron text-center ">
-				<div class=" jumbotron-heading">
-					<div id="rightsText" class="p-black"></div>
-				</div>
-			</section>
-		</div>
-
-		<!-- give some padding to the page -->
-		<div style="padding: 5%;"></div>
-
-		<!-- Bootstrap core JavaScript
-		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="resources/jquery-3.1.0.js"></script>  
-		<script src="resources/vibrant/Vibrant.min.js"></script>  
-		<script src="resources/bootstrap/js/bootstrap.min.js"></script>
-		<script src="script.js"></script>
+		</section>
+	</div>
 
 
+	<!-- Rights-->
+	<div id="rights">
+		<section class="jumbotron text-center ">
+			<div class=" jumbotron-heading">
+				<h3 id="rightsText"></h3>
+			</div>
+		</section>
+	</div>
 
-	</body>
+	<!-- give some padding to the page -->
+	<div style="padding: 5%;"></div>
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="resources/jquery-3.1.0.js"></script>  
+	<script src="resources/vibrant/Vibrant.min.js"></script>  
+	<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+
+
+
+</body>
 </html>

@@ -18,7 +18,7 @@ var view = (function($, undefined){
 		var rightsElement = $("#rightsText");
 		rightsElement.append("Samuel Gomes Web Page @ " + monthNames[m] + " of " + y +". <br> Unless stated otherwise in the works themselves, the rights are reserved to me as well as the other authors of the work presented here.");
 
-		$("#footer_contacts").hide();
+		$("#footerContacts").hide();
 	};
 
 	var showResearchProjectPopup = function(title,desc)
@@ -111,9 +111,9 @@ var view = (function($, undefined){
 			var expandDuration = 500;
 
 			if(!EXPANDED_FOOTER){
-				$("#footer_contacts").show(expandDuration);
+				$("#footerContacts").show(expandDuration);
 			}else{
-				$("#footer_contacts").hide(expandDuration);
+				$("#footerContacts").hide(expandDuration);
 			}
 			EXPANDED_FOOTER=!EXPANDED_FOOTER;
 		});

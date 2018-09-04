@@ -265,17 +265,16 @@ h2{
 * Poppups
 */
 
-.modal-content  {
-  border-radius: 0;
-  margin-top: 20%;
+.modal-content,  .modal-footer{
   background-color: rgba(150,150,150,1);
   box-shadow: none;
-  border-style: none;
-  border-radius: 2rem;
+  display: block;
+  text-align: left;
+  border-radius: 1.5em;
 }
 
 .modal-footer{
-	text-align: justify;
+  border-radius: 0 0 1.5em 1.5em;
 }
 
 .modal-open {

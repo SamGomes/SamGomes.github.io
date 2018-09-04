@@ -43,10 +43,12 @@ var view = (function($, undefined){
 	   var popupVideo = $("#portfolioPopup_video");
 	   var popupVideoTitle = $("#portfolioPopup_videoTitle");
 	   if(videoPath==""){
+	   	   //to avoid source not found error just load one of them
+	   	   videoPath = "resources/videos/P3DRayTracer.mp4";
 		   popupVideoTitle.text("No Demo Video Available for this work. Sorry :(");
-		   popupVideo.addClass("hidden");
+		   popupVideo.hide();
 	   }else{
-		   popupVideo.removeClass("hidden");
+		   popupVideo.show();
 		   popupVideoTitle.text("Demo Video:");
 	   }
 	   popupVideo.attr('src', videoPath);

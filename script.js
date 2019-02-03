@@ -21,49 +21,129 @@ var view = (function($, undefined){
 		$("#footerContacts").hide();
 	};
 
-	var showResearchProjectPopup = function(title,desc)
-	{
-		$("#researchProjectPopup .modal-title").text($("#"+title).text());
-		$("#researchProjectPopup_description").empty();
-		$("#researchProjectPopup_description").append($("#"+desc).children().clone());
 
-		$("#researchProjectPopup").modal();
-	};
-	exportedData.showResearchProjectPopup = showResearchProjectPopup;
-
-	var showPortfolioPopup = function(title,videoPath,desc,sourceLink)
+	var showPopup = function(title,videoPath,desc,sourceLink)
 	{
 		
-	   $("#portfolioPopup .modal-title").text($("#"+title).text());
-	   $("#portfolioPopup_description").empty();
-	   $("#portfolioPopup_description").append($("#"+desc).children().clone());
-	   $("#portfolioPopup_sourceLink").text($("#"+sourceLink).text());
-	   $("#portfolioPopup_sourceLink").attr("href",$("#"+sourceLink).text());
-	   
-	   var popupVideo = $("#portfolioPopup_video");
-	   var popupVideoTitle = $("#portfolioPopup_videoTitle");
-	   if(videoPath==""){
-	   	   //to avoid source not found error just load one of them
-	   	   videoPath = "resources/videos/P3DRayTracer.mp4";
-		   popupVideoTitle.text("No Demo Video Available for this work. Sorry :(");
-		   popupVideo.hide();
-	   }else{
-		   popupVideo.show();
-		   popupVideoTitle.text("Demo Video:");
-	   }
-	   popupVideo.attr('src', videoPath);
-	   
-	   $("#portfolioPopup").modal();
+		var poppup = $(`
+			<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title"></h4>
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						</div>
+						<div class="modal-body">
+						</div>
+					</div>
+				</div>
+			</div>
+		`);
+
+		if(title!=""){
+			poppup.find(" .modal-title").text($("#"+title).text());
+		}
+
+		if(videoPath!=""){
+			poppup.find(" .modal-body").append(`
+					<h3 style="text-align:left">Demo Video:</h3>
+					<video id="popup_video" style="height: 100%; width: 100%;" controls="controls" src="`+videoPath+`"></video>
+			`);
+		}
+
+		if(desc!=""){
+			poppup.find(" .modal-body").append(`
+					<h3 style="text-align:left">Description:</h3>
+					<div>`+$("#"+desc).html()+`</div>
+			`);
+		}
+		if(sourceLink!=""){
+			var sourceLinkText = $("#"+sourceLink).text();
+			poppup.find(" .modal-body").append(`
+					<h3 style="text-align:left">Source Link:</h3>
+					<a target="_blank" href="`+sourceLinkText+`">`+sourceLinkText+`</a>
+			`);
+		}
+
+		poppup.modal();
 	};
-	exportedData.showPortfolioPopup = showPortfolioPopup;
+	exportedData.showPopup = showPopup;
 
 
 	documentObj.ready(function(){ //after page load
 
+
+		//retrieve data from db server
+		$.getJSON( "portfolioData.json", function( data ) {
+			var currRow = $("<div class=\"row\"></div>");
+			var id = 0;
+			$("#portfolioContainer").append(currRow);
+			$.each( data, function( key, val ) {
+				var logoPath = val.logoPath;
+				if(logoPath==""){
+					logoPath = "resources/images/portfolio/placeholder.png";
+				}
+				var portfolioHTML = `
+						<div class="col-md-4">
+							<div class="card">
+								<img class="card-image" data-toggle="modal"  onclick=view.showPopup("portfolio_title`+id+`","`+val.videoPath+`","portfolio_desc`+id+`","portfolio_source`+id+`") alt="cardImage" src="`+logoPath+`" >
+								<p class="card-title" id="portfolio_title`+id+`">`+val.title+`</p>
+								<div class="d-none" id="portfolio_desc`+id+`">
+									`+val.descriptionHTML+`
+								</div>
+								<p class="d-none" id="portfolio_source`+id+`">`+val.source+`</p>
+							</div>
+						</div>	
+					`;
+				currRow.append(portfolioHTML)
+				id++;
+			});
+		});
+		$.getJSON( "researchProjectsData.json", function( data ) {
+			var currRow = $("<div class=\"row\"></div>");
+			var id = 0;
+			$("#researchProjectsContainer").append(currRow);
+			$.each( data, function( key, val ) {
+				var researchTopicsHTML = `
+						<div class="col-md-4">
+							<div class="card">
+								<img class="card-image" data-toggle="modal"  onclick=view.showPopup("researchProjects_title`+id+`","","researchProjects_desc`+id+`","") alt="cardImage" src="`+val.logoPath+`">
+								<p class="card-title" id="researchProjects_title`+id+`">`+val.title+`</p>
+								<div class="d-none" id="researchProjects_desc`+id+`">
+									`+val.descriptionHTML+`
+								</div>
+							</div>
+						</div>	
+					`;
+				currRow.append(researchTopicsHTML)
+				id++;
+			});
+		});
+		$.getJSON( "publicationsData.json", function( data ) {
+			var currRow = $("<div class=\"row\"></div>");
+			var id = 0;
+			$("#publicationsContainer").append(currRow);
+			$.each( data, function( key, val ) {
+				var publicationsHTML = `
+						<div class="col-md-4">
+							<div class="card">
+								<img class="card-image" data-toggle="modal"  onclick=view.showPopup("publications_title`+id+`","","publications_desc`+id+`","") alt="cardImage" src="`+val.logoPath+`">
+								<p class="card-title" id="publications_title`+id+`">`+val.title+`</p>
+								<div class="d-none" id="publications_desc`+id+`">
+									`+val.references[0]+`
+								</div>
+							</div>
+						</div>	
+					`;
+				currRow.append(publicationsHTML)
+				id++;
+			});
+		});
+
+
+		//background stuff
 		var codeBackgroundDarkEffects = $("#codeBackgroundDarkEffects");
 		codeBackgroundDarkEffects.css("transform","translateY(0px)");
-
-
 		//make background effect move a little in sin way
 		var backgroundEffectFunc = function(){
 			var frameRatioIncrement = 0.016;

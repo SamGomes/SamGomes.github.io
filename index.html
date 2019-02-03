@@ -90,241 +90,42 @@
 		</div>
 	</footer>
 
-
-	<!-- Portfolio-->	
-	<div id="anchor_portfolio">	
-
-		<!-- Popup -->
-		<div class="modal fade" id="portfolioPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title">Video demo</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					</div>
-					<div class="modal-body">
-						<h3 style="text-align:left" id="portfolioPopup_videoTitle"></h3>
-						<video id="portfolioPopup_video" style="height: 100%; width: 100%;" controls="controls"></video>
-					</div>
-					<div class="modal-footer">
-						<h3>Description:</h3>
-						<div id="portfolioPopup_description"></div>
-						<h3>Source Link:</h3>
-						<a id="portfolioPopup_sourceLink" target="_blank"></a>
-					</div>
+	<!-- Popup -->
+	<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title"></h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				</div>
+				<div class="modal-body">
+					<h3 style="text-align:left" id="popup_videoTitle"></h3>
+					<video id="popup_video" style="height: 100%; width: 100%;" controls="controls"></video>
+				</div>
+				<div class="modal-footer">
+					<h3>Description:</h3>
+					<div id="popup_description"></div>
+					<h3>Source Link:</h3>
+					<a id="popup_sourceLink" target="_blank"></a>
 				</div>
 			</div>
 		</div>
+	</div>
 
-
+	<!-- Portfolio-->	
+	<div id="anchor_portfolio">	
 		<section class="jumbotron text-center ">
 			<div class=" jumbotron-heading">
 				<h1>My Portfolio</h1>
 				<h2>Here I include some of the work I have participated over the years as a programmer.</h2>
 			</div>
 
-			<div class="container">
-
-				<div class="row">
-					<div class="col-md-4">
-						<div class="card">
-							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title1","resources/videos/CGJ.mp4","portfolio_desc1","portfolio_source1") alt="escapeThePyramid" src="resources/images/portfolio/escapeThePyramid.png" >
-							<p class="card-title" id="portfolio_title1">Escape-the-Pyramid</p>
-							<div class="d-none" id="portfolio_desc1">
-								<p>A game developed as a computer graphics project with implementation of multiple techniques such as cell shading,  normal mapping,  multiple light sources,  model importing / picking  and snapshots saving.</p>
-							</div>
-							<p class="d-none" id="portfolio_source1">https://github.com/SamGomes/Escape-the-Pyramid---CGJ</p>
-						</div>
-					</div>	
-
-					<div class="col-md-4">
-						<div class="card">
-							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title2","","portfolio_desc2","portfolio_source2") alt="cloudPrime" src="resources/images/portfolio/cloudPrime.png">
-							<p class="card-title" id="portfolio_title2">CloudPrime</p>
-							<div class="d-none" id="portfolio_desc2">
-								<p>A project for the "Cloud Computing and Virtualization" course. It consisted in a service to execute prime number factorizations. It automatically scaled AWS servers so that a response could always be provided. The objective was to manage the servers load.</p>
-							</div>
-							<p class="d-none" id="portfolio_source2">https://github.com/SamGomes/CloudPrime</p>
-						</div>
-					</div>	
-
-					<div class="col-md-4">
-						<div class="card">
-							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title3","","portfolio_desc3","portfolio_source3") alt="matSatSolver" src="resources/images/portfolio/MAXSAT.png">
-							<p class="card-title" id="portfolio_title3">Max-sat Solver</p>
-							<div class="d-none" id="portfolio_desc3">
-								<p>A solver for the maximum satisfaction problem in the context of the "Parallel and Distributed Computation" course. It implements dynamic parallel load balancing (using openMP) and static distributed load balancing (using MPI).</p>
-							</div>
-							<p class="d-none" id="portfolio_source3">https://github.com/SamGomes/MaxSat-Solver</p>
-						</div>		
-					</div>
-
-				</div>	
-				<div class="row">
-
-					<div class="col-md-4">
-						<div class="card">
-							<img   class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showPortfolioPopup("portfolio_title4","","portfolio_desc4","portfolio_source4")  alt="goal Bounding on nav mesh" src="resources/images/portfolio/goalBoundNavMesh.png">
-							<p class="card-title" id="portfolio_title4">Goal-Bounding-on-NavMesh</p>
-							<div class="d-none" id="portfolio_desc4">
-								<p>Use of the Goal Bounding algorithm created by Steve Rabin in a Navigation Mesh. Work done for the course "Artificial Inteligence for Games".</p>
-							</div>
-							<p class="d-none" id="portfolio_source4">https://github.com/SamGomes/Goal-Bounding-on-NavMesh</p>
-						</div>
-					</div>	
-
-					<div class="col-md-4">
-						<div class="card">
-							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title5","resources/videos/P3DRayTracer.mp4","portfolio_desc5","portfolio_source5")  alt="rayTracer" src="resources/images/portfolio/rayTracer.png">
-							<p class="card-title" id="portfolio_title5">P3D Ray Tracer</p>
-							<div class="d-none" id="portfolio_desc5">
-								<p>A ray tracer developed for the "3D Programming" course. It implements techniques such as nff models import, anti-aliasing, soft shadows, depth of field and acceleration by using an uniform grid.</p>
-							</div>
-							<p class="d-none" id="portfolio_source5">https://github.com/SamGomes/P3DStuff</p>
-						</div>
-					</div>	
-
-					<div class="col-md-4">
-						<div class="card">
-							<img   class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title6","resources/videos/doom^2.mp4","portfolio_desc6","portfolio_source6")   alt="doom^2" src="resources/images/portfolio/Doom^2.png">
-							<p class="card-title" id="portfolio_title6">Doom^2</p>
-							<div class="d-none" id="portfolio_desc6">
-								<p>A game developed in Unity 3D for the "3D Programming" course. It implements techniques such as ambient occlusion and Motion Blur.</p>
-							</div>
-							<p class="d-none" id="portfolio_source6">https://github.com/SamGomes/P3DStuff</p>
-						</div>
-					</div>	
-
-				</div>	
-				<div class="row">
-
-					<div class="col-md-4">
-						<div class="card">
-							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title7","resources/videos/VI.mp4","portfolio_desc7","portfolio_source7")  alt="metacriticDash" src="resources/images/portfolio/metacriticDash.png">
-							<p class="card-title" id="portfolio_title7">Metacritic-Dashboard</p>
-							<div class="d-none" id="portfolio_desc7">
-								<p>This work consists in a dashboard regarding information of the Metacritic website. Work done for the "Information Vizualization" course.</p>
-							</div>
-							<p class="d-none" id="portfolio_source7">https://github.com/SamGomes/Metacritic-DashBoard</p>
-						</div>
-					</div>	
-
-					<div class="col-md-4">
-						<div class="card">
-							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title8","","portfolio_desc8","portfolio_source8") alt="REFIND" src="resources/images/portfolio/HackForGood/2017/refind.png">
-							<p class="card-title" id="portfolio_title8">REFIND</p>
-							<div class="d-none" id="portfolio_desc8">
-								<div>
-									<img class="card-description-image" src="resources/images/portfolio/HackForGood/hackForGoodLogo.png">
-									<p class="card-description-image">Figure 1: Hack For Good logo.</p>
-								</div>
-								<hr>
-								<p>Project developed during the 2nd Edition of Hack for Good hackathon. Refind is a job platform, where companies can post jobs specifically for refugees, with the objective to bypass prejudice from certain employers.</p>
-							</div>
-							<p class="d-none" id="portfolio_source8">https://github.com/SamGomes/hack-for-good-2017</p>
-						</div>
-					</div>	
-
-					<div class="col-md-4">
-						<div class="card">
-							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title9","","portfolio_desc9","portfolio_source9") alt="CrossAnt" src="resources/images/portfolio/GGJ/2018/crossAntLogo.png">
-							<p class="card-title" id="portfolio_title9">Cross Ant</p>
-							<div class="d-none" id="portfolio_desc9">
-								<div>
-									<img class="card-description-image" src="resources/images/portfolio/GGJ/GGJLogo.png">
-									<p class="card-description-image">Figure 1: GGJ logo.</p>
-								</div>
-								<hr>
-								<p> Imagine you are an ant and you want to maintain the colony stable. To achieve your objective you have to serve the 👑 Queen Ant 👑 any type of food she likes. In order to get some food you got to use 4 colored buttons to press the letters of the requested food in an evergoing and challenge increasing rolling letter soup. </p>
-
-								<p> The game was developed at Global Game Jam '18. The main theme to follow was transmission. Our game associates to such theme, as it is based on the communication (transmission) of a message between a Helper Ant and the Queen Ant. A screenshot of the game is provided bellow.</p>
-								<hr>
-								<div>
-									<img  class="card-description-image" src="resources/images/portfolio/GGJ/2018/crossAntScreenshot.png">
-									<p  class="card-description-image">Figure 2: Screenshot of Cross Ant.</p>
-								</div>
-							</div>
-							<p class="d-none" id="portfolio_source9">https://github.com/SamGomes/cross-ant</p>
-						</div>
-					</div>	
-
-				</div>	
-				<div class="row">
-
-					<div class="col-md-4">
-						<div class="card">
-							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title10","","portfolio_desc10","portfolio_source10") alt="HashCode2018" src="resources/images/portfolio/HashCode/HashCodeLogo.png">
-							<p class="card-title" id="portfolio_title10">Hash Code 2018: Self-driving rides</p>
-							<div class="d-none" id="portfolio_desc10">
-								<div>
-									<img class="card-description-image" src="resources/images/portfolio/HashCode/HashCodeLogo.png">
-									<p class="card-description-image" >Figure 1: Hash Code logo. </p>
-								</div>
-								<hr>
-								<p> My team's solution for the Hash Code 2018 competition on 1st March is provided in the source link. </p>
-							</div>
-							<p class="d-none" id="portfolio_source10">https://github.com/SamGomes/HashCode2018</p>
-						</div>	
-					</div>	
-
-					<div class="col-md-4">
-						<div class="card">
-							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title11","","portfolio_desc11","portfolio_source11") alt="ForTheRecord" src="resources/images/portfolio/ForTheRecord.png">
-							<p class="card-title" id="portfolio_title11">For The Record</p>
-							<div class="d-none" id="portfolio_desc11">
-								<p> For the record is a game where a team forms a band in order to produce the most amount of successful records. The game was developed in the scope of the Amigos research project. </p>
-							</div>
-							<p class="d-none" id="portfolio_source11">https://github.com/SamGomes/for-the-record</p>
-						</div>	
-					</div>	
-
-					<div class="col-md-4">
-						<div class="card">
-							<img  class="cover-icon-link card-image" data-toggle="modal" onclick=view.showPortfolioPopup("portfolio_title12","","portfolio_desc12","portfolio_source12") alt="MyFreakingNeighbour" src="resources/images/portfolio/GGJ/2019/logo.png">
-							<p class="card-title" id="portfolio_title12">My Freaking Neighbour!</p>
-							<div class="d-none" id="portfolio_desc12">
-								<div>
-									<img class="card-description-image" src="resources/images/portfolio/GGJ/GGJLogo.png">
-									<p class="card-description-image">Figure 1: GGJ logo.</p>
-								</div>
-								<hr>
-								<p> My freaking neighbor is a game about two neighbours who absolutely despise each other. Reduce your opponent's reputation to zero in order to be crowned the best "worst" man in the neighbourhood! </p>
-
-								<p> The game was developed at Global Game Jam '19. The main theme to follow was "What does home mean to me?"</p>
-								<hr>
-								<div>
-									<img  class="card-description-image" src="resources/images/portfolio/GGJ/2019/screenshot.png">
-									<p  class="card-description-image">Figure 2: Screenshot of "My Freaking Neighbour!"</p>
-								</div>
-							</div>
-							<p class="d-none" id="portfolio_source12">https://github.com/SamGomes/my-freaking-neighbour</p>
-						</div>
-					</div>	
-
-				</div>
-				
-	
-			</div>
+			<div class="container" id="portfolioContainer"></div>
 		</section>
 	</div>
 
 	<!-- Research Projects-->
 	<div id="anchor_researchProjects">
-
-		<!-- Popup -->
-		<div class="modal fade" id="researchProjectPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					</div>
-					<div class="modal-body">
-						<h3>Description:</h3>
-						<div id="researchProjectPopup_description"></div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<section class="jumbotron text-center">
 			<div class=" jumbotron-heading">
@@ -332,30 +133,7 @@
 				<h2>Here I include the research projects in which I have participated </h2> <!--or am still part of.</h3> -->
 			</div>
 
-			<div class="container">
-				<div class="row">
-					<!-- <h3>Project Participations</h3> -->
-					<div class="col-md-4">
-						<div class="card">
-							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showResearchProjectPopup("researchProjects_title1","researchProjects_desc1") alt="LAW-TRAIN logo" src="resources/images/researchProjects/lawTrainLogo.png">
-							<p class="card-title" id="researchProjects_title1">LAW-TRAIN</p>
-							<div class="d-none" id="researchProjects_desc1">
-								<p>Participation for 7 months as a developer and researcher.</p>
-							</div>
-						</div>
-					</div>	
-					<div class="col-md-4">
-						<div class="card">		
-							<img class="cover-icon-link card-image" data-toggle="modal"  onclick=view.showResearchProjectPopup("researchProjects_title2","researchProjects_desc2") alt="AMIGOS logo" src="resources/images/researchProjects/amigosLogo.png">
-							<p class="card-title" id="researchProjects_title2">AMIGOS</p>
-							<div class="d-none" id="researchProjects_desc2">
-								<p>Currently Participating as a developer and researcher. Started working on this project in May of 2018.</p>
-							</div>
-
-						</div>
-					</div>	
-				</div>
-			</div>	
+			<div class="container" id="researchProjectsContainer"></div>	
 		</section>
 	</div>	
 
@@ -365,15 +143,15 @@
 			<div class=" jumbotron-heading">
 				<h1>My Publications</h1>
 				<h2>Here I include my publications related to academic studies and conferences.</h2>
-
 			</div>
 
-			<div class="row text-row">
+			<div class="container" id="publicationsContainer"></div>	
+			<!-- <div class="row text-row">
 				<a class="p-citation" href="https://link.springer.com/chapter/10.1007/978-3-319-65340-2_10" target="_blank">  Gomes S., Dias J., Martinho C. (2017) Iterative Parallel Sampling RRT for Racing Car Simulation. In: Oliveira E., Gama J., Vale Z., Lopes Cardoso H. (eds) Progress in Artificial Intelligence. EPIA 2017. Lecture Notes in Computer Science, vol 10423. Springer, Cham.</a>
 			</div>
 			<div class="row text-row">
 				<a class="p-citation" href="https://fenix.tecnico.ulisboa.pt/cursos/meic-t/dissertacao/1972678479053541" target="_blank">  Gomes S., Dias J., Martinho C. Application and Design of GPU Parallel RRT for Racing Car Simulation. Case Study of Iterative Parallel Sampling RRT applied to The Open Racing Car Simulator. Masters thesis, Instituto Superior Técnico, 2017.</a>
-			</div>
+			</div> -->
 
 		</section>
 	</div>
@@ -398,7 +176,6 @@
 	<script src="resources/vibrant/Vibrant.min.js"></script>  
 	<script src="resources/bootstrap/js/bootstrap.min.js"></script>
 	<script src="script.js"></script>
-
 
 
 </body>

@@ -1,0 +1,132 @@
+[
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Escape-the-Pyramid",
+    "logoPath": "resources/images/portfolio/escapeThePyramid.png",
+    "videoPath": "resources/videos/CGJ.mp4",
+    "descriptionHTML": "<p>A game developed as a computer graphics project with implementation of multiple techniques such as cell shading,  normal mapping,  multiple light sources,  model importing / picking  and snapshots saving.</p>",
+    "source": "https://github.com/SamGomes/Escape-the-Pyramid---CGJ"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "CloudPrime",
+    "logoPath": "resources/images/portfolio/cloudPrime.png",
+    "videoPath": "",
+    "descriptionHTML": "<p>A project for the \"Cloud Computing and Virtualization\" course. It consisted in a service to execute prime number factorizations. It automatically scaled AWS servers so that a response could always be provided. The objective was to manage the servers load.</p>",
+    "source": "https://github.com/SamGomes/CloudPrime"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Max-sat Solver",
+    "logoPath": "resources/images/portfolio/MAXSAT.png",
+    "videoPath": "",
+    "descriptionHTML": "<p>A solver for the maximum satisfaction problem in the context of the \"Parallel and Distributed Computation\" course. It implements dynamic parallel load balancing (using openMP) and static distributed load balancing (using MPI).</p>",
+    "source": "https://github.com/SamGomes/MaxSat-Solver"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Goal-Bounding-on-NavMesh",
+    "logoPath": "resources/images/portfolio/goalBoundNavMesh.png",
+    "videoPath": "",
+    "descriptionHTML": "<p>Use of the Goal Bounding algorithm created by Steve Rabin in a Navigation Mesh. Work done for the course \"Artificial Inteligence for Games\".</p>",
+    "source": "https://github.com/SamGomes/Goal-Bounding-on-NavMesh"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "P3D Ray Tracer",
+    "logoPath": "resources/images/portfolio/rayTracer.png",
+    "videoPath": "resources/videos/P3DRayTracer.mp4",
+    "descriptionHTML": "<p>A ray tracer developed for the \"3D Programming\" course. It implements techniques such as nff models import, anti-aliasing, soft shadows, depth of field and acceleration by using an uniform grid.</p>",
+    "source": "https://github.com/SamGomes/P3DStuff"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Doom^2",
+    "logoPath": "resources/images/portfolio/Doom^2.png",
+    "videoPath": "resources/videos/doom^2.mp4",
+    "descriptionHTML": "<p>A game developed in Unity 3D for the \"3D Programming\" course. It implements techniques such as ambient occlusion and Motion Blur.</p>",
+    "source": "https://github.com/SamGomes/P3DStuff"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Metacritic-Dashboard",
+    "logoPath": "resources/images/portfolio/metacriticDash.png",
+    "videoPath": "resources/videos/VI.mp4",
+    "descriptionHTML": "<p>This work consists in a dashboard regarding information of the Metacritic website. Work done for the \"Information Vizualization\" course.</p>",
+    "source": "https://github.com/SamGomes/Metacritic-DashBoard"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "REFIND",
+    "logoPath": "resources/images/portfolio/HackForGood/2017/refind.png",
+    "videoPath": "",
+    "descriptionHTML": "<div><img class=\"card-description-image\" src=\"resources/images/portfolio/HackForGood/hackForGoodLogo.png\"><p class=\"card-description-image\">Figure 1: Hack For Good logo.</p></div><hr><p>Project developed during the 2nd Edition of Hack for Good hackathon. Refind is a job platform, where companies can post jobs specifically for refugees, with the objective to bypass prejudice from certain employers.</p>",
+    "source": "https://github.com/SamGomes/hack-for-good-2017"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Cross Ant",
+    "logoPath": "resources/images/portfolio/GGJ/2018/crossAntLogo.png",
+    "videoPath": "",
+    "descriptionHTML": "<div><img class=\"card-description-image\" src=\"resources/images/portfolio/GGJ/GGJLogo.png\"><p class=\"card-description-image\">Figure 1: GGJ logo.</p></div><hr><p> Imagine you are an ant and you want to maintain the colony stable. To achieve your objective you have to serve the 👑 Queen Ant 👑 any type of food she likes. In order to get some food you got to use 4 colored buttons to press the letters of the requested food in an evergoing and challenge increasing rolling letter soup. </p><p> The game was developed at Global Game Jam '18. The main theme to follow was transmission. Our game associates to such theme, as it is based on the communication (transmission) of a message between a Helper Ant and the Queen Ant. A screenshot of the game is provided bellow.</p><hr><div><img  class=\"card-description-image\" src=\"resources/images/portfolio/GGJ/2018/crossAntScreenshot.png\"><p  class=\"card-description-image\">Figure 2: Screenshot of Cross Ant.</p></div>",
+    "source": "https://github.com/SamGomes/cross-ant"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Hash Code 2018: Self-driving rides",
+    "logoPath": "resources/images/portfolio/HashCode/HashCodeLogo.png",
+    "videoPath": "",
+    "descriptionHTML": "<div><img class=\"card-description-image\" src=\"resources/images/portfolio/HashCode/HashCodeLogo.png\"><p class=\"card-description-image\" >Figure 1: Hash Code logo. </p></div><hr><p> My team's solution for the Hash Code 2018 competition on 1st March is provided in the source link. </p>",
+    "source": "https://github.com/SamGomes/HashCode2018"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "For The Record",
+    "logoPath": "resources/images/portfolio/ForTheRecord.png",
+    "videoPath": "",
+    "descriptionHTML": "<p>For the record is a game where a team forms a band in order to produce the most amount of successful records. The game was developed in the scope of the Amigos research project.</p>",
+    "source": "https://github.com/SamGomes/for-the-record"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "My Freaking Neighbour!",
+    "logoPath": "resources/images/portfolio/GGJ/2019/logo.png",
+    "videoPath": "",
+    "descriptionHTML": "<div><img class=\"card-description-image\" src=\"resources/images/portfolio/GGJ/GGJLogo.png\"><p class=\"card-description-image\">Figure 1: GGJ logo.</p></div><hr><p> My freaking neighbor is a game about two neighbours who absolutely despise each other. Reduce your opponent's reputation to zero in order to be crowned the best \"worst\" man in the neighbourhood! </p><p> The game was developed at Global Game Jam '19. The main theme to follow was \"What does home mean to me?\"</p><hr><div><img  class=\"card-description-image\" src=\"resources/images/portfolio/GGJ/2019/screenshot.png\"><p  class=\"card-description-image\">Figure 2: Screenshot of \"My Freaking Neighbour!\"</p></div>",
+    "source": "https://github.com/SamGomes/my-freaking-neighbour"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Test",
+    "logoPath": "",
+    "videoPath": "resources/videos/CGJ.mp4",
+    "descriptionHTML": "<p>A game developed as a computer graphics project with implementation of multiple techniques such as cell shading,  normal mapping,  multiple light sources,  model importing / picking  and snapshots saving.</p>",
+    "source": "https://github.com/SamGomes/Escape-the-Pyramid---CGJ"
+  }
+]

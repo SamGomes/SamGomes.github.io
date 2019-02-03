@@ -1,0 +1,29 @@
+[
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "IST",
+    "logoPath": "resources/images/publications/istLogo.png",
+    "references": [
+      {
+        "text" : "Gomes S., Dias J., Martinho C. Application and Design of GPU Parallel RRT for Racing Car Simulation. Case Study of Iterative Parallel Sampling RRT applied to The Open Racing Car Simulator. Masters thesis, Instituto Superior Técnico, 2017.",
+        "href" : "https://fenix.tecnico.ulisboa.pt/cursos/meic-t/dissertacao/1972678479053541"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "EPIA",
+    "logoPath": "resources/images/publications/epiaLogo.png",
+    "references": [
+      {
+        "text" : "Gomes S., Dias J., Martinho C. (2017) Iterative Parallel Sampling RRT for Racing Car Simulation. In: Oliveira E., Gama J., Vale Z., Lopes Cardoso H. (eds) Progress in Artificial Intelligence. EPIA 2017. Lecture Notes in Computer Science, vol 10423. Springer, Cham.",
+        "href" : "https://link.springer.com/chapter/10.1007/978-3-319-65340-2_10"
+      }
+    ]
+  }
+  
+]

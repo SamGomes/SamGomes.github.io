@@ -22,12 +22,43 @@ var view = (function($, undefined){
 	};
 
 
-	var showPopup = function(title,videoPath,desc,sourceLink)
+	var createCards = function(container,dataPath)
+	{
+		$.getJSON( dataPath, function( data ) {
+			var currRow = $("<div class=\"row\"></div>");
+			var id = 0;
+			container.append(currRow);
+			$.each( data, function( key, val ) {
+				var logoPath = val.logoPath;
+				if(logoPath==undefined){
+					logoPath = "resources/images/portfolio/placeholder.png";
+				}
+				var HTMLString = `
+						<div class="col-md-4">
+							<div class="card">
+								<img class="card-image" data-toggle="modal" alt="cardImage" src="`+logoPath+`">
+								<p class="card-title" id="portfolio_title`+id+`">`+val.title+`</p>
+							</div>
+						</div>	
+					`;
+
+				var domElem = $(HTMLString);
+				domElem.find(".card-image").on("click",function(){
+					console.log("clicked");
+					view.createPopup(val.title,val.videoPath,val.descriptionHTML,val.references);
+				});
+				currRow.append(domElem);
+				id++;
+			});
+		});
+	};
+
+	var createPopup = function(title,videoPath,desc,references)
 	{
 		
 		var poppup = $(`
 			<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
+				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h4 class="modal-title"></h4>
@@ -40,106 +71,49 @@ var view = (function($, undefined){
 			</div>
 		`);
 
-		if(title!=""){
-			poppup.find(" .modal-title").text($("#"+title).text());
+		if(title!=undefined){
+			poppup.find(" .modal-title").text(title);
 		}
 
-		if(videoPath!=""){
+		if(videoPath!=undefined){
 			poppup.find(" .modal-body").append(`
+					<hr></hr>
 					<h3 style="text-align:left">Demo Video:</h3>
 					<video id="popup_video" style="height: 100%; width: 100%;" controls="controls" src="`+videoPath+`"></video>
 			`);
 		}
 
-		if(desc!=""){
+		if(desc!=undefined){
 			poppup.find(" .modal-body").append(`
+					<hr></hr>
 					<h3 style="text-align:left">Description:</h3>
-					<div>`+$("#"+desc).html()+`</div>
+					<div>`+desc+`</div>
 			`);
 		}
-		if(sourceLink!=""){
-			var sourceLinkText = $("#"+sourceLink).text();
-			poppup.find(" .modal-body").append(`
-					<h3 style="text-align:left">Source Link:</h3>
-					<a target="_blank" href="`+sourceLinkText+`">`+sourceLinkText+`</a>
-			`);
+		if(references!=undefined){
+			for(var i=0; i<references.length; i++){
+				poppup.find(" .modal-body").append(`
+					<hr></hr>
+					<h3 style="text-align:left">References:</h3>
+					<a target="_blank" href="`+references[i].href+`">`+references[i].text+`</a>
+				`);
+			}
 		}
 
 		poppup.modal();
 	};
-	exportedData.showPopup = showPopup;
+	exportedData.createPopup = createPopup;
 
 
 	documentObj.ready(function(){ //after page load
 
 
-		//retrieve data from db server
-		$.getJSON( "portfolioData.json", function( data ) {
-			var currRow = $("<div class=\"row\"></div>");
-			var id = 0;
-			$("#portfolioContainer").append(currRow);
-			$.each( data, function( key, val ) {
-				var logoPath = val.logoPath;
-				if(logoPath==""){
-					logoPath = "resources/images/portfolio/placeholder.png";
-				}
-				var portfolioHTML = `
-						<div class="col-md-4">
-							<div class="card">
-								<img class="card-image" data-toggle="modal"  onclick=view.showPopup("portfolio_title`+id+`","`+val.videoPath+`","portfolio_desc`+id+`","portfolio_source`+id+`") alt="cardImage" src="`+logoPath+`" >
-								<p class="card-title" id="portfolio_title`+id+`">`+val.title+`</p>
-								<div class="d-none" id="portfolio_desc`+id+`">
-									`+val.descriptionHTML+`
-								</div>
-								<p class="d-none" id="portfolio_source`+id+`">`+val.source+`</p>
-							</div>
-						</div>	
-					`;
-				currRow.append(portfolioHTML)
-				id++;
-			});
-		});
-		$.getJSON( "researchProjectsData.json", function( data ) {
-			var currRow = $("<div class=\"row\"></div>");
-			var id = 0;
-			$("#researchProjectsContainer").append(currRow);
-			$.each( data, function( key, val ) {
-				var researchTopicsHTML = `
-						<div class="col-md-4">
-							<div class="card">
-								<img class="card-image" data-toggle="modal"  onclick=view.showPopup("researchProjects_title`+id+`","","researchProjects_desc`+id+`","") alt="cardImage" src="`+val.logoPath+`">
-								<p class="card-title" id="researchProjects_title`+id+`">`+val.title+`</p>
-								<div class="d-none" id="researchProjects_desc`+id+`">
-									`+val.descriptionHTML+`
-								</div>
-							</div>
-						</div>	
-					`;
-				currRow.append(researchTopicsHTML)
-				id++;
-			});
-		});
-		$.getJSON( "publicationsData.json", function( data ) {
-			var currRow = $("<div class=\"row\"></div>");
-			var id = 0;
-			$("#publicationsContainer").append(currRow);
-			$.each( data, function( key, val ) {
-				var publicationsHTML = `
-						<div class="col-md-4">
-							<div class="card">
-								<img class="card-image" data-toggle="modal"  onclick=view.showPopup("publications_title`+id+`","","publications_desc`+id+`","") alt="cardImage" src="`+val.logoPath+`">
-								<p class="card-title" id="publications_title`+id+`">`+val.title+`</p>
-								<div class="d-none" id="publications_desc`+id+`">
-									`+val.references[0]+`
-								</div>
-							</div>
-						</div>	
-					`;
-				currRow.append(publicationsHTML)
-				id++;
-			});
-		});
+		//retrieve data from db server and create cards
+		createCards($("#portfolioContainer"),"portfolioData.json");
+		createCards($("#researchProjectsContainer"),"researchProjectsData.json");
+		createCards($("#publicationsContainer"),"publicationsData.json");
 
+		
 
 		//background stuff
 		var codeBackgroundDarkEffects = $("#codeBackgroundDarkEffects");

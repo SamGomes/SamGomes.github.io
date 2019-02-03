@@ -279,7 +279,8 @@ h2{
 
 .modal-open {
   /*avoid modal stucking background*/
-  overflow: visible; 
+  overflow: visible;
+  /*position: fixed; */
 }
 
 .icon {

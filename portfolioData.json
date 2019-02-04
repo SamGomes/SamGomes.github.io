@@ -170,5 +170,19 @@
         "href": "https://github.com/SamGomes/my-freaking-neighbour"
       }
     ]
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "RL Solutions",
+    "logoPath": "resources/images/portfolio/RL.png",
+    "descriptionHTML": "<div><p>Several practical problems were solved while attending the \"Reinforcement Learning\" couse. My solutions are also included here. </p></div>",
+    "references":[
+      { 
+        "text": "GitHub Source Link",
+        "href": "https://github.com/SamGomes/rl-solutions"
+      }
+    ]
   }
 ]

@@ -183,43 +183,61 @@ h2{
  * Middle
  */
 
- .jumbotron{
-   margin-left: auto;
-   margin-right: auto;
+  .jumbotron{
+     margin-left: auto;
+     margin-right: auto;
 
-   padding-left: 5%;
-   padding-right: 5%;
+     padding-left: 5%;
+     padding-right: 5%;
 
-   background-color: rgba(150,150,150,1);
+     background-color: rgba(150,150,150,1);
 
-   background-image: url("resources/images/jumbotronSkin.png");
-   background-size: 100%;
+     background-image: url("resources/images/jumbotronSkin.png");
+     background-size: 100%;
 
-   border-radius: 2em;
-   width: 90%;
- }
+     border-radius: 2em;
+     width: 90%;
+  }
 
- .jumbotron  h1{
-   font-size: 4em;  
-   color: rgba(20,20,20,1);
- }
- .jumbotron  h2{
-   font-size: 1.3em; 
-   color: rgba(20,20,20,1);
- }
- .jumbotron  h3{
-   font-size: 1em; 
-   color: rgba(20,20,20,1);
- }
- .jumbotron-heading{
-   padding-bottom: 3.5em;
- }
+  .jumbotron  h1{
+     font-size: 4em;  
+     color: rgba(20,20,20,1);
+  }
+  .jumbotron  h2{
+     font-size: 1.3em; 
+     color: rgba(20,20,20,1);
+  }
+  .jumbotron  h3{
+     font-size: 1em; 
+     color: rgba(20,20,20,1);
+  }
+  .jumbotron-heading{
+    padding-bottom: 3.5em; 
+  }
 
- .p-citation{
+  .p-citation{
     font-size: 1em; 
     color: rgba(20,20,100,1);
   }
 
+  .container{
+    max-height: 20%;
+  }
+  .container-link {
+    font-weight: normal;
+    color: black;
+    background-color: transparent;
+    border-bottom-color:transparent;
+   /* padding-right: 1em;
+    font-style: normal;
+    font-size: 1em; */
+    text-decoration: none;
+    margin: auto;
+  }
+  .container-link:hover{
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+  }
 
 .card {
   padding: 5%;

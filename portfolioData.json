@@ -170,19 +170,5 @@
         "href": "https://github.com/SamGomes/my-freaking-neighbour"
       }
     ]
-  },
-  {
-    "_id": {
-      "$oid": "5c376cb51f6e4f1a959e342c"
-    },
-    "title": "Test",
-    "videoPath": "resources/videos/CGJ.mp4",
-    "descriptionHTML": "<p>A game developed as a computer graphics project with implementation of multiple techniques such as cell shading,  normal mapping,  multiple light sources,  model importing / picking  and snapshots saving.</p>",
-    "references":[
-      { 
-        "text": "GitHub Source Link",
-        "href": "https://github.com/SamGomes/Escape-the-Pyramid---CGJ"
-      }
-    ]
   }
 ]

@@ -226,10 +226,12 @@ h2{
   margin: 2.5%;
   box-shadow: 1em 1em 1em rgba(50,50,50,1);
 
-  border-style: none;
-  border-radius: 1em;
+  border-style: outset;
+  border-radius: 3em;
+  border-width: thick;
 
-  border-color: rgba(50,50,50,1);
+  border-color: white;
+  background-color: white;
 
   background-image: url("resources/images/cardSkin.png");
   background-size: 100% 100%;

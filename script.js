@@ -21,6 +21,14 @@ var view = (function($, undefined){
 		$("#footerContacts").hide();
 	};
 
+	var lightColor = function(amount,originalColor){
+		var newColor = [];
+		for(var i=0; i<originalColor.length; i++){
+			currentComponent = (1 - amount)*originalColor[i] + amount*255;
+			newColor[i] = currentComponent; 
+		}
+		return newColor;
+	}
 
 	var createCards = function(container,dataPath)
 	{
@@ -30,9 +38,12 @@ var view = (function($, undefined){
 			container.append(currRow);
 			$.each( data, function( key, val ) {
 				var logoPath = val.logoPath;
-				if(logoPath==undefined){
+				var noLogo = (logoPath==undefined);
+				if(noLogo){
 					logoPath = "resources/images/portfolio/placeholder.png";
 				}
+
+
 				var HTMLString = `
 						<div class="col-md-4">
 							<div class="card">
@@ -43,15 +54,38 @@ var view = (function($, undefined){
 					`;
 
 				var domElem = $(HTMLString);
-				domElem.find(".card-image").on("click",function(){
-					console.log("clicked");
+				
+
+
+				currRow.append(domElem);
+
+				var domElemImages = domElem.find(".card-image");
+				var domElemImage = domElemImages[0];
+
+
+				domElemImages.on("click",function(){
 					view.createPopup(val.title,val.videoPath,val.descriptionHTML,val.references);
 				});
-				currRow.append(domElem);
+
+				if(noLogo){
+					return;
+				}
+				domElemImages.on("load",function(){
+					console.log(domElemImage)
+					//get predominant image color
+					var colorThief = new ColorThief();
+					var imageColor = colorThief.getColor(domElemImage);
+					console.log(imageColor);
+					//lighten image color by giving transparency
+					domElem.find(".card").css("border-color", "rgb("+lightColor(0.85,imageColor)+")" );
+					domElem.find(".card").css("background-color", "rgb("+lightColor(0.85,imageColor)+")" );
+				});
+
 				id++;
 			});
 		});
 	};
+
 
 	var createPopup = function(title,videoPath,desc,references)
 	{
@@ -101,6 +135,11 @@ var view = (function($, undefined){
 		}
 
 		poppup.modal();
+
+		//make it self-destruct
+		poppup.on('hide.bs.modal', function () {
+		    poppup.remove();
+		});
 	};
 	exportedData.createPopup = createPopup;
 
@@ -149,19 +188,7 @@ var view = (function($, undefined){
 			}
 		});
 
-		var cards = $(".card");
-		for(var i=0; i < cards.length; i++){
-			var currCard = $(cards[i]);
-			var currImage = currCard.find(".card-image")[0];
-			
-			//get predominant image color
-			var imageColor = (new Vibrant(currImage)).VibrantSwatch;
-			//checking if color could be found in the palette
-			if(imageColor!=undefined){
-				//lighten image color by giving transparency
-				currCard.css("background-color", imageColor.getHex()+"33");
-			}
-		}
+		
 
 		$("#expandFooterTrigger").click(function(){
 			var expandDuration = 500;

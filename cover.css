@@ -19,6 +19,13 @@
   scroll-behavior: smooth;
 }
 
+a{
+  color: #adccff;
+}
+a:hover{
+  color: #2a4e89;
+}
+
 .background{
   background-image: url("resources/images/codeBackgroundDark.png");
   background-color: #1D193C;

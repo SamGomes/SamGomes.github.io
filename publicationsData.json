@@ -14,7 +14,7 @@
   },
   {
     "_id": {
-      "$oid": "5c376cb51f6e4f1a959e342c"
+      "$oid": "5c376cb51f6e4f1a929e342d"
     },
     "title": "EPIA",
     "logoPath": "resources/images/publications/epiaLogo.png",
@@ -24,8 +24,20 @@
         "href" : "https://link.springer.com/chapter/10.1007/978-3-319-65340-2_10"
       }
     ]
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4e1a959e342e"
+    },
+    "title": "HRI",
+    "logoPath": "resources/images/publications/HRILogo.png",
+    "references": [
+      {
+        "text" : "Correia, F., Mascarenhas, S. F., Gomes, S., Arriaga, P., Leite, I., Prada, R., Melo, F. S., and Paiva, A. (2019).  Exploring prosociality in human-robot teams.",
+        "href" : "https://www.researchgate.net/profile/Filipa_Correia3/publication/330882439_Exploring_Prosociality_in_Human-Robot_Teams/links/5c59acc8299bf1d14cadbaa5/Exploring-Prosociality-in-Human-Robot-Teams.pdf"
+      }
+    ]
   }
   
-
   
 ]

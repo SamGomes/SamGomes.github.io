@@ -37,6 +37,20 @@
         "href" : "https://www.researchgate.net/profile/Filipa_Correia3/publication/330882439_Exploring_Prosociality_in_Human-Robot_Teams/links/5c59acc8299bf1d14cadbaa5/Exploring-Prosociality-in-Human-Robot-Teams.pdf"
       }
     ]
+  },
+  ,
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4e1a959e342f"
+    },
+    "title": "CoG",
+    "logoPath": "resources/images/publications/CoGLogo.png",
+    "references": [
+      {
+        "text" : "S. Gomes, J. Dias, and C. Martinho. In: IEEE Conference on Games (IEEE CoG 2019). Group Interactions Manager for Multiplayer sErious games.",
+        "href" : "http://ieee-cog.org/papers/paper_18.pdf"
+      }
+    ]
   }
   
   

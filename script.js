@@ -1,5 +1,8 @@
 var documentObj = $(document);
 
+
+
+
 var view = (function($, undefined){
 
 	var exportedData = {};

@@ -230,14 +230,9 @@ h2{
   .container{
   }
   .container-link {
-    font-weight: normal;
     color: black;
     background-color: transparent;
     border-bottom-color:transparent;
-   /* padding-right: 1em;
-    font-style: normal;
-    font-size: 1em; */
-    text-decoration: none;
     margin: auto;
   }
   .container-link:hover{

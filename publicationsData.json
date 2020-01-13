@@ -34,7 +34,20 @@
     "references": [
       {
         "text" : "Correia, F., Mascarenhas, S. F., Gomes, S., Arriaga, P., Leite, I., Prada, R., Melo, F. S., and Paiva, A. (2019).  Exploring prosociality in human-robot teams.",
-        "href" : "https://www.researchgate.net/profile/Filipa_Correia3/publication/330882439_Exploring_Prosociality_in_Human-Robot_Teams/links/5c59acc8299bf1d14cadbaa5/Exploring-Prosociality-in-Human-Robot-Teams.pdf"
+        "href" : "https://ieeexplore.ieee.org/abstract/document/8673299"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4e1a959e342e"
+    },
+    "title": "AAMAS",
+    "logoPath": "resources/images/publications/AAMASLogo.png",
+    "references": [
+      {
+        "text" : "Santos, Fernando P and Mascarenhas, Samuel F and Santos, Francisco C and Correia, Filipa and Gomes, Samuel and Paiva, Ana. Outcome-based Partner Selection in Collective Risk Dilemmas",
+        "href" : "https://dl.acm.org/doi/10.5555/3306127.3331873"
       }
     ]
   },
@@ -47,7 +60,7 @@
     "references": [
       {
         "text" : "S. Gomes, J. Dias, and C. Martinho. In: IEEE Conference on Games (IEEE CoG 2019). Group Interactions Manager for Multiplayer sErious games.",
-        "href" : "http://ieee-cog.org/papers/paper_18.pdf"
+        "href" : "https://ieeexplore.ieee.org/abstract/document/8847962"
       }
     ]
   }

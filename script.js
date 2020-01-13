@@ -41,56 +41,56 @@ var view = (function($, undefined){
 		});
 	}
 
+	var buildCards = function(currRow, val, id, logoPath){
+		var HTMLString = `
+				<div class="col-md-4">
+					<div class="card">
+						<img class="card-image" data-toggle="modal" alt="cardImage" src="`+logoPath+`">
+						<p class="card-title" id="portfolio_title`+id+`">`+val.title+`</p>
+					</div>
+				</div>	
+			`;
+
+		var domElem = $(HTMLString);
+		
+		currRow.append(domElem);
+
+		var domElemImages = domElem.find(".card-image");
+		var domElemImage = domElemImages[0];
+
+
+		domElemImages.on("click",function(){
+			view.createPopup(val.title,val.videoPath,val.descriptionHTML,val.references);
+		});
+
+		domElemImages.on("load",function(){
+			//get predominant image color
+			var colorThief = new ColorThief();
+			var imageColor = colorThief.getColor(domElemImage);
+			//lighten image color by giving transparency
+			domElem.find(".card").css("border-color", "rgb("+lightColor(0.85,imageColor)+")" );
+			domElem.find(".card").css("background-color", "rgb("+lightColor(0.85,imageColor)+")" );
+		});
+	}
+
+
 	var updateCards = function(container, data)
 	{
 		container.fadeOut(300, function() {
-	    	container.empty();
-	    	container.hide();
 			var currRow = $("<div class=\"row\"></div>");
 			var id = 0;
+			container.empty();
+			container.hide();
 			container.append(currRow);
 			$.each(data, function( key, val ) {
+				// var wait = true
 				var logoPath = val.logoPath;
-				var noLogo = (logoPath==undefined);
-				if(noLogo){
+
+				if(logoPath==undefined){
 					logoPath = "resources/images/portfolio/placeholder.png";
 				}
 
-
-				var HTMLString = `
-						<div class="col-md-4">
-							<div class="card">
-								<img class="card-image" data-toggle="modal" alt="cardImage" src="`+logoPath+`">
-								<p class="card-title" id="portfolio_title`+id+`">`+val.title+`</p>
-							</div>
-						</div>	
-					`;
-
-				var domElem = $(HTMLString);
-				
-
-
-				currRow.append(domElem);
-
-				var domElemImages = domElem.find(".card-image");
-				var domElemImage = domElemImages[0];
-
-
-				domElemImages.on("click",function(){
-					view.createPopup(val.title,val.videoPath,val.descriptionHTML,val.references);
-				});
-
-				if(noLogo){
-					return;
-				}
-				domElemImages.on("load",function(){
-					//get predominant image color
-					var colorThief = new ColorThief();
-					var imageColor = colorThief.getColor(domElemImage);
-					//lighten image color by giving transparency
-					domElem.find(".card").css("border-color", "rgb("+lightColor(0.85,imageColor)+")" );
-					domElem.find(".card").css("background-color", "rgb("+lightColor(0.85,imageColor)+")" );
-				});
+				buildCards(currRow, val, id, logoPath);				    
 				id++;
 			});
 	    	container.fadeIn(600);
@@ -173,11 +173,12 @@ var view = (function($, undefined){
 			limitIndex2 = limitIndex2 % dataLength;
 
 			var i=limitIndex1;
-			while(i!=limitIndex2){
+			while(i!=((limitIndex2+1)%dataLength)){
+				console.log(i)
+				i = (i+1) % dataLength;
+				// i = (i<0)? dataLength + i: i;
+				// i = i % dataLength;
 				currDisplayedElements.items.push(data[i]);
-				i++;
-				i = (i<0)? dataLength + i: i;
-				i = i % dataLength;
 			}
 
 			currDisplayedElements.min = limitIndex1;
@@ -197,7 +198,7 @@ var view = (function($, undefined){
 		var currDisplayedPD = {
 			items: [],
 			min: 0,
-			max: 3,
+			max: 2,
 			span: 1
 		};
 		portfolioDataExtractor.done(function() {
@@ -211,7 +212,7 @@ var view = (function($, undefined){
 		var currDisplayedRPD = {
 			items: [],
 			min: 0,
-			max: 3,
+			max: 2,
 			span: 1
 		};
 		researchProjectsDataExtractor.done(function() {
@@ -224,7 +225,7 @@ var view = (function($, undefined){
 		var currDisplayedPbD = {
 			items: [],
 			min: 0,
-			max: 3,
+			max: 2,
 			span: 1
 		};
 		publicationsDataExtractor.done(function() {

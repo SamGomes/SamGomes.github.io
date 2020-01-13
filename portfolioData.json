@@ -147,13 +147,17 @@
     "_id": {
       "$oid": "5c376cb51f6e4f1a959e342c"
     },
-    "title": "Hash Code 2018: Self-driving rides",
+    "title": "Hash Code Competitions",
     "logoPath": "resources/images/portfolio/HashCode/HashCodeLogo.png",
-    "descriptionHTML": "<div><img class=\"card-description-image\" src=\"resources/images/portfolio/HashCode/HashCodeLogo.png\"><p class=\"card-description-image\" >Figure 1: Hash Code logo. </p></div><hr><p> My team's solution for the Hash Code 2018 competition on 1st March is provided in the source link. </p>",
+    "descriptionHTML": "<div><img class=\"card-description-image\" src=\"resources/images/portfolio/HashCode/HashCodeLogo.png\"><p class=\"card-description-image\" >Figure 1: Hash Code logo. </p></div><hr><p> My team's solutions for the Hash Code competitions. </p>",
     "references":[
       { 
-        "text": "GitHub Source Link",
+        "text": "Hash Code 2018: Self-driving rides GitHub Link",
         "href": "https://github.com/SamGomes/HashCode2018"
+      },
+      { 
+        "text": "Hash Code 2019: Photo Slideshow GitHub Link",
+        "href": "https://github.com/SamGomes/hash-code-2019"
       }
     ]
   },
@@ -191,7 +195,7 @@
     },
     "title": "RL Solutions",
     "logoPath": "resources/images/portfolio/RL.png",
-    "descriptionHTML": "<div><p>Several practical problems were solved while attending the \"Reinforcement Learning\" couse. My solutions are also included here. </p></div>",
+    "descriptionHTML": "<div><p>Several practical problems were solved while attending the \"Reinforcement Learning\" course. My solutions are also included here. </p></div>",
     "references":[
       { 
         "text": "GitHub Source Link",

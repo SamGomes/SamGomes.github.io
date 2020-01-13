@@ -5,7 +5,7 @@
     },
     "title": "LAW-TRAIN",
     "logoPath": "resources/images/researchProjects/lawTrainLogo.png",
-    "descriptionHTML": "<p>Participation for 7 months as a developer and researcher.</p>"
+    "descriptionHTML": "<p>Participation in the LAW-TRAIN project as a developed and researcher(October of 2017 - April of 2018).</p>"
   },
   {
     "_id": {
@@ -13,6 +13,14 @@
     },
     "title": "AMIGOS",
     "logoPath": "resources/images/researchProjects/amigosLogo.png",
-    "descriptionHTML": "<p>Currently Participating as a developer and researcher. Started working on this project in May of 2018.</p>"
+    "descriptionHTML": "<p>Participation in the AMIGOS project as a developed and researcher (May of 2018 - December of 2019).</p>"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "GIMME",
+    "logoPath": "resources/images/researchProjects/GIMMELogo.png",
+    "descriptionHTML": "<p>Participation in the GIMME (PhD) project since January of 2020 as a developed and researcher (already accepted and granted by FCT).</p>"
   }
 ]

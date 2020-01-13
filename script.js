@@ -83,13 +83,10 @@ var view = (function($, undefined){
 			container.hide();
 			container.append(currRow);
 			$.each(data, function( key, val ) {
-				// var wait = true
 				var logoPath = val.logoPath;
-
 				if(logoPath==undefined){
 					logoPath = "resources/images/portfolio/placeholder.png";
 				}
-
 				buildCards(currRow, val, id, logoPath);				    
 				id++;
 			});
@@ -160,12 +157,15 @@ var view = (function($, undefined){
 		currDisplayedElements.items = [];
 		dataLength = data.length;
 		
-		if(currDisplayedElements.max > dataLength-1){
-			limitIndex1 = 0;
-			limitIndex2 = dataLength-1;
+	
+		console.log(currDisplayedElements.max)
+		console.log(dataLength)
+
+		if((currDisplayedElements.max-currDisplayedElements.min) > dataLength-2){
+			limitIndex1 = 0
+			limitIndex2 = dataLength-1
 			updateCards(container, data);
 		}else{
-
 			limitIndex1 = (limitIndex1<0)? dataLength + limitIndex1: limitIndex1;
 			limitIndex1 = limitIndex1 % dataLength;
 
@@ -174,7 +174,6 @@ var view = (function($, undefined){
 
 			var i=limitIndex1;
 			while(i!=((limitIndex2+1)%dataLength)){
-				console.log(i)
 				i = (i+1) % dataLength;
 				// i = (i<0)? dataLength + i: i;
 				// i = i % dataLength;

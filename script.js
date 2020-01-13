@@ -157,7 +157,6 @@ var view = (function($, undefined){
 		currDisplayedElements.items = [];
 		dataLength = data.length;
 		
-
 		if((currDisplayedElements.max-currDisplayedElements.min) > dataLength-2){
 			limitIndex1 = 0
 			limitIndex2 = dataLength-1

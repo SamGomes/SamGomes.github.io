@@ -157,9 +157,6 @@ var view = (function($, undefined){
 		currDisplayedElements.items = [];
 		dataLength = data.length;
 		
-	
-		console.log(currDisplayedElements.max)
-		console.log(dataLength)
 
 		if((currDisplayedElements.max-currDisplayedElements.min) > dataLength-2){
 			limitIndex1 = 0

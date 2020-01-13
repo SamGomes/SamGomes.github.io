@@ -1,6 +1,19 @@
 [
   {
     "_id": {
+      "$oid": "5c376cb51f6e4e1a959e342e"
+    },
+    "title": "HRI",
+    "logoPath": "resources/images/publications/HRILogo.png",
+    "references": [
+      {
+        "text" : "Correia, F., Mascarenhas, S. F., Gomes, S., Arriaga, P., Leite, I., Prada, R., Melo, F. S., and Paiva, A. (2019).  Exploring prosociality in human-robot teams.",
+        "href" : "https://ieeexplore.ieee.org/abstract/document/8673299"
+      }
+    ]
+  },
+  {
+    "_id": {
       "$oid": "5c376cb51f6e4f1a959e342c"
     },
     "title": "IST",
@@ -27,14 +40,14 @@
   },
   {
     "_id": {
-      "$oid": "5c376cb51f6e4e1a959e342e"
+      "$oid": "5c376cb51f6e4e1a959e342f"
     },
-    "title": "HRI",
-    "logoPath": "resources/images/publications/HRILogo.png",
+    "title": "CoG",
+    "logoPath": "resources/images/publications/CoGLogo.png",
     "references": [
       {
-        "text" : "Correia, F., Mascarenhas, S. F., Gomes, S., Arriaga, P., Leite, I., Prada, R., Melo, F. S., and Paiva, A. (2019).  Exploring prosociality in human-robot teams.",
-        "href" : "https://ieeexplore.ieee.org/abstract/document/8673299"
+        "text" : "S. Gomes, J. Dias, and C. Martinho. In: IEEE Conference on Games (IEEE CoG 2019). Group Interactions Manager for Multiplayer sErious games.",
+        "href" : "https://ieeexplore.ieee.org/abstract/document/8847962"
       }
     ]
   },
@@ -50,20 +63,6 @@
         "href" : "https://dl.acm.org/doi/10.5555/3306127.3331873"
       }
     ]
-  },
-  {
-    "_id": {
-      "$oid": "5c376cb51f6e4e1a959e342f"
-    },
-    "title": "CoG",
-    "logoPath": "resources/images/publications/CoGLogo.png",
-    "references": [
-      {
-        "text" : "S. Gomes, J. Dias, and C. Martinho. In: IEEE Conference on Games (IEEE CoG 2019). Group Interactions Manager for Multiplayer sErious games.",
-        "href" : "https://ieeexplore.ieee.org/abstract/document/8847962"
-      }
-    ]
   }
-  
   
 ]

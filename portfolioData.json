@@ -259,5 +259,23 @@
             }
         ]
     }
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Message Across",
+    "logoPath": "resources/images/portfolio/messageAcross.png",
+    "descriptionHTML": "<div><p> Message Across is a simple multiplayer game which focuses on word matching. In the course of the game, the players try to complete words as they advance through the levels. This game was built to be used in research. </p></div>",
+    "references":{
+      "title": "References",
+      "items":
+        [
+            { 
+              "text": "GitHub Source Link",
+              "href": "https://github.com/SamGomes/message-across"
+            }
+        ]
+    }
   }
 ]

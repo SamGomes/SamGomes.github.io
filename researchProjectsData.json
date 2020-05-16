@@ -12,7 +12,7 @@
         [
             { 
               "text" : "http://www.law-train.eu/",
-              "text" : "http://www.law-train.eu/"
+              "href" : "http://www.law-train.eu/"
             }
         ]
     }

@@ -59,12 +59,16 @@
       "references":{
         "title": "Venue Publications",
         "items":
-          [
-              { 
-          "text" : "S. Gomes, J. Dias, and C. Martinho. In: IEEE Venue on Games (IEEE CoG 2019). Group Interactions Manager for Multiplayer sErious games.",
-          "href" : "https://ieeexplore.ieee.org/abstract/document/8847962"
-        }
-      ] 
+        [
+          { 
+            "text" : "S. Gomes, J. Dias, and C. Martinho. In: IEEE Venue on Games (IEEE CoG 2019). Group Interactions Manager for Multiplayer sErious games.",
+            "href" : "https://ieeexplore.ieee.org/abstract/document/8847962"
+          },
+          { 
+            "text" : "(COG 2020) Approved, waiting for publish...",
+            "href" : ""
+          }
+        ] 
       }
     },
     {
@@ -112,7 +116,7 @@
         "items":
           [
               { 
-          "text" : "The Dark Side of Embodiment Teaming Up With Robots VS Disembodied Agents",
+          "text" : "(RSS 2020) Approved, waiting for publish...",
           "href" : ""
         }
       ] 

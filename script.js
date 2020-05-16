@@ -35,11 +35,6 @@ var view = (function($, undefined){
 
 	var extractData = function(dataPath){
 		var returnedData = []
-		console.log(dataPath)
-		console.log($.getJSON( dataPath, function(data) {
-			returnedData = data;
-			return returnedData;
-		}))
 		return $.getJSON( dataPath, function(data) {
 			returnedData = data;
 			return returnedData;

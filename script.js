@@ -35,6 +35,11 @@ var view = (function($, undefined){
 
 	var extractData = function(dataPath){
 		var returnedData = []
+		console.log(dataPath)
+		console.log($.getJSON( dataPath, function(data) {
+			returnedData = data;
+			return returnedData;
+		}))
 		return $.getJSON( dataPath, function(data) {
 			returnedData = data;
 			return returnedData;
@@ -58,9 +63,8 @@ var view = (function($, undefined){
 		var domElemImages = domElem.find(".card-image");
 		var domElemImage = domElemImages[0];
 
-
 		domElemImages.on("click",function(){
-			view.createPopup(val.title,val.videoPath,val.descriptionHTML,val.references);
+			view.createPopup(val.title,val.videoPath,val.descriptionHTML,val.references, val.website);
 		});
 
 		domElemImages.on("load",function(){
@@ -95,7 +99,7 @@ var view = (function($, undefined){
 	};
 
 
-	var createPopup = function(title,videoPath,desc,references)
+	var createPopup = function(title,videoPath,desc,references,website)
 	{
 		
 		var poppup = $(`
@@ -133,11 +137,13 @@ var view = (function($, undefined){
 			`);
 		}
 		if(references!=undefined){
-			for(var i=0; i<references.length; i++){
-				poppup.find(" .modal-body").append(`
+			poppup.find(" .modal-body")
+			.append(`<h3 style="text-align:left">`+references.title+`:</h3>`);
+			for(var i=0; i<references.items.length; i++){
+				poppup.find(" .modal-body")
+				.append(`
 					<hr></hr>
-					<h3 style="text-align:left">References:</h3>
-					<a target="_blank" href="`+references[i].href+`">`+references[i].text+`</a>
+					<a target="_blank" href="`+references.items[i].href+`">`+references.items[i].text+`</a>
 				`);
 			}
 		}
@@ -188,7 +194,7 @@ var view = (function($, undefined){
 
 	documentObj.ready(function(){ //after page load
 
-		var portfolioDataExtractor = extractData("portfolioData.json");
+		var portfolioDataExtractor = extractData("./portfolioData.json");
 		var portfolioData = [];
 		var currDisplayedPD = {
 			items: [],
@@ -202,7 +208,7 @@ var view = (function($, undefined){
 		});
 
 
-		var researchProjectsDataExtractor = extractData("researchProjectsData.json");
+		var researchProjectsDataExtractor = extractData("./researchProjectsData.json");
 		var researchProjectsData = [];
 		var currDisplayedRPD = {
 			items: [],
@@ -215,7 +221,7 @@ var view = (function($, undefined){
 			changeDisplayedCards(researchProjectsData,$("#researchProjectsContainer"),$("#researchProjects_range_display"),currDisplayedRPD,currDisplayedRPD.min, currDisplayedRPD.max);
 		});
 
-		var publicationsDataExtractor = extractData("publicationsData.json");
+		var publicationsDataExtractor = extractData("./publicationsData.json");
 		var publicationsData = [];
 		var currDisplayedPbD = {
 			items: [],

@@ -5,7 +5,17 @@
     },
     "title": "LAW-TRAIN",
     "logoPath": "resources/images/researchProjects/lawTrainLogo.png",
-    "descriptionHTML": "<p>Research assistant and developer in the LAW-TRAIN project (October of 2017 - April of 2018).</p>"
+    "descriptionHTML": "<p>Research assistant and developer in the LAW-TRAIN project (October of 2017 - April of 2018).</p>",
+    "references":{
+      "title": "Website",
+      "items":
+        [
+            { 
+              "text" : "http://www.law-train.eu/",
+              "text" : "http://www.law-train.eu/"
+            }
+        ]
+    }
   },
   {
     "_id": {
@@ -13,7 +23,17 @@
     },
     "title": "AMIGOS",
     "logoPath": "resources/images/researchProjects/amigosLogo.png",
-    "descriptionHTML": "<p>Research assistant and developer in the AMIGOS project (May of 2018 - December of 2019).</p>"
+    "descriptionHTML": "<p>Research assistant and developer in the AMIGOS project (May of 2018 - December of 2019).</p>",
+    "references":{
+      "title": "Website",
+      "items":
+        [
+            { 
+              "text" : "https://gaips.inesc-id.pt/amigos/team.html",
+              "href" : "https://gaips.inesc-id.pt/amigos/team.html"
+            }
+        ]
+    }
   },
   {
     "_id": {
@@ -21,6 +41,16 @@
     },
     "title": "GIMME",
     "logoPath": "resources/images/researchProjects/GIMMELogo.png",
-    "descriptionHTML": "<p>Researcher and developer in the GIMME (PhD) project since January of 2020 (already accepted and granted by FCT).</p>"
+    "descriptionHTML": "<p>Researcher and developer in the GIMME (PhD) project since January of 2020 (already accepted and granted by FCT).</p>",
+    "references":{
+      "title": "Website",
+      "items":
+        [
+            { 
+              "text" : "https://github.com/SamGomes/GIMME/wiki",
+              "href" : "https://github.com/SamGomes/GIMME/wiki"
+            }
+        ]
+    }
   }
 ]

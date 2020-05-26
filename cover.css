@@ -14,7 +14,8 @@
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
-  font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+  
+  font-family: "Lucida Console", Courier, monospace;
 
   scroll-behavior: smooth;
 }
@@ -27,7 +28,7 @@ a:hover{
 }
 
 .background{
-  background-image: url("resources/images/codeBackgroundDark.png");
+  background-image: url("resources/images/codeBackground.png");
   background-color: #1D193C;
   position: fixed;
 
@@ -70,6 +71,7 @@ a:hover{
 }
 .cover-container-text{
   font-size: 2vw;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 
 
@@ -240,17 +242,18 @@ h2{
     cursor: pointer;
   }
 
+
 .card {
-  padding: 5%;
+  padding: 10%;
   margin: 2.5%;
-  box-shadow: 1em 1em 1em rgba(50,50,50,1);
+  /*box-shadow: 1em 1em 1em rgba(60,60,60,1);*/
 
-  border-style: outset;
-  border-radius: 3em;
-  border-width: thick;
+  /*border-style: outset;*/
+  /*border-radius: 1.5em;*/
+  border-width: 0em;
 
-  border-color: white;
-  background-color: white;
+  border-color: transparent;
+  background-color: transparent;
 
   background-image: url("resources/images/cardSkin.png");
   background-size: 100% 100%;
@@ -260,19 +263,19 @@ h2{
 .jumbotron  p.card-title{
  font-size: 1em; 
  color: rgba(50,50,50,1);
- text-align: left;
+ text-align: center;
 }
 
 
 .card:hover{
- transform: scale(1.05);
- background-color: rgba(235,235,235,1);
+ transform: scale(0.98);
  background-image: url("resources/images/cardSkinHover.png");
 }
 
 .card-image{
-  width: 100%; 
-  height: auto; 
+  width: 90%; 
+  height: auto;
+  margin: auto;
   display: block;
 }
 .card-description-image{

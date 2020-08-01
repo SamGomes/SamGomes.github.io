@@ -115,11 +115,11 @@
         "title": "Venue Publications",
         "items":
           [
-              { 
-          "text" : "(RSS 2020) Approved, waiting for publish...",
-          "href" : ""
-        }
-      ] 
+            { 
+				"text" : "Correia, F., Gomes, S., Mascarenhas, S., Melo, F. S., & Paiva, A. (2020) The Dark Side of Embodiment Teaming Up With Robots VS Disembodied Agents. In Robotics: Science and Systems (2020).",
+				"href" : "https://roboticsconference.org/program/papers/10/"
+	        }
+	      ] 
       }
     }
 

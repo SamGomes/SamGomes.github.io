@@ -1,0 +1,26 @@
+[
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "IST",
+    "logoPath": "resources/images/workExperience/istLogo.png",
+    "references":{
+      "title": "Professional Roles",
+      "items":
+        [
+          { 
+              "text" :"Assistant for Education Support - Logic for Programming (2019/2020 - 2nd Semester)"
+          }
+        ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "INESC",
+    "logoPath": "resources/images/workExperience/inescLogo.png",
+    "descriptionHTML": "<p>Research assistant and developer since 2017.</p>"
+  }
+]

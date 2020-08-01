@@ -23,7 +23,6 @@ $(document).ready(function(){ //after page load
 		window.location.href = "#";
 		window.setTimeout(function(){
 			window.location.href = "#anchor_portfolio";
-			console.log(backgroundTimer)
 			clearInterval(backgroundTimer);
 		},3000);
 	
@@ -136,14 +135,27 @@ $(document).ready(function(){ //after page load
 				`);
 			}
 			if(references!=undefined){
-				poppup.find(" .modal-body")
-				.append(`<h3 style="text-align:left">`+references.title+`:</h3>`);
-				for(var i=0; i<references.items.length; i++){
+				if(references.title != undefined){
 					poppup.find(" .modal-body")
-					.append(`
-						<hr></hr>
-						<a target="_blank" href="`+references.items[i].href+`">`+references.items[i].text+`</a>
-					`);
+					.append(`<h3 style="text-align:left">`+references.title+`:</h3>`);
+				}
+				for(var i=0; i<references.items.length; i++){
+					currRefItem = references.items[i];
+					if(currRefItem.text != undefined){
+						if(currRefItem.href != undefined){
+							poppup.find(" .modal-body")
+							.append(`
+								<hr></hr>
+								<a target="_blank" href="`+references.items[i].href+`">`+references.items[i].text+`</a>
+							`);
+						}else{
+							poppup.find(" .modal-body")
+							.append(`
+								<hr></hr>
+								<a>`+references.items[i].text+`</a>
+							`);
+						}
+					}
 				}
 			}
 
@@ -202,7 +214,7 @@ $(document).ready(function(){ //after page load
 			};
 			portfolioDataExtractor.done(function() {
 				portfolioData = portfolioDataExtractor.responseJSON.reverse();
-				changeDisplayedCards(portfolioData,$("#portfolioContainer"),$("#portfolio_range_display"),currDisplayedPD,currDisplayedPD.min, currDisplayedPD.max);
+				changeDisplayedCards(portfolioData, $("#portfolioContainer"), $("#portfolio_range_display"),currDisplayedPD,currDisplayedPD.min, currDisplayedPD.max);
 			});
 
 
@@ -216,7 +228,7 @@ $(document).ready(function(){ //after page load
 			};
 			researchProjectsDataExtractor.done(function() {
 				researchProjectsData = researchProjectsDataExtractor.responseJSON.reverse();
-				changeDisplayedCards(researchProjectsData,$("#researchProjectsContainer"),$("#researchProjects_range_display"),currDisplayedRPD,currDisplayedRPD.min, currDisplayedRPD.max);
+				changeDisplayedCards(researchProjectsData, $("#researchProjectsContainer"), $("#researchProjects_range_display"),currDisplayedRPD,currDisplayedRPD.min, currDisplayedRPD.max);
 			});
 
 			var publicationsDataExtractor = extractData("./publicationsData.json");
@@ -229,7 +241,20 @@ $(document).ready(function(){ //after page load
 			};
 			publicationsDataExtractor.done(function() {
 				publicationsData = publicationsDataExtractor.responseJSON.reverse();
-				changeDisplayedCards(publicationsData,$("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, currDisplayedPbD.min, currDisplayedPbD.max);
+				changeDisplayedCards(publicationsData, $("#publicationsContainer"), $("#publications_range_display"), currDisplayedPbD, currDisplayedPbD.min, currDisplayedPbD.max);
+			});
+
+			var workExperienceDataExtractor = extractData("./workExperienceData.json");
+			var workExperienceData = [];
+			var currDisplayedWE = {
+				items: [],
+				min: 0,
+				max: 2,
+				span: 1
+			};
+			workExperienceDataExtractor.done(function() {
+				workExperienceData = workExperienceDataExtractor.responseJSON.reverse();
+				changeDisplayedCards(workExperienceData, $("#workExperienceContainer"), $("#workExperience_range_display"), currDisplayedWE, currDisplayedWE.min, currDisplayedWE.max);
 			});
 			
 
@@ -253,6 +278,14 @@ $(document).ready(function(){ //after page load
 			$("#publications_right_arrow").on("click",function(){
 				changeDisplayedCards(publicationsData,$("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, (currDisplayedPbD.min + currDisplayedPbD.span), (currDisplayedPbD.max + currDisplayedPbD.span));
 			});
+
+			$("#workExperience_left_arrow").on("click",function(){
+				changeDisplayedCards(workExperienceData,$("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min - currDisplayedWE.span), (currDisplayedWE.max - currDisplayedWE.span));
+			});
+			$("#workExperience_right_arrow").on("click",function(){
+				changeDisplayedCards(workExperienceData,$("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min + currDisplayedWE.span), (currDisplayedWE.max + currDisplayedWE.span));
+			});
+
 			//retrieve data from db server and create cards
 			// createCards($("#researchProjectsContainer"),"researchProjectsData.json");
 			// createCards($("#publicationsContainer"),"publicationsData.json");

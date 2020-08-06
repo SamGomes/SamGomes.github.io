@@ -78,7 +78,7 @@
     },
     "title": "Goal-Bounding-on-NavMesh",
     "logoPath": "resources/images/portfolio/goalBoundNavMesh.png",
-    "descriptionHTML": "<p>Use of the Goal Bounding algorithm created by Steve Rabin in a Navigation Mesh. Work done for the course \"Artificial Inteligence for Games\".</p>",
+    "descriptionHTML": "<p>Use of the Goal Bounding algorithm created by Steve Rabin in a Navigation Mesh. Work done for the course \"Artificial Intelligence for Games\".</p>",
     "references":{
       "title": "Website",
       "items":
@@ -136,7 +136,7 @@
     "title": "Metacritic Dashboard",
     "logoPath": "resources/images/portfolio/metacriticDash.png",
     "videoPath": "resources/videos/VI.mp4",
-    "descriptionHTML": "<p>This work consists in a dashboard regarding information of the Metacritic website. Work done for the \"Information Vizualization\" course.</p>",
+    "descriptionHTML": "<p>This work consists in a dashboard regarding information of the Metacritic website. Work done for the \"Information Visualization\" course.</p>",
     "references":{
       "title": "Website",
       "items":

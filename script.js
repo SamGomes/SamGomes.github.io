@@ -256,36 +256,54 @@ $(document).ready(function(){ //after page load
 				workExperienceData = workExperienceDataExtractor.responseJSON.reverse();
 				changeDisplayedCards(workExperienceData, $("#workExperienceContainer"), $("#workExperience_range_display"), currDisplayedWE, currDisplayedWE.min, currDisplayedWE.max);
 			});
-			
+		
+			var extracurricularDataExtractor = extractData("./extracurricularData.json");
+			var extracurricularData = [];
+			var currDisplayedEC = {
+				items: [],
+				min: 0,
+				max: 2,
+				span: 1
+			};
+			extracurricularDataExtractor.done(function() {
+				extracurricularData = extracurricularDataExtractor.responseJSON.reverse();
+				changeDisplayedCards(extracurricularData, $("#extracurricularContainer"), $("#extracurricular_range_display"), currDisplayedEC, currDisplayedEC.min, currDisplayedEC.max);
+			});	
 
 			$("#portfolio_left_arrow").on("click",function(){
-				changeDisplayedCards(portfolioData,$("#portfolioContainer"),$("#portfolio_range_display"), currDisplayedPD, (currDisplayedPD.min - currDisplayedPD.span), (currDisplayedPD.max - currDisplayedPD.span));
+				changeDisplayedCards(portfolioData, $("#portfolioContainer"),$("#portfolio_range_display"), currDisplayedPD, (currDisplayedPD.min - currDisplayedPD.span), (currDisplayedPD.max - currDisplayedPD.span));
 			});
 			$("#portfolio_right_arrow").on("click",function(){
-				changeDisplayedCards(portfolioData,$("#portfolioContainer"),$("#portfolio_range_display"), currDisplayedPD, (currDisplayedPD.min + currDisplayedPD.span), (currDisplayedPD.max + currDisplayedPD.span));
+				changeDisplayedCards(portfolioData, $("#portfolioContainer"),$("#portfolio_range_display"), currDisplayedPD, (currDisplayedPD.min + currDisplayedPD.span), (currDisplayedPD.max + currDisplayedPD.span));
 			});
 
 			$("#researchProjects_left_arrow").on("click",function(){
-				changeDisplayedCards(researchProjectsData,$("#researchProjectsContainer"),$("#researchProjects_range_display"), currDisplayedRPD, (currDisplayedRPD.min - currDisplayedRPD.span), (currDisplayedRPD.max - currDisplayedRPD.span));
+				changeDisplayedCards(researchProjectsData, $("#researchProjectsContainer"),$("#researchProjects_range_display"), currDisplayedRPD, (currDisplayedRPD.min - currDisplayedRPD.span), (currDisplayedRPD.max - currDisplayedRPD.span));
 			});
 			$("#researchProjects_right_arrow").on("click",function(){
-				changeDisplayedCards(researchProjectsData,$("#researchProjectsContainer"),$("#researchProjects_range_display"), currDisplayedRPD, (currDisplayedRPD.min + currDisplayedRPD.span), (currDisplayedRPD.max + currDisplayedRPD.span));
+				changeDisplayedCards(researchProjectsData, $("#researchProjectsContainer"),$("#researchProjects_range_display"), currDisplayedRPD, (currDisplayedRPD.min + currDisplayedRPD.span), (currDisplayedRPD.max + currDisplayedRPD.span));
 			});
 
 			$("#publications_left_arrow").on("click",function(){
-				changeDisplayedCards(publicationsData,$("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, (currDisplayedPbD.min - currDisplayedPbD.span), (currDisplayedPbD.max - currDisplayedPbD.span));
+				changeDisplayedCards(publicationsData, $("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, (currDisplayedPbD.min - currDisplayedPbD.span), (currDisplayedPbD.max - currDisplayedPbD.span));
 			});
 			$("#publications_right_arrow").on("click",function(){
-				changeDisplayedCards(publicationsData,$("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, (currDisplayedPbD.min + currDisplayedPbD.span), (currDisplayedPbD.max + currDisplayedPbD.span));
+				changeDisplayedCards(publicationsData, $("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, (currDisplayedPbD.min + currDisplayedPbD.span), (currDisplayedPbD.max + currDisplayedPbD.span));
 			});
 
 			$("#workExperience_left_arrow").on("click",function(){
-				changeDisplayedCards(workExperienceData,$("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min - currDisplayedWE.span), (currDisplayedWE.max - currDisplayedWE.span));
+				changeDisplayedCards(workExperienceData, $("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min - currDisplayedWE.span), (currDisplayedWE.max - currDisplayedWE.span));
 			});
 			$("#workExperience_right_arrow").on("click",function(){
-				changeDisplayedCards(workExperienceData,$("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min + currDisplayedWE.span), (currDisplayedWE.max + currDisplayedWE.span));
+				changeDisplayedCards(workExperienceData, $("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min + currDisplayedWE.span), (currDisplayedWE.max + currDisplayedWE.span));
 			});
 
+			$("#extracurricular_left_arrow").on("click",function(){
+				changeDisplayedCards(extracurricularData, $("#extracurricularContainer"),$("#extracurricular_range_display"), currDisplayedEC, (currDisplayedEC.min - currDisplayedEC.span), (currDisplayedEC.max - currDisplayedEC.span));
+			});
+			$("#extracurricular_right_arrow").on("click",function(){
+				changeDisplayedCards(extracurricularData, $("#extracurricularContainer"),$("#extracurricular_range_display"), currDisplayedEC, (currDisplayedEC.min + currDisplayedEC.span), (currDisplayedEC.max + currDisplayedEC.span));
+			});
 			//retrieve data from db server and create cards
 			// createCards($("#researchProjectsContainer"),"researchProjectsData.json");
 			// createCards($("#publicationsContainer"),"publicationsData.json");

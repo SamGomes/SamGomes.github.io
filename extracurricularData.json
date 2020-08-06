@@ -1,0 +1,19 @@
+[
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Music",
+    "logoPath": "resources/images/extracurricular/music.png",
+    "descriptionHTML": "<p>Composer, musician and song writer. Link to a new channel is provided below.</p>",
+    "references":{
+      "items":
+        [
+          { 
+              "text" :"Sam G Music -Samuel Gomes-",
+              "href" :"https://www.youtube.com/channel/UCM7NTKaMKr46aCFiSLPKpWA"
+          }
+        ]
+    }
+  }
+]

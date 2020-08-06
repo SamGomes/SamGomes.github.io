@@ -4,7 +4,7 @@
       "$oid": "5c376cb51f6e4f1a959e342c"
     },
     "title": "Happy New Year App",
-    "logoPath": "resources/images/portfolio/HappyNewYearApp.png",
+    "logoPath": "resources/images/portfolio/happyNewYearApp.png",
     "descriptionHTML": "<div><p>A simple app which consists in an interactive card for the happy new year celebrations (updates required).</p></div>",
     "references":{
       "title": "Website",

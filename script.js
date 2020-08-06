@@ -21,10 +21,10 @@ $(document).ready(function(){ //after page load
 
 		$("#footerContacts").hide(300);
 		window.location.href = "#";
-		window.setTimeout(function(){
-			window.location.href = "#anchor_portfolio";
-			clearInterval(backgroundTimer);
-		},3000);
+		// window.setTimeout(function(){
+		// 	window.location.href = "#anchor_portfolio";
+		// 	clearInterval(backgroundTimer);
+		// },3000);
 	
 
 		var lightColor = function(amount, originalColor){
@@ -70,8 +70,8 @@ $(document).ready(function(){ //after page load
 				var colorThief = new ColorThief();
 				var imageColor = colorThief.getColor(domElemImage);
 				//lighten image color by giving transparency
-				domElem.find(".card").css("border-color", "rgb("+lightColor(0.55, imageColor)+")" );
-				domElem.find(".card").css("background-color", "rgb("+lightColor(0.55, imageColor)+")" );
+				domElem.find(".card").css("border-color", "rgb("+lightColor(0.75, imageColor)+")" );
+				domElem.find(".card").css("background-color", "rgb("+lightColor(0.75, imageColor)+")" );
 			});
 		}
 
@@ -321,7 +321,7 @@ $(document).ready(function(){ //after page load
 					// 		window.clearInterval(backgroundTimer);
 					// 	}
 					// });
-					
+
 					if(codeBackgroundDarkEffects.is(":hidden")){
 						window.clearInterval(backgroundTimer);
 					}

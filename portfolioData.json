@@ -277,5 +277,23 @@
             }
         ]
     }
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "SpeedBoat",
+    "logoPath": "resources/images/portfolio/speedboat.png",
+    "descriptionHTML": "<div><p> This will be a reference for the repository for my own OpenGL game engine, called SpeedBoat. Ongoing features list comprehends full scene management and supplement possibilities, projection features, dynamic shaders. </p></div>",
+    "references":{
+      "title": "References",
+      "items":
+        [
+            { 
+              "text": "GitHub Source Link (currently disabled)",
+              "href": ""
+            }
+        ]
+    }
   }
 ]

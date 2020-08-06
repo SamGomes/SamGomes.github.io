@@ -15,7 +15,7 @@
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
   
-  font-family: "Lucida Console", Courier, monospace;
+  font-family: "Lucida Sans Unicode", Courier, monospace;
 
   scroll-behavior: smooth;
 }
@@ -246,10 +246,10 @@ h2{
 .card {
   padding: 10%;
   margin: 2.5%;
-  /*box-shadow: 1em 1em 1em rgba(60,60,60,1);*/
+  box-shadow: 1em 1em 1em rgba(60,60,60,1);
 
-  /*border-style: outset;*/
-  /*border-radius: 1.5em;*/
+  border-style: outset;
+  border-radius: 1.5em;
   border-width: 0em;
 
   border-color: transparent;

@@ -27,7 +27,7 @@ $(document).ready(function(){ //after page load
 		},3000);
 	
 
-		var lightColor = function(amount,originalColor){
+		var lightColor = function(amount, originalColor){
 			var newColor = [];
 			for(var i=0; i<originalColor.length; i++){
 				currentComponent = (1 - amount)*originalColor[i] + amount*255;
@@ -65,14 +65,14 @@ $(document).ready(function(){ //after page load
 				view.createPopup(val.title,val.videoPath,val.descriptionHTML,val.references, val.website);
 			});
 
-			// domElemImages.on("load",function(){
-			// 	//get predominant image color
-			// 	var colorThief = new ColorThief();
-			// 	var imageColor = colorThief.getColor(domElemImage);
-			// 	//lighten image color by giving transparency
-			// 	domElem.find(".card").css("border-color", "rgb("+lightColor(0.85,imageColor)+")" );
-			// 	domElem.find(".card").css("background-color", "rgb("+lightColor(0.85,imageColor)+")" );
-			// });
+			domElemImages.on("load",function(){
+				//get predominant image color
+				var colorThief = new ColorThief();
+				var imageColor = colorThief.getColor(domElemImage);
+				//lighten image color by giving transparency
+				domElem.find(".card").css("border-color", "rgb("+lightColor(0.55, imageColor)+")" );
+				domElem.find(".card").css("background-color", "rgb("+lightColor(0.55, imageColor)+")" );
+			});
 		}
 
 
@@ -321,6 +321,7 @@ $(document).ready(function(){ //after page load
 					// 		window.clearInterval(backgroundTimer);
 					// 	}
 					// });
+					
 					if(codeBackgroundDarkEffects.is(":hidden")){
 						window.clearInterval(backgroundTimer);
 					}

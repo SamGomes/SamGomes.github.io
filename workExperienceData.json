@@ -3,6 +3,14 @@
     "_id": {
       "$oid": "5c376cb51f6e4f1a959e342c"
     },
+    "title": "Review Roles",
+    "logoPath": "resources/images/workExperience/reviewer.png",
+    "descriptionHTML": "<p>Sub-reviewer for ICGI2019</p><p>Sub-reviewer for VJ2019</p><p>Sub-reviewer for CoG 2020 full papers</p><p>Reviewer for CoG 2020 short papers</p><p>Sub-reviewer for AIIDE-20 full papers</p>"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
     "title": "IST",
     "logoPath": "resources/images/workExperience/istLogo.png",
     "references":{

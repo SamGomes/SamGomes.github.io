@@ -5,7 +5,27 @@
     },
     "title": "Review Roles",
     "logoPath": "resources/images/workExperience/reviewer.png",
-    "descriptionHTML": "<p>Sub-reviewer for ICGI2019</p><p>Sub-reviewer for VJ2019</p><p>Sub-reviewer for CoG 2020 full papers</p><p>Reviewer for CoG 2020 short papers</p><p>Sub-reviewer for AIIDE-20 full papers</p>"
+    "references":{ 
+      "title": "Roles and Venues",
+      "items":
+        [
+          { 
+              "text" :"Sub-reviewer for ICGI2019"
+          },
+          { 
+              "text" :"Sub-reviewer for VJ2019"
+          },
+          { 
+              "text" :"Sub-reviewer for CoG 2020 full papers"
+          },
+          { 
+              "text" :"Reviewer for CoG 2020 short papers"
+          },
+          { 
+              "text" :"Sub-reviewer for AIIDE-20 full papers"
+          }
+        ]
+    }
   },
   {
     "_id": {

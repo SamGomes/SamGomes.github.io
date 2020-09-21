@@ -50,5 +50,13 @@
     "title": "INESC",
     "logoPath": "resources/images/workExperience/inescLogo.png",
     "descriptionHTML": "<p>Research assistant and developer since 2017.</p>"
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "HAC",
+    "logoPath": "resources/images/workExperience/hac.png",
+    "descriptionHTML": "<p>Supervisor in the project HAC from September of 2019 to June of 2020 (https://www.treetree2.org/hac).</p>"
   }
 ]

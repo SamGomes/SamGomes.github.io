@@ -61,11 +61,32 @@
         "items":
         [
           { 
-            "text" : "S. Gomes, J. Dias, and C. Martinho. In: IEEE Venue on Games (IEEE CoG 2019). Group Interactions Manager for Multiplayer sErious games.",
+            "text" : "S. Gomes, J. Dias and C. Martinho, \"GIMME: Group Interactions Manager for Multiplayer sErious games,\" 2019 IEEE Conference on Games (CoG), London, United Kingdom, 2019, pp. 1-8, doi: 10.1109/CIG.2019.8847962.",
             "href" : "https://ieeexplore.ieee.org/abstract/document/8847962"
           },
           { 
-            "text" : "(COG 2020) Approved, waiting for publish...",
+            "text" : "T. Alves, S. Gomes, J. Dias and C. Martinho, \"The Influence of Reward on the Social Valence of Interactions,\" 2020 IEEE Conference on Games (CoG), Osaka, Japan, 2020, pp. 168-175, doi: 10.1109/CoG47356.2020.9231853.",
+            "href" : "https://ieeexplore.ieee.org/document/9231853"
+          }
+        ] 
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5c376cb51f6e4e1a959e342f"
+      },
+      "title": "Videojogos",
+      "logoPath": "resources/images/publications/VideojogosLogo.png",
+      "references":{
+        "title": "Venue Publications",
+        "items":
+        [
+          { 
+            "text" : "(VJ 2020) Approved full paper, waiting for publish...",
+            "href" : ""
+          },
+          { 
+            "text" : "(VJ 2020) Approved demo paper, waiting for publish...",
             "href" : ""
           }
         ] 

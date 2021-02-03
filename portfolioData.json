@@ -238,6 +238,28 @@
             { 
               "text": "GitHub Source Link",
               "href": "https://github.com/SamGomes/my-freaking-neighbour"
+            },
+            { 
+              "text": "GGJ Link",
+              "href": "https://globalgamejam.org/2019/games/my-freaking-neighbour"
+            }
+        ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "I should have",
+    "logoPath": "resources/images/portfolio/GGJ/2020/logo.png",
+    "descriptionHTML": "<div><img class=\"card-description-image\" src=\"resources/images/portfolio/GGJ/GGJLogo.png\"><p class=\"card-description-image\">Figure 1: GGJ logo.</p></div><hr><p> It's unavoidable to do things we believe we shouldn't have done. But how often do we take actions to repair those things? This game represents the repair of a girl's memories in order to restore her inner peace. The game contains several puzzles for the player to complete. The development platform was the GODOT game engine. </p><p> The game was developed at Global Game Jam '20 (Figure 1). The main theme to follow was \"Repair\".</p><p> A screenshot of the game is included in Figure 2. </p><hr><div><img  class=\"card-description-image\" src=\"resources/images/portfolio/GGJ/2020/screenshot.png\"><p  class=\"card-description-image\">Figure 2: Screenshot of \"I should have\"</p></div>",
+    "references":{
+      "title": "References",
+      "items":
+        [
+            { 
+              "text": "GGJ Link",
+              "href": "https://globalgamejam.org/2020/games/i-should-have-1"
             }
         ]
     }
@@ -292,6 +314,32 @@
             { 
               "text": "GitHub Source Link (currently disabled)",
               "href": ""
+            }
+        ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "The Lost Pixel Art",
+    "logoPath": "resources/images/portfolio/GGJ/2021/logo.png",
+    "descriptionHTML": "<div><img class=\"card-description-image\" src=\"resources/images/portfolio/GGJ/GGJLogo.png\"><p class=\"card-description-image\">Figure 1: GGJ logo.</p></div><hr><p> \"The Lost Pixel Art\" is an online multiplayer game developed using Unity 3D and the Mirror plugin. Either play as the guard and protect all the pixel paintings during a night shift in a gallery, or play as the robber and try to take all the gallery paintings. The paintings were all hand-made using the Pixel Art technique. All audio was also developed in-house. </p><p> The game was developed at Global Game Jam '21 (Figure 1). The main theme to follow was \"Lost and Found\".</p><p> A screenshot of the game is included in Figure 2. </p><hr><div><img  class=\"card-description-image\" src=\"resources/images/portfolio/GGJ/2021/screenshot.png\"><p  class=\"card-description-image\">Figure 2: Screenshot of \"The Lost Pixel Art\"</p></div>",
+    "references":{
+      "title": "References",
+      "items":
+        [
+            { 
+              "text": "GitHub Source Link",
+              "href": "https://github.com/SamGomes/the-lost-pixel-art"
+            },
+            { 
+              "text": "GGJ Link",
+              "href": "https://globalgamejam.org/2021/games/lost-pixel-art-3"
+            },
+            { 
+              "text": "Game trailer",
+              "href": "https://youtu.be/ffj_RYJJB-4"
             }
         ]
     }

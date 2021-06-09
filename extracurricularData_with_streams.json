@@ -1,0 +1,40 @@
+[
+  // {
+  //   "_id": {
+  //     "$oid": "5c376cb51f6e4f1a959e342c"
+  //   },
+  //   "title": "Videogames and streams",
+  //   "logoPath": "resources/images/extracurricular/streams.png",
+  //   "descriptionHTML": "<p>Videogame streamer. Link to channels provided below.</p>",
+  //   "references":{
+  //     "items":
+  //       [
+  //         { 
+  //             "text" :"twitch.tv/samggstreams",
+  //             "href" :"https://www.twitch.tv/samggstreams"
+  //         },
+  //         { 
+  //             "text" :"samggstreams - Samuel Gomes Streams (YT channel)",
+  //             "href" :"https://www.youtube.com/channel/UCca9iEQUIvX2xL8upwwbBxQ"
+  //         }
+  //       ]
+  //   }
+  // },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
+    "title": "Music",
+    "logoPath": "resources/images/extracurricular/music.png",
+    "descriptionHTML": "<p>Composer, musician and song writer. Link to a new channel is provided below.</p>",
+    "references":{
+      "items":
+        [
+          { 
+              "text" :"Samuel Gomes Music",
+              "href" :"https://www.youtube.com/channel/UCM7NTKaMKr46aCFiSLPKpWA"
+          }
+        ]
+    }
+  }
+]

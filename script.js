@@ -6,6 +6,7 @@ $(document).ready(function(){ //after page load
 
 		var backgroundTimer = undefined; //will contain the timer for the background effects loop
 
+
 		//play song on load
 		//document.getElementById("my_audio").play();
 		var rights =  new Date();

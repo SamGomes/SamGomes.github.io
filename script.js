@@ -14,6 +14,41 @@ $(document).ready(function(){ //after page load
 		m = rights.getMonth();
 		d = rights.getDate();
 
+
+
+
+		var coverPhrases = 
+		[
+			"\"Hi! I am Sam, welcome to my website! <br> \
+				I work as a CS engineer, PhD student, and assistant professor. <br> \
+				You can check out my work in the sections below.\"", 
+			"\"Hi! I am Sam, welcome to my website! <br> \
+				I work as a CS engineer, PhD student, and assistant professor. <br> \
+			    Do you like good looking professional websites? \n \
+				I hope this one meets your requirements...", 
+			"\"Hey Hey Hey! Helloooo visitaaant! I am Sam, welcome to my website! <br> \
+				I work as a CS engineer, PhD student, and assistant professor. <br> \
+				You can see my portfolio in the sections below.\"", 
+			"\"Hi! I am Sam, welcome to my website! <br> \
+				I work as a CS engineer, PhD student, and assistant professor. <br> \
+				I had a cringy saying here, but I removed it.\"", 
+			"\"Hi! I am Sam, welcome to my website! <br> \
+				I work as a CS engineer, PhD student, and assistant professor, <br> \
+				and I can present a different saying here in every refresh lol.\"", 
+			"\"Hi! I am Sam, welcome to my website! <br> \
+				I work as a CS engineer, PhD student, and assistant professor. <br> \
+				As a PhD student, I have the opportunity to use my knowledge to create new things!\"", 
+			"\"Hi! I am Sam, welcome to my website! <br> \
+				I work as a CS engineer, PhD student, and assistant professor. <br> \
+				Oh no! A wild m̶i̴s̴s̴i̷n̴g̸n̷o̷ appeared! <br> \
+				<h5>|˜Ž­|　<br> |‡g|　<br> |¾ù|　<br> |åm|__<br> |ïãëw|<br> |ú¥ê2|<br> |)å¬7|<br> |…¾¥ˆ|<br></h5>\""
+		];
+		var randWebsiteMode = Math.floor(Math.random()*coverPhrases.length);
+		var isEasterEgged = (randWebsiteMode == 6);
+		isEasterEgg = true;
+		$("#coverContainerText").html(coverPhrases[randWebsiteMode]);
+
+
 		var monthNames = ["January", "February", "March", "April", "May", "June",
 						  "July", "August", "September", "October", "November", "December"];
 
@@ -31,8 +66,12 @@ $(document).ready(function(){ //after page load
 		var lightColor = function(amount, originalColor){
 			var newColor = [];
 			for(var i=0; i<originalColor.length; i++){
-				currentComponent = (1 - amount)*originalColor[i] + amount*255;
-				newColor[i] = currentComponent; 
+				if(isEasterEgged){
+					newColor[i] = Math.random()*255; 					 
+				}else{
+					currentComponent = (1 - amount)*originalColor[i] + amount*255;
+					newColor[i] = currentComponent; 					
+				}
 			}
 			return newColor;
 		}
@@ -205,181 +244,179 @@ $(document).ready(function(){ //after page load
 
 
 
-			var portfolioDataExtractor = extractData("./portfolioData.json");
-			var portfolioData = [];
-			var currDisplayedPD = {
-				items: [],
-				min: 0,
-				max: 2,
-				span: 1
-			};
-			portfolioDataExtractor.done(function() {
-				portfolioData = portfolioDataExtractor.responseJSON.reverse();
-				changeDisplayedCards(portfolioData, $("#portfolioContainer"), $("#portfolio_range_display"),currDisplayedPD,currDisplayedPD.min, currDisplayedPD.max);
-			});
+		var portfolioDataExtractor = extractData("./portfolioData.json");
+		var portfolioData = [];
+		var currDisplayedPD = {
+			items: [],
+			min: 0,
+			max: 2,
+			span: 1
+		};
+		portfolioDataExtractor.done(function() {
+			portfolioData = portfolioDataExtractor.responseJSON.reverse();
+			changeDisplayedCards(portfolioData, $("#portfolioContainer"), $("#portfolio_range_display"),currDisplayedPD,currDisplayedPD.min, currDisplayedPD.max);
+		});
 
 
-			var researchProjectsDataExtractor = extractData("./researchProjectsData.json");
-			var researchProjectsData = [];
-			var currDisplayedRPD = {
-				items: [],
-				min: 0,
-				max: 2,
-				span: 1
-			};
-			researchProjectsDataExtractor.done(function() {
-				researchProjectsData = researchProjectsDataExtractor.responseJSON.reverse();
-				changeDisplayedCards(researchProjectsData, $("#researchProjectsContainer"), $("#researchProjects_range_display"),currDisplayedRPD,currDisplayedRPD.min, currDisplayedRPD.max);
-			});
+		var researchProjectsDataExtractor = extractData("./researchProjectsData.json");
+		var researchProjectsData = [];
+		var currDisplayedRPD = {
+			items: [],
+			min: 0,
+			max: 2,
+			span: 1
+		};
+		researchProjectsDataExtractor.done(function() {
+			researchProjectsData = researchProjectsDataExtractor.responseJSON.reverse();
+			changeDisplayedCards(researchProjectsData, $("#researchProjectsContainer"), $("#researchProjects_range_display"),currDisplayedRPD,currDisplayedRPD.min, currDisplayedRPD.max);
+		});
 
-			var publicationsDataExtractor = extractData("./publicationsData.json");
-			var publicationsData = [];
-			var currDisplayedPbD = {
-				items: [],
-				min: 0,
-				max: 2,
-				span: 1
-			};
-			publicationsDataExtractor.done(function() {
-				publicationsData = publicationsDataExtractor.responseJSON.reverse();
-				changeDisplayedCards(publicationsData, $("#publicationsContainer"), $("#publications_range_display"), currDisplayedPbD, currDisplayedPbD.min, currDisplayedPbD.max);
-			});
+		var publicationsDataExtractor = extractData("./publicationsData.json");
+		var publicationsData = [];
+		var currDisplayedPbD = {
+			items: [],
+			min: 0,
+			max: 2,
+			span: 1
+		};
+		publicationsDataExtractor.done(function() {
+			publicationsData = publicationsDataExtractor.responseJSON.reverse();
+			changeDisplayedCards(publicationsData, $("#publicationsContainer"), $("#publications_range_display"), currDisplayedPbD, currDisplayedPbD.min, currDisplayedPbD.max);
+		});
 
-			var workExperienceDataExtractor = extractData("./workExperienceData.json");
-			var workExperienceData = [];
-			var currDisplayedWE = {
-				items: [],
-				min: 0,
-				max: 2,
-				span: 1
-			};
-			workExperienceDataExtractor.done(function() {
-				workExperienceData = workExperienceDataExtractor.responseJSON.reverse();
-				changeDisplayedCards(workExperienceData, $("#workExperienceContainer"), $("#workExperience_range_display"), currDisplayedWE, currDisplayedWE.min, currDisplayedWE.max);
-			});
+		var workExperienceDataExtractor = extractData("./workExperienceData.json");
+		var workExperienceData = [];
+		var currDisplayedWE = {
+			items: [],
+			min: 0,
+			max: 2,
+			span: 1
+		};
+		workExperienceDataExtractor.done(function() {
+			workExperienceData = workExperienceDataExtractor.responseJSON.reverse();
+			changeDisplayedCards(workExperienceData, $("#workExperienceContainer"), $("#workExperience_range_display"), currDisplayedWE, currDisplayedWE.min, currDisplayedWE.max);
+		});
+	
+		var extracurricularDataExtractor = extractData("./extracurricularData.json");
+		var extracurricularData = [];
+		var currDisplayedEC = {
+			items: [],
+			min: 0,
+			max: 2,
+			span: 1
+		};
+		extracurricularDataExtractor.done(function() {
+			extracurricularData = extracurricularDataExtractor.responseJSON.reverse();
+			changeDisplayedCards(extracurricularData, $("#extracurricularContainer"), $("#extracurricular_range_display"), currDisplayedEC, currDisplayedEC.min, currDisplayedEC.max);
+		});	
+
+		$("#portfolio_left_arrow").on("click",function(){
+			changeDisplayedCards(portfolioData, $("#portfolioContainer"),$("#portfolio_range_display"), currDisplayedPD, (currDisplayedPD.min - currDisplayedPD.span), (currDisplayedPD.max - currDisplayedPD.span));
+		});
+		$("#portfolio_right_arrow").on("click",function(){
+			changeDisplayedCards(portfolioData, $("#portfolioContainer"),$("#portfolio_range_display"), currDisplayedPD, (currDisplayedPD.min + currDisplayedPD.span), (currDisplayedPD.max + currDisplayedPD.span));
+		});
+
+		$("#researchProjects_left_arrow").on("click",function(){
+			changeDisplayedCards(researchProjectsData, $("#researchProjectsContainer"),$("#researchProjects_range_display"), currDisplayedRPD, (currDisplayedRPD.min - currDisplayedRPD.span), (currDisplayedRPD.max - currDisplayedRPD.span));
+		});
+		$("#researchProjects_right_arrow").on("click",function(){
+			changeDisplayedCards(researchProjectsData, $("#researchProjectsContainer"),$("#researchProjects_range_display"), currDisplayedRPD, (currDisplayedRPD.min + currDisplayedRPD.span), (currDisplayedRPD.max + currDisplayedRPD.span));
+		});
+
+		$("#publications_left_arrow").on("click",function(){
+			changeDisplayedCards(publicationsData, $("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, (currDisplayedPbD.min - currDisplayedPbD.span), (currDisplayedPbD.max - currDisplayedPbD.span));
+		});
+		$("#publications_right_arrow").on("click",function(){
+			changeDisplayedCards(publicationsData, $("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, (currDisplayedPbD.min + currDisplayedPbD.span), (currDisplayedPbD.max + currDisplayedPbD.span));
+		});
+
+		$("#workExperience_left_arrow").on("click",function(){
+			changeDisplayedCards(workExperienceData, $("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min - currDisplayedWE.span), (currDisplayedWE.max - currDisplayedWE.span));
+		});
+		$("#workExperience_right_arrow").on("click",function(){
+			changeDisplayedCards(workExperienceData, $("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min + currDisplayedWE.span), (currDisplayedWE.max + currDisplayedWE.span));
+		});
+
+		$("#extracurricular_left_arrow").on("click",function(){
+			changeDisplayedCards(extracurricularData, $("#extracurricularContainer"),$("#extracurricular_range_display"), currDisplayedEC, (currDisplayedEC.min - currDisplayedEC.span), (currDisplayedEC.max - currDisplayedEC.span));
+		});
+		$("#extracurricular_right_arrow").on("click",function(){
+			changeDisplayedCards(extracurricularData, $("#extracurricularContainer"),$("#extracurricular_range_display"), currDisplayedEC, (currDisplayedEC.min + currDisplayedEC.span), (currDisplayedEC.max + currDisplayedEC.span));
+		});
+		//retrieve data from db server and create cards
+		// createCards($("#researchProjectsContainer"),"researchProjectsData.json");
+		// createCards($("#publicationsContainer"),"publicationsData.json");
+
+
 		
-			var extracurricularDataExtractor = extractData("./extracurricularData.json");
-			var extracurricularData = [];
-			var currDisplayedEC = {
-				items: [],
-				min: 0,
-				max: 2,
-				span: 1
-			};
-			extracurricularDataExtractor.done(function() {
-				extracurricularData = extracurricularDataExtractor.responseJSON.reverse();
-				changeDisplayedCards(extracurricularData, $("#extracurricularContainer"), $("#extracurricular_range_display"), currDisplayedEC, currDisplayedEC.min, currDisplayedEC.max);
-			});	
 
-			$("#portfolio_left_arrow").on("click",function(){
-				changeDisplayedCards(portfolioData, $("#portfolioContainer"),$("#portfolio_range_display"), currDisplayedPD, (currDisplayedPD.min - currDisplayedPD.span), (currDisplayedPD.max - currDisplayedPD.span));
-			});
-			$("#portfolio_right_arrow").on("click",function(){
-				changeDisplayedCards(portfolioData, $("#portfolioContainer"),$("#portfolio_range_display"), currDisplayedPD, (currDisplayedPD.min + currDisplayedPD.span), (currDisplayedPD.max + currDisplayedPD.span));
-			});
-
-			$("#researchProjects_left_arrow").on("click",function(){
-				changeDisplayedCards(researchProjectsData, $("#researchProjectsContainer"),$("#researchProjects_range_display"), currDisplayedRPD, (currDisplayedRPD.min - currDisplayedRPD.span), (currDisplayedRPD.max - currDisplayedRPD.span));
-			});
-			$("#researchProjects_right_arrow").on("click",function(){
-				changeDisplayedCards(researchProjectsData, $("#researchProjectsContainer"),$("#researchProjects_range_display"), currDisplayedRPD, (currDisplayedRPD.min + currDisplayedRPD.span), (currDisplayedRPD.max + currDisplayedRPD.span));
-			});
-
-			$("#publications_left_arrow").on("click",function(){
-				changeDisplayedCards(publicationsData, $("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, (currDisplayedPbD.min - currDisplayedPbD.span), (currDisplayedPbD.max - currDisplayedPbD.span));
-			});
-			$("#publications_right_arrow").on("click",function(){
-				changeDisplayedCards(publicationsData, $("#publicationsContainer"),$("#publications_range_display"), currDisplayedPbD, (currDisplayedPbD.min + currDisplayedPbD.span), (currDisplayedPbD.max + currDisplayedPbD.span));
-			});
-
-			$("#workExperience_left_arrow").on("click",function(){
-				changeDisplayedCards(workExperienceData, $("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min - currDisplayedWE.span), (currDisplayedWE.max - currDisplayedWE.span));
-			});
-			$("#workExperience_right_arrow").on("click",function(){
-				changeDisplayedCards(workExperienceData, $("#workExperienceContainer"),$("#workExperience_range_display"), currDisplayedWE, (currDisplayedWE.min + currDisplayedWE.span), (currDisplayedWE.max + currDisplayedWE.span));
-			});
-
-			$("#extracurricular_left_arrow").on("click",function(){
-				changeDisplayedCards(extracurricularData, $("#extracurricularContainer"),$("#extracurricular_range_display"), currDisplayedEC, (currDisplayedEC.min - currDisplayedEC.span), (currDisplayedEC.max - currDisplayedEC.span));
-			});
-			$("#extracurricular_right_arrow").on("click",function(){
-				changeDisplayedCards(extracurricularData, $("#extracurricularContainer"),$("#extracurricular_range_display"), currDisplayedEC, (currDisplayedEC.min + currDisplayedEC.span), (currDisplayedEC.max + currDisplayedEC.span));
-			});
-			//retrieve data from db server and create cards
-			// createCards($("#researchProjectsContainer"),"researchProjectsData.json");
-			// createCards($("#publicationsContainer"),"publicationsData.json");
-
-
+		//background stuff
+		var codeBackgroundDarkEffects = $("#codeBackgroundDarkEffects");
+		codeBackgroundDarkEffects.css("transform","translateY(0px)");
+		//make background effect move a little in sin way
+		var backgroundEffectFunc = function(){
+			var frameRatioIncrement = 0.016;
+			if(isEasterEgged){
+				frameRatioIncrement = 0;
+			}
 			
+			var currI = 0;
+			backgroundTimer = window.setInterval(function(){ 
+				var currEffectsOffset = parseFloat(codeBackgroundDarkEffects.css('transform').split(/[(,)]/)[6]);
+				var currentScroll = parseFloat($(document).scrollTop());  
 
-			//background stuff
-			var codeBackgroundDarkEffects = $("#codeBackgroundDarkEffects");
-			codeBackgroundDarkEffects.css("transform","translateY(0px)");
-			//make background effect move a little in sin way
-			var backgroundEffectFunc = function(){
-				var frameRatioIncrement = 0.016;
-				var currI = 0;
-				backgroundTimer = window.setInterval(function(){ 
-					var currEffectsOffset = parseFloat(codeBackgroundDarkEffects.css('transform').split(/[(,)]/)[6]);
-					var currentScroll = parseFloat($(document).scrollTop());  
+				//do linear interpolation for animations using translations
+				currI = (currI>2*Math.PI)? currI=frameRatioIncrement : currI+=frameRatioIncrement;
+				var ratio = Math.sin(currI)*0.2;
+				var newOffset = ratio*window.screen.height;
 
-					//do linear interpolation for animations using translations
-					currI = (currI>2*Math.PI)? currI=frameRatioIncrement : currI+=frameRatioIncrement;
-					var ratio = Math.sin(currI)*0.2;
-					var newOffset = ratio*window.screen.height;
+				codeBackgroundDarkEffects.css("transform","translateY("+ parseFloat(-currentScroll+newOffset) +"px)");
 
-					codeBackgroundDarkEffects.css("transform","translateY("+ parseFloat(-currentScroll+newOffset) +"px)");
 
-					// $(document).keypress(function(event){
-					//   	var char = String.fromCharCode(event.which); 
-					//   	if(char =='p' && codeBackgroundDarkEffects.hidden()){
-					//   		$("#codeBackgroundDarkEffects").show()
-					// 		window.setInterval(backgroundTimer);
-					// 	}else{
-					// 		$("#codeBackgroundDarkEffects").show()
-					// 		window.clearInterval(backgroundTimer);
-					// 	}
-					// });
-
-					if(codeBackgroundDarkEffects.is(":hidden")){
-						window.clearInterval(backgroundTimer);
-					}
-				}, 41);
-			}();
-
-			var EXPANDED_FOOTER=false;
-
-			$('#portfolioPopup').on('hidden.bs.modal', function () {
-				$('video').each(function() {
-					$(this).get(0).pause();
-				});
-			});
-			
-			$('img').hover(function() {
-				if($(this).hasClass("portfolioTooltiped")){
-					$(this).attr("title","Click for more info");      			
+				if(isEasterEgged){
+					codeBackgroundDarkEffects.css("transform","translateX("+ parseFloat(Math.random()*100) +"px)");
 				}
-			});
 
-			
-
-			$("#expandFooterTrigger").click(function(){
-				var expandDuration = 500;
-
-				if(!EXPANDED_FOOTER){
-					$("#footerContacts").show(expandDuration);
-				}else{
-					$("#footerContacts").hide(expandDuration);
+				if(codeBackgroundDarkEffects.is(":hidden")){
+					window.clearInterval(backgroundTimer);
 				}
-				EXPANDED_FOOTER=!EXPANDED_FOOTER;
-			});
+			}, 41);
+		}();
 
-			// $("#coverDownArrow").mouseover(function(){
-			// 	$("#scrollDownText").css("color", "rgba(186,100,255,1)");
-			// });
-			// $("#coverDownArrow").mouseout(function(){
-			// 	$("#scrollDownText").css("color", "rgba(255,100,0,1)");
-			// });
+		var EXPANDED_FOOTER=false;
+
+		$('#portfolioPopup').on('hidden.bs.modal', function () {
+			$('video').each(function() {
+				$(this).get(0).pause();
+			});
+		});
+		
+		$('img').hover(function() {
+			if($(this).hasClass("portfolioTooltiped")){
+				$(this).attr("title","Click for more info");      			
+			}
+		});
+
+		
+
+		$("#expandFooterTrigger").click(function(){
+			var expandDuration = 500;
+
+			if(!EXPANDED_FOOTER){
+				$("#footerContacts").show(expandDuration);
+			}else{
+				$("#footerContacts").hide(expandDuration);
+			}
+			EXPANDED_FOOTER=!EXPANDED_FOOTER;
+		});
+
+		// $("#coverDownArrow").mouseover(function(){
+		// 	$("#scrollDownText").css("color", "rgba(186,100,255,1)");
+		// });
+		// $("#coverDownArrow").mouseout(function(){
+		// 	$("#scrollDownText").css("color", "rgba(255,100,0,1)");
+		// });
 			
 			
 

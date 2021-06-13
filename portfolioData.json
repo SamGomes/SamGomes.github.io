@@ -196,12 +196,16 @@
       "items":
         [
             { 
-              "text": "Hash Code 2018: Self-driving rides GitHub Link",
+              "text": "Hash Code 2018: Self-driving rides",
               "href": "https://github.com/SamGomes//hash-code-2018"
             },
             { 
-              "text": "Hash Code 2019: Photo Slideshow GitHub Link",
+              "text": "Hash Code 2019: Photo slideshow",
               "href": "https://github.com/SamGomes/hash-code-2019"
+            },
+            { 
+              "text": "Hash Code 2021: Traffic signaling",
+              "href": "https://github.com/SamGomes/hash-code-2021"
             }
         ]
     }

@@ -11,7 +11,7 @@
     "_id": {
       "$oid": "5c376cb51f6e4f1a959e342c"
     },
-    "title": "AfterSchool by TreeTree2",
+    "title": "AfterSchool",
     "logoPath": "resources/images/workExperience/afterSchool.png",
     "descriptionHTML": "<p>Instructor in the AfterSchool project by TreeTree2 (<a href=\"https://treetree2.school/\" target=\"_blank\">https://treetree2.school/</a>) in the area of Computer Science (Informática I), from March of 2021 to April of 2021.</p>"
   },
@@ -55,6 +55,12 @@
         [
           { 
               "text" :"Assistant for Education Support - Logic for Programming (2019/2020 - 2nd Semester)"
+          },
+          { 
+              "text" :"Assistant for Education Support - Three-Dimensional Vizualization and Animation (2020/2021 - 1st Semester)"
+          },
+          { 
+              "text" :"Assistant for Education Support - Logic for Programming (2020/2021 - 2nd Semester)"
           }
         ]
     }

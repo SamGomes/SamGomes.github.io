@@ -19,31 +19,39 @@ $(document).ready(function(){ //after page load
 
 		var coverPhrases = 
 		[
-			"\"Hi! I am Sam, welcome to my website! <br> \
-				I work as a CS engineer, PhD student, and assistant professor. <br> \
+			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
+				I work as a CS engineer, PhD student, and education assistant. <br> \
 				You can check out my work in the sections below.\"", 
-			"\"Hi! I am Sam, welcome to my website! <br> \
-				I work as a CS engineer, PhD student, and assistant professor. <br> \
+			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
+				I work as a CS engineer, PhD student, and education assistant. <br> \
 			    Do you like good looking professional websites? \n \
-				I hope this one meets your requirements...", 
-			"\"Hey Hey Hey! Helloooo visitaaant! I am Sam, welcome to my website! <br> \
-				I work as a CS engineer, PhD student, and assistant professor. <br> \
-				You can see my portfolio in the sections below.\"", 
-			"\"Hi! I am Sam, welcome to my website! <br> \
-				I work as a CS engineer, PhD student, and assistant professor. <br> \
-				I had a cringy saying here, but I removed it.\"", 
-			"\"Hi! I am Sam, welcome to my website! <br> \
-				I work as a CS engineer, PhD student, and assistant professor, <br> \
-				and I can present a different saying here in every refresh lol.\"", 
-			"\"Hi! I am Sam, welcome to my website! <br> \
-				I work as a CS engineer, PhD student, and assistant professor. <br> \
+				I hope this one meets your requirements... 😅", 
+			"\"Hey Hey Hey! Helloooo visitaaant! I am Sam, welcome to my website! 😀 <br> \
+				I work as a CS engineer, PhD student, and education assistant. <br> \
+				You can check out my portfolio in the sections below.\"", 
+			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
+				I work as a CS engineer, PhD student, and education assistant. <br> \
+				I had a cringy saying here, but I removed it. 😅\"", 
+			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
+				I work as a CS engineer, PhD student, education assistant, <br> \
+				and I can present a different saying here in every refresh. 👾\"", 
+			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
+				I work as a CS engineer, PhD student, and education assistant. <br> \
 				As a PhD student, I have the opportunity to use my knowledge to create new things!\"", 
-			"\"Hi! I am Sam, welcome to my website! <br> \
-				I work as a CS engineer, PhD student, and assistant professor. <br> \
-				Oh no! A wild m̶i̴s̴s̴i̷n̴g̸n̷o̷ appeared! <br> \
+			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
+				I work as a CS engineer, PhD student, and education assistant. <br> \
+				Oh no! A wild m̶i̴s̴s̴i̷n̴g̸n̷o̷ appeared! 😨 <br> \
 				<h5>|˜Ž­|　<br> |‡g|　<br> |¾ù|　<br> |åm|__<br> |ïãëw|<br> |ú¥ê2|<br> |)å¬7|<br> |…¾¥ˆ|<br></h5>\""
 		];
-		var randWebsiteMode = Math.floor(Math.random()*coverPhrases.length);
+
+		var randomNum = Math.random()*coverPhrases.length;
+		var randWebsiteMode = Math.floor(randomNum);
+		console.log(randomNum)
+		if(randomNum >= 6){
+			if(randomNum < 6.7){
+				randWebsiteMode = Math.floor(Math.random()*(coverPhrases.length-1));
+			}
+		}
 		var isEasterEgged = (randWebsiteMode == 6);
 		isEasterEgg = true;
 		$("#coverContainerText").html(coverPhrases[randWebsiteMode]);

@@ -46,7 +46,6 @@ $(document).ready(function(){ //after page load
 
 		var randomNum = Math.random()*coverPhrases.length;
 		var randWebsiteMode = Math.floor(randomNum);
-		console.log(randomNum)
 		if(randomNum >= 6){
 			if(randomNum < 6.7){
 				randWebsiteMode = Math.floor(Math.random()*(coverPhrases.length-1));

@@ -82,12 +82,12 @@
         "items":
         [
           { 
-            "text" : "(VJ 2020) Approved full paper, waiting for publish...",
-            "href" : ""
+            "text" : "Gomes S., Alves T., Dias J., Martinho C. (2022) Reward-Mediated Individual and Altruistic Behavior. In: Videogame Sciences and Arts. VJ 2020. Communications in Computer and Information Science, vol 1531. Springer, Cham. https://doi.org/10.1007/978-3-030-95305-8_7",
+            "href" : "https://link.springer.com/chapter/10.1007/978-3-030-95305-8_7"
           },
           { 
-            "text" : "(VJ 2020) Approved demo paper, waiting for publish...",
-            "href" : ""
+            "text" : "Gomes S., Alves T., Dias J., Martinho C. (2022) Message Across: A word matching game for reward-based in-game behavior change. In: Videogame Sciences and Arts. VJ 2020. http://videojogos2020.ipb.pt/docs/ProceedingsVJ2020.pdf",
+            "href" : "http://videojogos2020.ipb.pt/docs/ProceedingsVJ2020.pdf"
           }
         ] 
       }

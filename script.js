@@ -20,38 +20,47 @@ $(document).ready(function(){ //after page load
 		var coverPhrases = 
 		[
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and education assistant. <br> \
+				I work as a CS engineer, PhD student, and TA. <br> \
+				I also like to sing and to play music. 🎤🎧🎶🎸\"", 
+			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
+				I work as a CS engineer, PhD student, and TA. <br> \
+				This is not a Tinder description, <br> \
+				 thus I will not get more casual than this...\"", 
+			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
+				I work as a CS engineer, PhD student, and TA. <br> \
 				You can check out my work in the sections below.\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and education assistant. <br> \
+				I work as a CS engineer, PhD student, and TA. <br> \
 			    Do you like good looking professional websites? \n \
-				I hope this one meets your requirements... 😅", 
+				I hope this one meets your requirements... 😅\"", 
 			"\"Hey Hey Hey! Helloooo visitaaant! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and education assistant. <br> \
+				I work as a CS engineer, PhD student, and TA. <br> \
 				You can check out my portfolio in the sections below.\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and education assistant. <br> \
+				I work as a CS engineer, PhD student, and TA. <br> \
 				I had a cringy saying here, but I removed it. 😅\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, education assistant, <br> \
+				I work as a CS engineer, PhD student, TA, <br> \
 				and I can present a different saying here in every refresh. 👾\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and education assistant. <br> \
-				As a PhD student, I have the opportunity to use my knowledge to create new things!\"", 
+				I work as a CS engineer, PhD student, and TA. <br> \
+				As a PhD student, I have the opportunity to <br> \
+				use my knowledge to create new things!\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and education assistant. <br> \
+				I work as a CS engineer, PhD student, and TA. <br> \
 				Oh no! A wild m̶i̴s̴s̴i̷n̴g̸n̷o̷ appeared! 😨 <br> \
 				<h5>|˜Ž­|　<br> |‡g|　<br> |¾ù|　<br> |åm|__<br> |ïãëw|<br> |ú¥ê2|<br> |)å¬7|<br> |…¾¥ˆ|<br></h5>\""
 		];
 
+
 		var randomNum = Math.random()*coverPhrases.length;
 		var randWebsiteMode = Math.floor(randomNum);
-		if(randomNum >= 6){
-			if(randomNum < 6.7){
+		if(randomNum >= 8){
+			if(randomNum < 8.7){
 				randWebsiteMode = Math.floor(Math.random()*(coverPhrases.length-1));
 			}
 		}
-		var isEasterEgged = (randWebsiteMode == 6);
+		var isEasterEgged = (randWebsiteMode == 8);
 		isEasterEgg = true;
 		$("#coverContainerText").html(coverPhrases[randWebsiteMode]);
 
@@ -105,10 +114,13 @@ $(document).ready(function(){ //after page load
 			
 			currRow.append(domElem);
 
+			var domElemCards = domElem.find(".card");
+			var domElemCard = domElemCards[0];
+
 			var domElemImages = domElem.find(".card-image");
 			var domElemImage = domElemImages[0];
 
-			domElemImages.on("click",function(){
+			domElemCards.on("click",function(){
 				view.createPopup(val.title,val.videoPath,val.descriptionHTML,val.references, val.website);
 			});
 

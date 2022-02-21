@@ -54,13 +54,19 @@
       "items":
         [
           { 
-              "text" :"Assistant for Education Support - Logic for Programming (2019/2020 - 2nd Semester)"
+              "text" :"Teaching Assistant - Logic for Programming (2021/2022 - 1st Semester)"
           },
           { 
-              "text" :"Assistant for Education Support - Three-Dimensional Vizualization and Animation (2020/2021 - 1st Semester)"
+              "text" :"Teaching Assistant - Three-Dimensional Vizualization and Animation (2021/2022 - 1st Semester)"
           },
           { 
-              "text" :"Assistant for Education Support - Logic for Programming (2020/2021 - 2nd Semester)"
+              "text" :"Teaching Assistant - Logic for Programming (2019/2020 - 2nd Semester)"
+          },
+          { 
+              "text" :"Teaching Assistant - Three-Dimensional Vizualization and Animation (2020/2021 - 1st Semester)"
+          },
+          { 
+              "text" :"Teaching Assistant - Logic for Programming (2020/2021 - 2nd Semester)"
           }
         ]
     }

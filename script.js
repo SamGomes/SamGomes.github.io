@@ -80,6 +80,7 @@ $(document).ready(function(){ //after page load
 	
 
 		var lightColor = function(amount, originalColor){
+			// return originalColor;
 			var newColor = [];
 			for(var i=0; i<originalColor.length; i++){
 				if(isEasterEgged){
@@ -126,7 +127,7 @@ $(document).ready(function(){ //after page load
 
 			domElemImages.on("load",function(){
 				//get predominant image color
-				var colorThief = new ColorThief();
+				var colorThief = new ColorThief(); 
 				var imageColor = colorThief.getColor(domElemImage);
 				//lighten image color by giving transparency
 				domElem.find(".card").css("border-color", "rgb("+lightColor(0.75, imageColor)+")" );
@@ -137,6 +138,8 @@ $(document).ready(function(){ //after page load
 
 		var updateCards = function(container, data)
 		{
+
+			
 			container.fadeOut(300, function() {
 				var currRow = $("<div class=\"row\"></div>");
 				var id = 0;
@@ -145,10 +148,10 @@ $(document).ready(function(){ //after page load
 				container.append(currRow);
 				$.each(data, function( key, val ) {
 					var logoPath = val.logoPath;
-					if(logoPath==undefined){
+					if(logoPath == undefined){
 						logoPath = "resources/images/portfolio/placeholder.png";
 					}
-					buildCards(currRow, val, id, logoPath);				    
+					buildCards(currRow, val, id, logoPath);
 					id++;
 				});
 		    	container.fadeIn(600);

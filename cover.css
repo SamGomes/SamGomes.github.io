@@ -246,12 +246,14 @@ a:hover{
 
   @media only screen and (max-width: 768px) {
     .card-image{
+      width: 4%;
       visibility: hidden;
     }
     .card {
       width:100%;
+      height: auto;
       
-      padding: 0%;
+      padding: 0.0%;
       margin: 1.0%;
       box-shadow: 0.5em 0.5em 0.5em rgba(60,60,60,1);
 
@@ -261,8 +263,8 @@ a:hover{
 
       border-color: transparent;
 
-      background-image: url("resources/images/cardSkin.png");
-      background-size: 300% 300%;
+      /*background-image: url("resources/images/cardSkin.png");*/
+      background-size: 100% 100%;
       float: right;
 
       max-height: 3em;
@@ -270,6 +272,12 @@ a:hover{
   }
 
   @media only screen and (min-width: 768px) {
+    .card-image{
+      height: 100%;
+      width: 90%; 
+      margin: auto;
+      display: block;
+    }
     .card {
       padding: 10%;
       margin: 2.5%;
@@ -299,12 +307,6 @@ a:hover{
  background-image: url("resources/images/cardSkinHover.png");
 }
 
-.card-image{
-  width: 90%; 
-  height: 100%;
-  margin: auto;
-  display: block;
-}
 .card-description-image{
   width: 80%; 
   margin:auto;

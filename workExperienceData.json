@@ -19,6 +19,28 @@
     "_id": {
       "$oid": "5c376cb51f6e4f1a959e342c"
     },
+    "title": "Organizer Roles",
+    "logoPath": "resources/images/workExperience/organizer.png",
+    "references":{ 
+      "title": "Roles and Venues",
+      "items":
+        [
+          { 
+              "text" :"Publication Chair at IVA 2022"
+          },
+          { 
+              "text" :"Volunteer at IVA 2022"
+          },
+          { 
+              "text" :"Volunteer at EPIA 2022"
+          }
+        ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5c376cb51f6e4f1a959e342c"
+    },
     "title": "Review Roles",
     "logoPath": "resources/images/workExperience/reviewer.png",
     "references":{ 
@@ -26,19 +48,22 @@
       "items":
         [
           { 
-              "text" :"Sub-reviewer for ICGI2019"
+              "text" :"Reviewer for CoG 2022 regular papers"
           },
           { 
-              "text" :"Sub-reviewer for VJ2019"
-          },
-          { 
-              "text" :"Sub-reviewer for CoG 2020 full papers"
+              "text" :"Sub-reviewer for CoG 2020 regular papers"
           },
           { 
               "text" :"Reviewer for CoG 2020 short papers"
           },
           { 
-              "text" :"Sub-reviewer for AIIDE-20 full papers"
+              "text" :"Sub-reviewer for AIIDE-20 regular papers"
+          },
+          { 
+              "text" :"Sub-reviewer for ICGI2019"
+          },
+          { 
+              "text" :"Sub-reviewer for VJ2019"
           }
         ]
     }
@@ -60,13 +85,13 @@
               "text" :"Teaching Assistant - Three-Dimensional Vizualization and Animation (2021/2022 - 1st Semester)"
           },
           { 
-              "text" :"Teaching Assistant - Logic for Programming (2019/2020 - 2nd Semester)"
-          },
-          { 
               "text" :"Teaching Assistant - Three-Dimensional Vizualization and Animation (2020/2021 - 1st Semester)"
           },
           { 
               "text" :"Teaching Assistant - Logic for Programming (2020/2021 - 2nd Semester)"
+          },
+          { 
+              "text" :"Teaching Assistant - Logic for Programming (2019/2020 - 2nd Semester)"
           }
         ]
     }

@@ -1,23 +1,6 @@
   [
     {
       "_id": {
-        "$oid": "5c376cb51f6e4e1a959e342e"
-      },
-      "title": "HRI",
-      "logoPath": "resources/images/publications/HRILogo.png",
-      "references":{
-        "title": "Venue Publications",
-        "items":
-          [
-            { 
-              "text" : "Correia, F., Mascarenhas, S. F., Gomes, S., Arriaga, P., Leite, I., Prada, R., Melo, F. S., and Paiva, A. (2019).  Exploring prosociality in human-robot teams.",
-              "href" : "https://ieeexplore.ieee.org/abstract/document/8673299"
-            }
-          ] 
-      }
-    },
-    {
-      "_id": {
         "$oid": "5c376cb51f6e4f1a959e342c"
       },
       "title": "IST",
@@ -27,7 +10,7 @@
         "items":
           [
             { 
-              "text" : "Gomes S., Dias J., Martinho C. Application and Design of GPU Parallel RRT for Racing Car Simulation. Case Study of Iterative Parallel Sampling RRT applied to The Open Racing Car Simulator. Masters thesis, Instituto Superior Técnico, 2017.",
+              "text" : "Gomes S., Dias J., Martinho C. Application and Design of GPU Parallel RRT for Racing Car Simulation. Case Study of Iterative Parallel Sampling RRT applied to The Open Racing Car Simulator. Masters thesis, Instituto Superior Técnico (2017)",
               "href" : "https://fenix.tecnico.ulisboa.pt/cursos/meic-t/dissertacao/1972678479053541"
             }
           ] 
@@ -82,11 +65,11 @@
         "items":
         [
           { 
-            "text" : "Gomes S., Alves T., Dias J., Martinho C. (2022) Reward-Mediated Individual and Altruistic Behavior. In: Videogame Sciences and Arts. VJ 2020. Communications in Computer and Information Science, vol 1531. Springer, Cham. https://doi.org/10.1007/978-3-030-95305-8_7",
+            "text" : "Gomes S., Alves T., Dias J., Martinho C. (2022) .\"Reward-Mediated Individual and Altruistic Behavior. In: Videogame Sciences and Arts.\" VJ 2020. Communications in Computer and Information Science, vol 1531. Springer, Cham. https://doi.org/10.1007/978-3-030-95305-8_7",
             "href" : "https://link.springer.com/chapter/10.1007/978-3-030-95305-8_7"
           },
           { 
-            "text" : "Gomes S., Alves T., Dias J., Martinho C. (2022) Message Across: A word matching game for reward-based in-game behavior change. In: Videogame Sciences and Arts. VJ 2020. http://videojogos2020.ipb.pt/docs/ProceedingsVJ2020.pdf",
+            "text" : "Gomes S., Alves T., Dias J., Martinho C. (2022) .\"Message Across: A word matching game for reward-based in-game behavior change.\" In: Videogame Sciences and Arts. VJ 2020. http://videojogos2020.ipb.pt/docs/ProceedingsVJ2020.pdf",
             "href" : "http://videojogos2020.ipb.pt/docs/ProceedingsVJ2020.pdf"
           }
         ] 
@@ -103,7 +86,7 @@
         "items":
           [
               { 
-          "text" : "Santos, Fernando P and Mascarenhas, Samuel F and Santos, Francisco C and Correia, Filipa and Gomes, Samuel and Paiva, Ana. Outcome-based Partner Selection in Collective Risk Dilemmas",
+          "text" : "Santos, Fernando P and Mascarenhas, Samuel F and Santos, Francisco C and Correia, Filipa and Gomes, Samuel and Paiva, Ana. \"Outcome-based Partner Selection in Collective Risk Dilemmas\" (2019)",
           "href" : "https://dl.acm.org/doi/10.5555/3306127.3331873"
         }
       ] 
@@ -111,16 +94,33 @@
     },
     {
       "_id": {
+        "$oid": "5c376cb51f6e4e1a959e342e"
+      },
+      "title": "HRI",
+      "logoPath": "resources/images/publications/HRILogo.png",
+      "references":{
+        "title": "Venue Publications",
+        "items":
+          [
+            { 
+              "text" : "Correia, F., Mascarenhas, S. F., Gomes, S., Arriaga, P., Leite, I., Prada, R., Melo, F. S., and Paiva, A.  Exploring prosociality in human-robot teams (2019)",
+              "href" : "https://ieeexplore.ieee.org/abstract/document/8673299"
+            }
+          ] 
+      }
+    },
+    {
+      "_id": {
         "$oid": "5c376cb51f6e4e1a959e342g"
       },
-      "title": "Software X",
+      "title": "SoftwareX",
       "logoPath": "resources/images/publications/SoftwareXLogo.png",
       "references":{
         "title": "Venue Publications",
         "items":
           [
               { 
-          "text" : "Alves-Oliveira, P., Gomes, S., Chandak, A., Arriaga, P., Hoffman, G., & Paiva, A. (2020). Software architecture for YOLO, a creativity-stimulating robot. SoftwareX, 11, 100461.",
+          "text" : "Alves-Oliveira, P., Gomes, S., Chandak, A., Arriaga, P., Hoffman, G., & Paiva, A. \"Software architecture for YOLO, a creativity-stimulating robot\" (2020)",
           "href" : "https://www.sciencedirect.com/science/article/pii/S2352711019302468?via%3Dihub"
         }
       ] 
@@ -137,8 +137,42 @@
         "items":
           [
             { 
-				"text" : "Correia, F., Gomes, S., Mascarenhas, S., Melo, F. S., & Paiva, A. (2020) The Dark Side of Embodiment Teaming Up With Robots VS Disembodied Agents. In Robotics: Science and Systems (2020).",
+				"text" : "Correia, F., Gomes, S., Mascarenhas, S., Melo, F. S., & Paiva, A. \"The Dark Side of Embodiment Teaming Up With Robots VS Disembodied Agents. In Robotics: Science and Systems\" (2020)",
 				"href" : "http://roboticsproceedings.org/rss16/p010.pdf"
+	        }
+	      ] 
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5c376cb51f6e4e1a959e342h"
+      },
+      "title": "IEEE TAC",
+      "logoPath": "resources/images/publications/IEEETAC.png",
+      "references":{
+        "title": "Venue Publications",
+        "items":
+          [
+            { 
+				"text" : "Samuel Gomes, José Bernardo Rocha, João Dias and Carlos Martinho, \"Designing a Mood-Mediated Multi-level Reasoner\" (2023)",
+				"href" : "https://ieeexplore.ieee.org/document/10175576"
+	        }
+	      ] 
+      }
+    },
+    {
+      "_id": {
+        "$oid": "5c376cb51f6e4e1a959e342h"
+      },
+      "title": "International Journal of STEM Education",
+      "logoPath": "resources/images/publications/InternationalJornalOfSTEMEducation.png",
+      "references":{
+        "title": "Venue Publications",
+        "items":
+          [
+            { 
+				"text" : "Samuel Gomes, Luis Costa, Carlos Martinho, João Dias, Geraldo Xexéo, and Ana Moura Santos, \"Modeling students’ behavioral engagement through different in-class behavior styles\" (2023)",
+				"href" : "https://stemeducationjournal.springeropen.com/articles/10.1186/s40594-023-00407-w"
 	        }
 	      ] 
       }
@@ -154,7 +188,7 @@
         "items":
           [
             { 
-				"text" : "Gomes, S., & Costa, L. Behavioral Analysis of Math Students’ Engagement. (2022) (Presentation Abstract)",
+				"text" : "Gomes, S., & Costa, L. \"Behavioral Analysis of Math Students’ Engagement\" (2022) (Presentation Abstract)",
 				"href" : "https://enspm2022.spm.pt/wp-content/uploads/thwcfe_uploads/6b0909f3738be6bf2a985fe9f3fdc43f/ENSPMAbstract.pdf"
 	        }
 	      ] 

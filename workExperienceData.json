@@ -48,16 +48,10 @@
       "items":
         [
           { 
-              "text" :"Reviewer for CoG 2022 regular papers"
+              "text" :"Reviewer for CoG 2020, 2022, and 2024"
           },
           { 
-              "text" :"Sub-reviewer for CoG 2020 regular papers"
-          },
-          { 
-              "text" :"Reviewer for CoG 2020 short papers"
-          },
-          { 
-              "text" :"Sub-reviewer for AIIDE-20 regular papers"
+              "text" :"Sub-reviewer for AIIDE-20"
           },
           { 
               "text" :"Sub-reviewer for ICGI2019"
@@ -75,23 +69,20 @@
     "title": "IST",
     "logoPath": "resources/images/workExperience/istLogo.png",
     "references":{
-      "title": "Professional Roles",
+      "title": "Professional Roles -- Teaching Assistant",
       "items":
         [
           { 
-              "text" :"Teaching Assistant - Logic for Programming (2021/2022 - 1st Semester)"
+              "text" :"Game Design (M.Sc.) during the academic years 2022/2023 and 2023/2024"
           },
           { 
-              "text" :"Teaching Assistant - Three-Dimensional Vizualization and Animation (2021/2022 - 1st Semester)"
+              "text" :"Game Development Methodology (M.Sc.) during the academic year 2022/2023"
           },
           { 
-              "text" :"Teaching Assistant - Three-Dimensional Vizualization and Animation (2020/2021 - 1st Semester)"
+              "text" :"Logic for Programming (B.Sc.) during the academic years 2019/2020, 2020/2021, 2021/2022, 2022/2023, and 2023/2024"
           },
           { 
-              "text" :"Teaching Assistant - Logic for Programming (2020/2021 - 2nd Semester)"
-          },
-          { 
-              "text" :"Teaching Assistant - Logic for Programming (2019/2020 - 2nd Semester)"
+              "text" :"Three-Dimensional Visualization and Animation (M.Sc.) during the academic years 2020/2021 and 2021/2022"
           }
         ]
     }

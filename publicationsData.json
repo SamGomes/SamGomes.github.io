@@ -193,6 +193,23 @@
 	        }
 	      ] 
       }
+    },
+    {
+      "_id": {
+        "$oid": "5c376cb51f6e4e1a959e342h"
+      },
+      "title": "IEEE Access",
+      "logoPath": "resources/images/publications/IEEEAccess.png",
+      "references":{
+        "title": "Venue Publications",
+        "items":
+          [
+            { 
+				"text" : "Costa, L. F. C., Gomes, S., Santos, A. M., Xexéo, G., Lima, Y., Prada, R., ... & Dias, J. (2024). Heroine’s Learning Journey: Motivating Women in STEM Online Courses Through the Power of a Narrative. IEEE Access.",
+				"href" : "https://ieeexplore.ieee.org/abstract/document/10416858"
+	        }
+	      ] 
+      }
     }
 
 

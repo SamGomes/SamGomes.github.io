@@ -2,10 +2,19 @@
 $(document).ready(function(){ //after page load
 	var view = (function($, undefined){
 
+		var cvOptionsText = $("#cvButton").html()
+		$("#cvButton").on("click",function(){
+			if($("#cvOptions").is(":hidden")){
+				$("#cvButton").html(cvOptionsText+" >")
+				$("#cvOptions").show(500);
+			}else{
+				$("#cvButton").html(cvOptionsText)
+				$("#cvOptions").hide(500);
+			}
+		});
+		
 		var exportedData = {};
-
 		var backgroundTimer = undefined; //will contain the timer for the background effects loop
-
 
 		//play song on load
 		//document.getElementById("my_audio").play();
@@ -13,9 +22,6 @@ $(document).ready(function(){ //after page load
 		y = rights.getFullYear();
 		m = rights.getMonth();
 		d = rights.getDate();
-
-
-
 
 		var coverPhrases = 
 		[
@@ -69,7 +75,7 @@ $(document).ready(function(){ //after page load
 						  "July", "August", "September", "October", "November", "December"];
 
 		var rightsElement = $("#rightsText");
-		rightsElement.append("Samuel Gomes Web Page @ " + monthNames[m] + " of " + y +". <br> Unless stated otherwise in the works themselves, the rights are reserved to me as well as the other authors of the work presented here.");
+		rightsElement.append("Samuel Gomes Web Page @ " + monthNames[m] + " " + y +". <br> Unless stated otherwise in the works themselves, the rights are reserved to me as well as the other authors of the work presented here.");
 
 		$("#footerContacts").hide(300);
 		window.location.href = "#";
@@ -130,8 +136,8 @@ $(document).ready(function(){ //after page load
 				var colorThief = new ColorThief(); 
 				var imageColor = colorThief.getColor(domElemImage);
 				//lighten image color by giving transparency
-				domElem.find(".card").css("border-color", "rgb("+lightColor(0.75, imageColor)+")" );
-				domElem.find(".card").css("background-color", "rgb("+lightColor(0.75, imageColor)+")" );
+				// domElem.find(".card").css("border-color", "rgba("+lightColor(0.75, imageColor)+")" );
+				domElem.find(".card").css("background-color", "rgba("+lightColor(0.9, imageColor)+",0.65)" );
 			});
 		}
 
@@ -141,7 +147,7 @@ $(document).ready(function(){ //after page load
 
 			
 			container.fadeOut(300, function() {
-				var currRow = $("<div class=\"row\"></div>");
+				var currRow = $("<div class=\"row\" container-cards></div>");
 				var id = 0;
 				container.empty();
 				container.hide();
@@ -374,11 +380,13 @@ $(document).ready(function(){ //after page load
 		
 
 		//background stuff
+		documentHeight = $(document).height();
 		var codeBackgroundDarkEffects = $("#codeBackgroundDarkEffects");
 		codeBackgroundDarkEffects.css("transform","translateY(0px)");
+		
 		//make background effect move a little in sin way
 		var backgroundEffectFunc = function(){
-			var frameRatioIncrement = 0.016;
+			var frameRatioIncrement = 0.008;
 			if(isEasterEgged){
 				frameRatioIncrement = 0;
 			}
@@ -394,7 +402,16 @@ $(document).ready(function(){ //after page load
 				var newOffset = ratio*window.screen.height;
 
 				codeBackgroundDarkEffects.css("transform","translateY("+ parseFloat(-currentScroll+newOffset) +"px)");
-
+				$("#codeBackgroundOverlay").css("transform","translateY("+ parseFloat((currentScroll*0.95-newOffset*0.1)) +"px)");
+				
+				currentScroll*=0.2;
+				$("#anchor_portfolio").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
+				$("#anchor_workExperience").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
+				// $("#anchor_workExperience").css("opacity",1.0 - parseFloat(2*currentScroll)/(documentHeight/2.0));
+				$("#anchor_researchProjects").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
+				$("#anchor_publications").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
+				$("#anchor_extracurricular").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
+				$("#rights").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
 
 				if(isEasterEgged){
 					codeBackgroundDarkEffects.css("transform","translateX("+ parseFloat(Math.random()*100) +"px)");

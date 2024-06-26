@@ -29,6 +29,7 @@
 
 	<!--Background -->
 	<div class="background" id="codeBackground"></div>
+	<div class="background-overlay" id="codeBackgroundOverlay"></div>
 	<div class="parallaxContainer" id="mainParallaxContainer">
 		<!-- background effects -->
 		<div class="background-effect" id="codeBackgroundDarkEffects"></div>
@@ -36,7 +37,7 @@
 
 	<!--FrontPage-->
 	<div id="cover" class="cover">
-		<div class="navbar fixed-top navbar-expand-md" style="background-image: url(&apos;resources/images/topNavbarSkin.png&apos;);">
+		<div class="navbar navbar-header fixed-top navbar-expand-md">
 			<img class="nav-img" src="resources/images/artisticSignature.png">
 			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#topNavbar">	<span class=" fa fa-bars"></span>
 			</button>
@@ -44,28 +45,30 @@
 				<nav class="nav navbar-nav nav-masthead">	
 					<a class="nav-link" href="#anchor_frontPage">cd ~</a>
                 	<!-- <a class="nav-link" href="#anchor_biography">Biography</a> -->	
-                	<a class="nav-link" href="#anchor_portfolio">cd ~/My_Portfolio/</a>
+                	<a class="nav-link" href="#anchor_portfolio">cd ~/Portfolio/</a>
                 	<a class="nav-link" href="#anchor_workExperience">cd ~/Work_Experience/</a>
                 	<a class="nav-link" href="#anchor_researchProjects">cd ~/Research_Projects/</a>
-                	<a class="nav-link" href="#anchor_publications">cd ~/My_Publications/</a>
-                	<a class="nav-link nav-link-fancy" href="./files/cv.pdf" target="_blank">sh CV.out</a>
+                	<a class="nav-link" href="#anchor_publications">cd ~/Publications/</a>
+                	<a class="nav-link" id="cvButton">sh CV.out</a>
+                	<div  id="cvOptions" style="display: none; float-right">
+						<a class="nav-link nav-link-fancy" href="./files/cv/academic_CV.pdf" target="_blank">sh academic_CV.out</a>
+						<a class="nav-link nav-link-fancy" href="./files/cv/companies_CV.pdf" target="_blank">sh companies_CV.out</a>
+					</div>
+					
         		</nav>
     		</div>
 		</div>
 
 	    <div class="cover-container" id="anchor_frontPage">
-	    	<img  class="cover-image" src="resources/images/Sam.png"></img>
+	    	<img  class="cover-image" src="/resources/images/SamEffects.png"></img>
+<!-- 	    	<div  class="cover-image"></div> -->
 	    	<h2 class="cover-container-text" id="coverContainerText"></h2>
-	    	<!-- <h3 class="cover-container-text" style="color:rgba(255,100,0,1)" id="scrollDownText">Scroll down to see the rest</h3> -->
-	    	<!-- <a class="cover-container-text cover-icon-link fa fa-arrow-circle-down" id="coverDownArrow" href="#anchor_portfolio"></a></h1>
-	    	<a class="cover-container-text cover-icon-link fa fa-arrow-circle-down" id="coverDownArrow" href="#anchor_portfolio"></a></h1>
-	    	<a class="cover-container-text cover-icon-link fa fa-arrow-circle-down" id="coverDownArrow" href="#anchor_portfolio"></a></h1> -->
 	    </div>
 	</div>
 
 
 	<!--Contact-->
-	<footer class="navbar fixed-bottom navbar-expand-md" id="footer" style="background-image: url('resources/images/bottomNavbarSkin.png');">
+	<footer class="navbar navbar-footer fixed-bottom navbar-expand-md" id="footer">
 		<div class="row">
 			<a class="nav-link" id="expandFooterTrigger" href="#">Contacts</a>
 		</div>
@@ -95,12 +98,13 @@
 
 	<!--Portfolio-->	
 	<div id="anchor_portfolio">	
-		<section class="jumbotron text-center ">
+		<section class="jumbotron jumbotron-margin-left">
 			<div class=" jumbotron-heading">
-				<h1>My Portfolio</h1>
+				<h1>Portfolio</h1>
 				<h2>Some of the work in which I participated over the years as a programmer.</h2>
 			</div>
 			
+			<div class="container" id="portfolioContainer"></div>
 			<div class="row d-flex align-items-center justify-content-center">
 				<h2><span id="portfolio_left_arrow" class="container-link fa fas fa-angle-left" style="display: block;"></span></h2> 
 				&nbsp;
@@ -109,19 +113,19 @@
 				<h2><span id="portfolio_right_arrow" class="container-link fa fas fa-angle-right" style="display: block;"></span></h2>
 			</div>
 
-			<div class="container" id="portfolioContainer"></div>
 		</section>
 	</div>
 
 
 	<!--Work Experience-->
 	<div id="anchor_workExperience">
-		<section class="jumbotron">
+		<section class="jumbotron jumbotron-margin-right">
 			<div class="jumbotron-heading">
 				<h1>Work Experience</h1>
 				<h2>Overview of my work experience.</h2>
 			</div>
-
+			
+			<div class="container" id="workExperienceContainer"></div>	
 			<div class="row d-flex align-items-center justify-content-center">
 				<h2><span id="workExperience_left_arrow" class="container-link fa fas fa-angle-left" style="display: block;"></span></h2> 
 				&nbsp;
@@ -130,19 +134,19 @@
 				<h2><span id="workExperience_right_arrow" class="container-link fa fas fa-angle-right" style="display: block;"></span></h2>
 			</div>
 
-			<div class="container" id="workExperienceContainer"></div>	
 		</section>
 	</div>
 
 
 	<!--Research Projects-->
 	<div id="anchor_researchProjects">
-		<section class="jumbotron text-center">
+		<section class="jumbotron jumbotron-margin-left">
 			<div class=" jumbotron-heading">
 				<h1>Research Projects</h1>
 				<h2>The research projects in which I have participated.</h2> <!--or am still part of.</h3> -->
 			</div>
 
+			<div class="container" id="researchProjectsContainer"></div>	
 			<div class="row d-flex align-items-center justify-content-center">
 				<h2><span id="researchProjects_left_arrow" class="container-link fa fas fa-angle-left" style="display: block;"></span></h2> 
 				&nbsp;
@@ -151,19 +155,20 @@
 				<h2><span id="researchProjects_right_arrow" class="container-link fa fas fa-angle-right" style="display: block;"></span></h2>
 			</div>
 
-			<div class="container" id="researchProjectsContainer"></div>	
 		</section>
 	</div>	
 
 
 	<!-- Publications-->
 	<div id="anchor_publications">
-		<section class="jumbotron text-center ">
+		<section class="jumbotron jumbotron-margin-right">
 			<div class=" jumbotron-heading">
-				<h1>My Publications</h1>
+				<h1>Publications</h1>
+				<h3><a href="https://scholar.google.com/citations?user=U937SdIAAAAJ&hl=pt-PT" class="nav-link fab fa-scholar" target="_blank"></a></h3>
 				<h2>The publications related to academic studies I worked on.</h2>
 			</div>
 
+			<div class="container" id="publicationsContainer"></div>
 			<div class="row d-flex align-items-center justify-content-center">
 				<h2><span id="publications_left_arrow" class="container-link fa fas fa-angle-left" style="display: block;"></span></h2> 
 				&nbsp;
@@ -172,18 +177,18 @@
 				<h2><span id="publications_right_arrow" class="container-link fa fas fa-angle-right" style="display: block;"></span></h2>
 			</div>
 
-			<div class="container" id="publicationsContainer"></div>	
 		</section>
 	</div>
 
 	<!-- Extracurricular Activities -->
 	<div id="anchor_extracurricular">
-		<section class="jumbotron text-center ">
+		<section class="jumbotron jumbotron-margin-left">
 			<div class=" jumbotron-heading">
 				<h1>Extracurricular Activities</h1>
-				<h2>Stuff I do outside academia and engineering.</h2>
+				<h2>The stuff I do outside of academia and engineering.</h2>
 			</div>
 
+			<div class="container" id="extracurricularContainer"></div>
 			<div class="row d-flex align-items-center justify-content-center">
 				<h2><span id="extracurricular_left_arrow" class="container-link fa fas fa-angle-left" style="display: block;"></span></h2> 
 				&nbsp;
@@ -192,7 +197,6 @@
 				<h2><span id="extracurricular_right_arrow" class="container-link fa fas fa-angle-right" style="display: block;"></span></h2>
 			</div>
 
-			<div class="container" id="extracurricularContainer"></div>	
 		</section>
 	</div>
 

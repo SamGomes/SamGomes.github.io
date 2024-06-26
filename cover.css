@@ -11,27 +11,48 @@
   width: 100%; 
   height: 100%; 
 
-  color: #fff;
+  color: var(--highlightColor);
   text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
   
-  font-family: "Lucida Sans Unicode", Courier, monospace;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif, monospace;
 
-  scroll-behavior: smooth;
+/*   scroll-behavior: smooth; */
 }
 
 a{
-  color: #3d3d3d;
+  color: var(--highlightColor);
 }
 a:hover{
-  color: #2a4e89;
+  color: var(--highlightColor);
 }
 
-.background{
-  background-image: url("resources/images/codeBackground.png");
-  background-color: #1D193C;
-  position: fixed;
+:root {
+  --bkgColor: black;
+  --bkgHighlightColor: purple;
+  --highlightColor: white;
+}
 
+
+.background{
+  background-color: var(--bkgColor);
+  position: fixed;
+  background-repeat: no-repeat;
+  
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+
+  z-index: -1;
+}
+
+.background-overlay{
+  background: linear-gradient(160deg, var(--bkgHighlightColor) 20%, var(--bkgColor) 90.00%);
+  background-repeat: no-repeat;
+  position: absolute;
+  
+  box-shadow: var(--bkgColor) 0px 100px 100px -100px inset, var(--bkgColor) 0px -200px 150px -150px inset;
+  
   top: 0; 
   left: 0; 
   width: 100%; 
@@ -44,7 +65,7 @@ a:hover{
   background-image: url("resources/images/codeBackgroundDarkEffects.png");
   background-color: transparent;
   background-size: contain;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   position: absolute;
 
   top: 12%;
@@ -59,19 +80,18 @@ a:hover{
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .cover {
   width: 100%;
-  /*height: 100%; */
+  height: 100%;
   vertical-align: middle;
   display: table;
 
 }
 .cover-container{
-
   margin-top: 10vw;
   margin-bottom: 10vw;
 }
 .cover-container-text{
   font-size: 2vw;
-  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+  text-shadow: -3px 0 var(--bkgColor), 0 3px var(--bkgColor), 3px 0 var(--bkgColor), 0 -3px var(--bkgColor);
 }
 
 
@@ -81,7 +101,7 @@ a:hover{
  */
 
  .masthead {
-   background-color:  rgba(0,0,0,.8);
+   background-color:  rgba(0,0,0,.95);
  }
 
  .masthead-brand {
@@ -109,20 +129,32 @@ a:hover{
 }
 
 .cover-image {
-  padding: 2%;
-  width: 22.8%;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-image: url("resources/images/Sam.png");
+  
+  border-radius: 50%;
+  border-width: 50px
+  border-style: solid;
+  border-color: rgba(150,150,150,1);
+  
+  box-shadow: var(--bkgColor) 0px 200px 200px -200px;
+/*   padding: auto; */
+  width: 15%;
+  margin: auto;
 }
 
 .nav-img {
   width: 6em;
-  height: 2em;
   float: left;
-  margin: 0;
+  margin: auto;
 }
 
 .nav-link {
   font-weight: normal;
-  color: rgba(150,150,150,1);
+  color: rgba(200,200,200,1);
   background-color: transparent;
   border-bottom-color:transparent;
  /* padding-right: 1em;
@@ -135,7 +167,7 @@ a:hover{
 .nav-text{
   display: inline-block;
   font-weight: normal;
-  color: rgba(150,150,150,1);
+  color: var(--highlightColor);
   background-color: transparent;
   border-bottom-color:transparent;
   font-style: normal;
@@ -146,15 +178,28 @@ a:hover{
 
 .navbar{
   opacity: 0.9;
-  border-radius: 1.5em;
+  border-radius: 0.5em;
 
   margin:0.5em;
 
   background-size: cover;
   background-color: transparent;
 
+
   border-style: none;
   display: block;
+}
+
+.navbar-header{
+/*   background-image: url('resources/images/topNavbarSkin.png');   */
+  background-color: var(--bkgColor);
+  box-shadow: var(--bkgHighlightColor) 50px;
+}
+
+.navbar-footer{
+/*   background-image: url('resources/images/bottomNavbarSkin.png'); */
+  background-color: var(--bkgColor);
+  box-shadow: var(--bkgHighlightColor) 50px;
 }
 
 .navbar-toggler{
@@ -171,7 +216,7 @@ a:hover{
 
 
 .nav-link:hover{
-  color: rgba(255,255,255,1);
+  color: white;
   cursor: pointer;
 }
 
@@ -179,69 +224,71 @@ a:hover{
   padding-bottom: 1em;
 }
 
-/*h2{
-	padding-left: 5em;
-	padding-right: 5em;
-}*/
-
 /*
  * Middle
  */
 
+
   .jumbotron{
-     margin-left: auto;
-     margin-right: auto;
+    padding-left: 20%;
+    padding-right: 20%;
 
-     padding-left: 5%;
-     padding-right: 5%;
+    padding-bottom: 5%;
 
-     background-color: rgba(150,150,150,1);
+/*     background-color: rgba(87, 10, 75,0.5); */
+    background-color:transparent;
+    
+    margin-left: 8%;
+    margin-right: 8%;
 
-     background-image: url("resources/images/jumbotronSkin.png");
-     background-size: 100%;
+/*     background-color: transparent; */
+    background-image: url("resources/images/jumbotronSkin.png");
+    background-size: cover;
+    box-shadow: var(--bkgColor) 0px 10px 10px 10px;
+        
 
-     border-radius: 2em;
-     width: 90%;
+    border-radius: 5%;
+     
+    width: auto;
+    height: 100%;
+
+    color: var(--highlightColor);
+    text-shadow: 0.5rem 0.5rem 0.5rem black;
+  }
+  
+  .jumbotron-margin-left{
+    margin-left: 20%;
+    margin-right: 8%;
   }
 
-  .jumbotron  h1{
-    font-size: 5vw;  
-    color: rgba(20,20,20,1);
+  .jumbotron-margin-right{
+    margin-left: 8%;
+    margin-right: 20%;
   }
-  .jumbotron  h2{
-    font-size: 3vw; 
-    color: rgba(20,20,20,1);
-  }
-  .jumbotron  h3{
-    font-size: 2vw; 
-    color: rgba(20,20,20,1);
-  }
-  .jumbotron  h4{
-    font-size: 1.5vw; 
-    color: rgba(20,20,20,1);
-  }
-  /*.jumbotron-heading{
-    padding-bottom: 3.5em; 
-  }*/
-
+  
   .p-citation{
     font-size: 1em; 
-    color: rgba(20,20,100,1);
+    color: var(--highlightColor);
   }
 
   .container{
+    padding:5%
   }
   .container-link {
-    color: black;
+    color: var(--highlightColor);
+    text-shadow: 0.5rem 0.5rem 0.5rem black;
     background-color: transparent;
     border-bottom-color:transparent;
     margin: auto;
   }
   .container-link:hover{
-    color: rgba(255,255,255,1);
+    color: var(--highlightColor);
     cursor: pointer;
   }
 
+  .container-cards{
+      border-color: var(--bkgColor);
+  }
 
 
   @media only screen and (max-width: 768px) {
@@ -255,19 +302,19 @@ a:hover{
       
       padding: 0.0%;
       margin: 1.0%;
-      box-shadow: 0.5em 0.5em 0.5em rgba(60,60,60,1);
 
       border-style: outset;
       border-radius: 1.0em;
-      border-width: 0em;
+      border-width: 10%;
 
-      border-color: transparent;
-
+      border-color: var(--bkgColor);
+      color: var(--highlightColor);
       /*background-image: url("resources/images/cardSkin.png");*/
       background-size: 100% 100%;
       float: right;
 
       max-height: 3em;
+      
     }
   }
 
@@ -279,17 +326,15 @@ a:hover{
       display: block;
     }
     .card {
-      padding: 10%;
-      margin: 2.5%;
-      box-shadow: 1em 1em 1em rgba(60,60,60,1);
+      padding: 5%;
+      margin: 2%;
 
       border-style: outset;
-      border-radius: 1.5em;
-      border-width: 0em;
+      border-width: 10%;
 
-      border-color: transparent;
-
-      background-image: url("resources/images/cardSkin.png");
+      border-color: var(--bkgColor);
+      color: var(--highlightColor);
+      
       background-size: 100% 100%;
       float: right;
     }
@@ -297,14 +342,15 @@ a:hover{
 
 .jumbotron  p.card-title{
  font-size: 1em; 
- color: rgba(50,50,50,1);
+ color: var(--bkgColor);
  text-align: center;
+ text-shadow: none;
 }
 
 
 .card:hover{
- transform: scale(0.98);
- background-image: url("resources/images/cardSkinHover.png");
+ transform: scale(1.05);
+/*  background-image: url("resources/images/cardSkinHover.png"); */
 }
 
 .card-description-image{
@@ -319,11 +365,11 @@ a:hover{
 */
 
 .modal-content,  .modal-footer{
-  background-color: rgba(150,150,150,1);
+  background-color: var(--bkgHighlightColor);
   box-shadow: none;
   display: block;
   text-align: left;
-  border-radius: 1.5em;
+/*   border-radius: 1.5em; */
 }
 
 .modal-footer{

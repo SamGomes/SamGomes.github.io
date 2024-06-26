@@ -2,6 +2,62 @@
 $(document).ready(function(){ //after page load
 	var view = (function($, undefined){
 
+		//get random background color from the presets
+		//source: https://stackoverflow.com/questions/40572157/change-css-root-variable-with-jquery-or-javascript
+		
+		// array with colors
+		var colors = [
+		{r:255, g:  0, b:  0},
+		{r:0, g:  128, b:  128},
+		{r:128, g:  0, b:  128},
+		{r:0, g:  0, b:  255}
+		];
+
+		// get random color from array
+		var getRandomBkgColor = function() {
+		return colors[
+			Math.floor(Math.random() * colors.length)
+		];
+		}
+		
+		var currColor = getRandomBkgColor();
+		document.documentElement.style.setProperty("--bkgHighlightColor", 'rgb('+currColor.r+','+currColor.g+','+currColor.b+')');
+		//source: https://stackoverflow.com/questions/11292649/javascript-color-animation
+		var lerp = function(a,b,u) {
+			return (1-u) * a + u * b;
+		};
+		var fade = function(element, property, start, end, duration) {
+			var interval = 10;
+			var steps = duration/interval;
+			var step_u = 1.0/steps;
+			var u = 0.0;
+			var theInterval = setInterval(function(){
+			if (u >= 1.0){ clearInterval(theInterval) }
+			var r = parseInt(lerp(start.r, end.r, u));
+			var g = parseInt(lerp(start.g, end.g, u));
+			var b = parseInt(lerp(start.b, end.b, u));
+			var colorname = 'rgb('+r+','+g+','+b+')';
+			element.style.setProperty(property, colorname);
+			u += step_u;
+			}, interval);
+		};
+		
+		var changeBkgColor = function(){
+			newColor = getRandomBkgColor();
+			fade(
+			document.documentElement,
+			"--bkgHighlightColor", 
+			currColor,
+			newColor, 10000);
+			currColor = newColor;
+		};
+		
+		// Set the color from array
+		changeBkgColor();
+		backgroundTimer = window.setInterval(function(){ 
+			changeBkgColor();
+		},10000);		
+		
 		var cvOptionsText = $("#cvButton").html()
 		$("#cvButton").on("click",function(){
 			if($("#cvOptions").is(":hidden")){
@@ -404,7 +460,7 @@ $(document).ready(function(){ //after page load
 				codeBackgroundDarkEffects.css("transform","translateY("+ parseFloat(-currentScroll+newOffset) +"px)");
 				$("#codeBackgroundOverlay").css("transform","translateY("+ parseFloat((currentScroll*0.95-newOffset*0.1)) +"px)");
 				
-				currentScroll*=0.2;
+				currentScroll*=0.3;
 				$("#anchor_portfolio").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
 				$("#anchor_workExperience").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
 				// $("#anchor_workExperience").css("opacity",1.0 - parseFloat(2*currentScroll)/(documentHeight/2.0));
@@ -412,6 +468,7 @@ $(document).ready(function(){ //after page load
 				$("#anchor_publications").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
 				$("#anchor_extracurricular").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
 				$("#rights").css("transform","translateY("+ parseFloat(-currentScroll) +"px)");
+		
 
 				if(isEasterEgged){
 					codeBackgroundDarkEffects.css("transform","translateX("+ parseFloat(Math.random()*100) +"px)");

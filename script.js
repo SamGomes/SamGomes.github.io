@@ -43,12 +43,14 @@ $(document).ready(function(){ //after page load
 		};
 		
 		var changeBkgColor = function(){
-			newColor = getRandomBkgColor();
+			var newColor = "";
+			while(newColor == "" || newColor == currColor)
+				newColor = getRandomBkgColor();
 			fade(
 			document.documentElement,
 			"--bkgHighlightColor", 
 			currColor,
-			newColor, 10000);
+			newColor, 200000);
 			currColor = newColor;
 		};
 		
@@ -56,7 +58,7 @@ $(document).ready(function(){ //after page load
 		changeBkgColor();
 		backgroundTimer = window.setInterval(function(){ 
 			changeBkgColor();
-		},10000);		
+		},200000);		
 		
 		var cvOptionsText = $("#cvButton").html()
 		$("#cvButton").on("click",function(){

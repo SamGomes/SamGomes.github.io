@@ -108,12 +108,12 @@ $(document).ready(function(){ //after page load
 
 		var randomNum = Math.random()*coverPhrases.length;
 		var randWebsiteMode = Math.floor(randomNum);
-		if(randomNum >= 8){
-			if(randomNum < 8.7){
+		if(randomNum >= 5){
+			if(randomNum < 5.7){
 				randWebsiteMode = Math.floor(Math.random()*(coverPhrases.length-1));
 			}
 		}
-		var isEasterEgged = (randWebsiteMode == 8);
+		var isEasterEgged = (randWebsiteMode == 5);
 		isEasterEgg = true;
 		$("#coverContainerText").html(coverPhrases[randWebsiteMode]);
 

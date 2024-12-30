@@ -88,21 +88,10 @@ $(document).ready(function(){ //after page load
 				I also like to sing and to play music. 🎤🎧🎶🎸\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
 				I work as a CS engineer, PhD student, and TA. <br> \
-				This is not a Tinder description, <br> \
-				 thus I will not get more casual than this...\"", 
-			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and TA. <br> \
 				You can check out my work in the sections below.\"", 
-			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and TA. <br> \
-			    Do you like good looking professional websites? \n \
-				I hope this one meets your requirements... 😅\"", 
 			"\"Hey Hey Hey! Helloooo visitaaant! I am Sam, welcome to my website! 😀 <br> \
 				I work as a CS engineer, PhD student, and TA. <br> \
 				You can check out my portfolio in the sections below.\"", 
-			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and TA. <br> \
-				I had a cringy saying here, but I removed it. 😅\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
 				I work as a CS engineer, PhD student, TA, <br> \
 				and I can present a different saying here in every refresh. 👾\"", 

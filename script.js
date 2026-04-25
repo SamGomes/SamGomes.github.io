@@ -84,23 +84,23 @@ $(document).ready(function(){ //after page load
 		var coverPhrases = 
 		[
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and TA. <br> \
+				I work as a CS engineer and PhD research scientist, teaching some classes as well. <br> \
 				I also like to sing and to play music. 🎤🎧🎶🎸\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and TA. <br> \
+				I work as a CS engineer and PhD research scientist, teaching some classes as well. <br> \
 				You can check out my work in the sections below.\"", 
 			"\"Hey Hey Hey! Helloooo visitaaant! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and TA. <br> \
+				I work as a CS engineer and PhD research scientist, teaching some classes as well. <br> \
 				You can check out my portfolio in the sections below.\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, TA, <br> \
+				I work as a CS engineer and PhD research scientist, teaching some classes as well, <br> \
 				and I can present a different saying here in every refresh. 👾\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and TA. <br> \
-				As a PhD student, I have the opportunity to <br> \
+				I work as a CS engineer and PhD research scientist, teaching some classes as well. <br> \
+				As a research scientist, I have the opportunity to <br> \
 				use my knowledge to create new things!\"", 
 			"\"Hi! I am Sam, welcome to my website! 😀 <br> \
-				I work as a CS engineer, PhD student, and TA. <br> \
+				I work as a CS engineer and PhD research scientist, teaching some classes as well... <br> \
 				Oh no! A wild m̶i̴s̴s̴i̷n̴g̸n̷o̷ appeared! 😨 <br> \
 				<h5>|˜Ž­|　<br> |‡g|　<br> |¾ù|　<br> |åm|__<br> |ïãëw|<br> |ú¥ê2|<br> |)å¬7|<br> |…¾¥ˆ|<br></h5>\""
 		];
